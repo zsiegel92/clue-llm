@@ -5,10 +5,6 @@ import { usePython } from "react-py";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-interface StaticCodeBlockProps {
-  code: string;
-}
-
 function Output({
   isLoading,
   isRunning,
@@ -42,7 +38,7 @@ function Output({
   );
 }
 
-export function StaticCodeBlock({ code }: StaticCodeBlockProps) {
+export function StaticCodeBlock({ code }: { code: string }) {
   const { runPython, stdout, stderr, isLoading, isRunning } = usePython({});
 
   useEffect(() => {
