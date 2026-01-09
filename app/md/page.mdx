@@ -1,5 +1,4 @@
-import { TestComponent } from '@/components/test-component'
-import { PythonProvidedStaticCodeBlock,PythonProvidedEditableCodeBlock } from '@/components/python-provided'
+import { PythonProvidedStaticCodeBlock } from '@/components/python-provided'
  
 # Welcome to my MDX page!
  
@@ -20,18 +19,9 @@ x = 1
 print(x)
 ```
 
-## Testing
-
-<TestComponent />
-
-----
-
-## Editable Python Block
-
-<PythonProvidedEditableCodeBlock code="print('Hello, World!')" />
-
-----
-
 ## Static Python Block
 
-<PythonProvidedStaticCodeBlock code="print('Hello, World!')" />
+<PythonProvidedStaticCodeBlock code={
+    `
+    print('Hello, World!')
+    `} />

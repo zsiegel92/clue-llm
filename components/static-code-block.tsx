@@ -1,45 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { usePython } from "react-py";
-import { codeToHtml } from "shiki";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 interface StaticCodeBlockProps {
   code: string;
-  lang?: string;
-}
-
-export function StaticCodeBlock({
-  code,
-}: StaticCodeBlockProps) {
-  const [html, setHtml] = useState<string | null>(null);
-  const { runPython, stdout, stderr, isLoading, isRunning } = usePython();
-  useEffect(() => {
-    codeToHtml(code.trim(), {
-      lang: "python",
-      theme: "github-dark",
-    }).then((html) => {
-      setHtml(html);
-    });
-    runPython(code);
-  }, [code, runPython]);
-
-  return (
-    <div>
-      <h1>Code</h1>
-      {html ? (
-        <div
-          className="static-code-block"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      ) : (
-        <p>Rendering......</p>
-      )}
-
-      <h1>Output</h1>
-      <Output isLoading={isLoading} isRunning={isRunning} stdout={stdout} stderr={stderr} />
-    </div>
-  );
 }
 
 function Output({
@@ -71,6 +38,37 @@ function Output({
           <pre>{stderr}</pre>
         </div>
       ) : null}
+    </div>
+  );
+}
+
+export function StaticCodeBlock({ code }: StaticCodeBlockProps) {
+  const { runPython, stdout, stderr, isLoading, isRunning } = usePython({});
+
+  useEffect(() => {
+    runPython(code);
+  }, [code, runPython]);
+
+  return (
+    <div>
+      <SyntaxHighlighter
+        language="python"
+        style={oneDark}
+        customStyle={{
+          margin: 0,
+          borderRadius: "0.5rem",
+          fontSize: "0.875rem",
+          lineHeight: 1.7,
+        }}
+      >
+        {code.trim()}
+      </SyntaxHighlighter>
+      <Output
+        isLoading={isLoading}
+        isRunning={isRunning}
+        stdout={stdout}
+        stderr={stderr}
+      />
     </div>
   );
 }
