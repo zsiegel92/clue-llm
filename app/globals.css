@@ -153,3 +153,18 @@ body {
   font-style: italic;
   color: #6b7280;
 }
+
+/* StaticCodeBlock styles */
+.static-code-block pre {
+  margin: 0;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.static-code-block code {
+  font-family: inherit;
+}
