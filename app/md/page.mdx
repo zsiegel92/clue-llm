@@ -1,5 +1,7 @@
 import { PythonProvidedStaticCodeBlock } from '@/components/python-provided'
- 
+import { ServerPythonProvidedStaticCodeBlock } from '@/components/server-python-provided'
+
+
 # Welcome to my MDX page!
  
 This is some **bold** and _italics_ text.
@@ -24,4 +26,15 @@ print(x)
 <PythonProvidedStaticCodeBlock code={
     `
     print('Hello, World!')
+    `} />
+
+
+## Server Python Block (runs on client but rendering entrypoint is server)
+
+<ServerPythonProvidedStaticCodeBlock code={
+    `
+    import time
+    for i in range(5):
+        time.sleep(1)
+        print(f'Hello, World, from the server! {i}')
     `} />

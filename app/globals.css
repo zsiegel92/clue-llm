@@ -155,16 +155,55 @@ body {
 }
 
 /* StaticCodeBlock styles */
-.static-code-block pre {
-  margin: 0;
-  padding: 1.25rem;
+.code-block {
   border-radius: 0.5rem;
-  overflow-x: auto;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.875rem;
-  line-height: 1.7;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.static-code-block code {
-  font-family: inherit;
+.output {
+  background: #1a1a1a;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #333;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.875rem;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.output--loading,
+.output--running {
+  color: #888;
+}
+
+.output__stdout {
+  margin: 0;
+  color: #e6e6e6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.output__stderr {
+  margin: 0;
+  color: #f87171;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.output__spinner {
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 2px solid #444;
+  border-top-color: #888;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

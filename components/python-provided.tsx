@@ -14,9 +14,9 @@ export function PythonProvidedStaticCodeBlock({ code }: { code: string }) {
   );
 }
 
-export function PythonProvidedEditableCodeBlock({ code }: { code: string }) {
+export function PythonProvidedEditableCodeBlock({ code }: { code: string }) {    
   return (
-    <PythonProvider>
+    <PythonProvider lazy={false}>
       <main>
         <EditableCodeBlock code={code} />
       </main>

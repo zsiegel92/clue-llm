@@ -17,47 +17,55 @@ function Output({
   stderr: string;
 }) {
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="output output--loading">
+        <span className="output__spinner" />
+        Loading Python...
+      </div>
+    );
   }
+
   if (isRunning) {
-    return <p>Running...</p>;
+    return (
+      <div className="output output--running">
+        <span className="output__spinner" />
+        Running...
+      </div>
+    );
   }
-  if (stderr) {
-    return <pre>{stderr}</pre>;
-  }
+
   return (
-    <div>
-      <pre>{stdout}</pre>
-      {stderr ? (
-        <div>
-          <h2>Error</h2>
-          <pre>{stderr}</pre>
-        </div>
-      ) : null}
+    <div className="output">
+      {stdout && <pre className="output__stdout">{stdout}</pre>}
+      {stderr && <pre className="output__stderr">{stderr}</pre>}
     </div>
   );
 }
 
 export function StaticCodeBlock({ code }: { code: string }) {
-  const { runPython, stdout, stderr, isLoading, isRunning } = usePython({});
+  const { runPython, stdout, stderr, isLoading, isRunning, isReady } =
+    usePython({});
 
   useEffect(() => {
-    runPython(code);
-  }, [code, runPython]);
+    if (isReady) {
+      runPython(code);
+    }
+  }, [code, isReady, runPython]);
 
   return (
-    <div>
+    <div className="code-block">
       <SyntaxHighlighter
         language="python"
         style={oneDark}
         customStyle={{
           margin: 0,
-          borderRadius: "0.5rem",
+          padding: "1rem",
+          borderRadius: "0.5rem 0.5rem 0 0",
           fontSize: "0.875rem",
           lineHeight: 1.7,
         }}
       >
-        {code.trim()}
+        {code}
       </SyntaxHighlighter>
       <Output
         isLoading={isLoading}
