@@ -1,6 +1,12 @@
 import type { MDXComponents } from "mdx/types";
 
-const components: MDXComponents = {};
+function ProseWrapper({ children }: { children: React.ReactNode }) {
+  return <article className="prose">{children}</article>;
+}
+
+const components: MDXComponents = {
+  wrapper: ProseWrapper,
+};
 
 export function useMDXComponents(): MDXComponents {
   return components;
