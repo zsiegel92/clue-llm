@@ -1,9 +1,13 @@
+import fs from "fs/promises";
+import path from "path";
 import { PythonProvidedStaticCodeBlock } from "@/components/python-provided";
 
 export async function ServerPythonProvidedStaticCodeBlock({
-  code,
+  filePath,
 }: {
-  code: string;
+  filePath: string;
 }) {
-  return <PythonProvidedStaticCodeBlock code={code} />;
+  const code = await fs.readFile(filePath, "utf8");
+  const fileName = path.basename(filePath);
+  return <PythonProvidedStaticCodeBlock code={code} fileName={fileName} />;
 }

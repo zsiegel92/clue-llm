@@ -42,7 +42,13 @@ function Output({
   );
 }
 
-export function StaticCodeBlock({ code }: { code: string }) {
+export function StaticCodeBlock({
+  code,
+  fileName,
+}: {
+  code: string;
+  fileName?: string;
+}) {
   const { runPython, stdout, stderr, isLoading, isRunning, isReady } =
     usePython({});
 
@@ -55,6 +61,7 @@ export function StaticCodeBlock({ code }: { code: string }) {
   return (
     <div className="code-block">
       <SyntaxHighlighter
+        wrapLines={true}
         language="python"
         style={oneDark}
         customStyle={{
@@ -65,7 +72,7 @@ export function StaticCodeBlock({ code }: { code: string }) {
           lineHeight: 1.7,
         }}
       >
-        {code}
+        {fileName ? `# ${fileName}\n${code}` : code}
       </SyntaxHighlighter>
       <Output
         isLoading={isLoading}
