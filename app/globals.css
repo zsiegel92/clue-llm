@@ -100,7 +100,6 @@ body {
 }
 
 .prose pre {
-  background: var(--code-bg);
   border: 1px solid var(--code-border);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -116,6 +115,25 @@ body {
   border: none;
   padding: 0;
   font-size: inherit;
+}
+
+/* Syntax highlighting from rehype-pretty-code */
+.prose pre [data-highlighted-line] {
+  background: rgba(200, 200, 255, 0.1);
+}
+
+.prose code[data-line-numbers] {
+  counter-reset: line;
+}
+
+.prose code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: #6b7280;
 }
 
 .prose a {

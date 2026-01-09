@@ -7,7 +7,17 @@ const nextConfig: NextConfig = {
 };
 
 const withMDX = createMDX({
-  // Add markdown plugins here, as desired
+  options: {
+    rehypePlugins: [
+      [
+        "rehype-pretty-code",
+        {
+          theme: "github-dark",
+          keepBackground: true,
+        },
+      ],
+    ],
+  },
 });
 
 // Merge MDX config with Next.js config
