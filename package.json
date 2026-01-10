@@ -10,7 +10,8 @@
     "tsgo-check": "tsgo -p tsconfig.json --noEmit",
     "format": "biome format --write",
     "script": "tsx --env-file=.env.local",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
