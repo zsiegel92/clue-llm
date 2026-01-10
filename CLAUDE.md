@@ -1,0 +1,7 @@
+- Read `package.json` to understand what tools we use and how we run scripts/common commands
+- Always type check after making changes
+- Lint and format after every update
+- NEVER use type assertions (`as X`) - `as const` is fine and good! `satisfies X` is great, keep types as narrow as is reasonable
+- Try not to define the same type or annotations in multiple places - single source of truth is best
+- For Python code, format with `ruff`, type-check with `pyright`, use `uv` for everything
+- Do NOT edit `.env.local`

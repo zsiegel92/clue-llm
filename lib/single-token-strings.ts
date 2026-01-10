@@ -1,20 +1,16 @@
-export const programmingLanguages = [
+export const technologies = [
   "JavaScript",
   "Python",
   "Java",
-  "C++",
-  "C#",
   "Ruby",
   "PHP",
   "SQL",
   "Linux",
   "Windows",
-  "MacOS",
   "Android",
   "iOS",
   "Chrome",
   "Firefox",
-  "Safari",
   "Edge",
 ] as const;
 
@@ -41,6 +37,5 @@ export const institutions = [
   "government",
   "company",
   "system",
-  "university",
   "school",
 ] as const;
