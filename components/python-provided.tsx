@@ -15,6 +15,7 @@ export function PythonProvidedStaticCodeBlock({
     <PythonProvider
       packages={{
         official: ["pyodide-http"],
+        micropip: ["numpy"],
       }}
     >
       <main>
