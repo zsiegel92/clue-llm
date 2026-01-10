@@ -1,0 +1,38 @@
+import { describe, it, expect } from "vitest";
+import {
+  technologies,
+  places,
+  companies,
+  institutions,
+} from "./single-token-strings";
+import { encodingForModel, type TiktokenModel } from "js-tiktoken";
+
+describe("single-token-strings", () => {
+  const allStrings = [
+    ...technologies,
+    ...places,
+    ...companies,
+    ...institutions,
+  ];
+
+  it("exports non-empty arrays", () => {
+    expect(technologies.length).toBeGreaterThan(0);
+    expect(places.length).toBeGreaterThan(0);
+    expect(companies.length).toBeGreaterThan(0);
+    expect(institutions.length).toBeGreaterThan(0);
+  });
+
+  for (const model of [
+    "gpt-4o",
+    "gpt-4.1-nano",
+    "gpt-4.1-mini",
+  ] satisfies TiktokenModel[]) {
+    const encoding = encodingForModel(model);
+    it(`all strings tokenize to exactly 1 token with ${model}`, () => {
+      for (const string of allStrings) {
+        const tokens = encoding.encode(string);
+        expect(tokens.length).toBe(1);
+      }
+    });
+  }
+});
