@@ -26,12 +26,19 @@ export function PythonProvidedStaticCodeBlock({
   );
 }
 
-export function PythonProvidedEditableCodeBlock({ code }: { code: string }) {
+export function PythonProvidedEditableCodeBlock({
+  code,
+  dependencies,
+}: {
+  code: string;
+  dependencies: string[];
+}) {
   return (
     <PythonProvider
       lazy={false}
       packages={{
         official: ["pyodide-http"],
+        micropip: dependencies,
       }}
     >
       <main>
