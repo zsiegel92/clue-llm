@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {  usePython } from "react-py";
+import { usePython } from "react-py";
 
 export function EditableCodeBlock({ code }: { code: string }) {
   const [input, setInput] = useState(code);

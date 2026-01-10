@@ -1,5 +1,4 @@
 export const technologies = [
-  "JavaScript",
   "Python",
   "Java",
   "Ruby",
@@ -8,7 +7,6 @@ export const technologies = [
   "Linux",
   "Windows",
   "Android",
-  "iOS",
   "Chrome",
   "Firefox",
   "Edge",
@@ -23,15 +21,7 @@ export const places = [
   "Paris",
 ] as const;
 
-export const companies = [
-  "Google",
-  "Facebook",
-  "Amazon",
-  "Twitter",
-  "Reddit",
-  "YouTube",
-  "GitHub",
-] as const;
+export const companies = ["Google", "Facebook", "Amazon", "Twitter"] as const;
 
 export const institutions = [
   "government",

@@ -26,7 +26,7 @@ export async function ServerPythonProvidedStaticCodeBlock({
     .then((configString) =>
       pyProjectSchema
         .parse(toml.parse(configString))
-        .project.dependencies.map(stripVersion)
+        .project.dependencies.map(stripVersion),
     );
   return (
     <PythonProvidedStaticCodeBlock

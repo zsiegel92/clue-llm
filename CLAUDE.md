@@ -1,4 +1,4 @@
-- Read `package.json` to understand what tools we use and how we run scripts/common commands
+- Read `package.json` to understand what tools we use and how we run scripts/common commands. We use `pnpm`!
 - Always type check after making changes
 - Lint and format after every update
 - NEVER use type assertions (`as X`) - `as const` is fine and good! `satisfies X` is great, keep types as narrow as is reasonable
