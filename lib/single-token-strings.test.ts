@@ -1,11 +1,13 @@
-import { describe, it, expect } from "vitest";
-import {
-  technologies,
-  places,
-  companies,
-  institutions,
-} from "./single-token-strings";
 import { encodingForModel, type TiktokenModel } from "js-tiktoken";
+import { describe, expect, it } from "vitest";
+import {
+  companies,
+  foods,
+  institutions,
+  materials,
+  places,
+  technologies,
+} from "./single-token-strings";
 
 describe("single-token-strings", () => {
   const allStrings = [
@@ -13,6 +15,8 @@ describe("single-token-strings", () => {
     ...places,
     ...companies,
     ...institutions,
+    ...foods,
+    ...materials,
   ];
 
   it("exports non-empty arrays", () => {
@@ -20,6 +24,12 @@ describe("single-token-strings", () => {
     expect(places.length).toBeGreaterThan(0);
     expect(companies.length).toBeGreaterThan(0);
     expect(institutions.length).toBeGreaterThan(0);
+    expect(foods.length).toBeGreaterThan(0);
+    expect(materials.length).toBeGreaterThan(0);
+  });
+
+  it("exports unique strings", () => {
+    expect(allStrings.length).toEqual([...new Set(allStrings)].length);
   });
 
   for (const model of [
