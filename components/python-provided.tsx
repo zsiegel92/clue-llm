@@ -4,9 +4,19 @@ import { PythonProvider } from "react-py";
 import { EditableCodeBlock } from "./editable-code-block";
 import { StaticCodeBlock } from "./static-code-block";
 
-export function PythonProvidedStaticCodeBlock({ code, fileName }: { code: string, fileName?: string }) {
+export function PythonProvidedStaticCodeBlock({
+  code,
+  fileName,
+}: {
+  code: string;
+  fileName?: string;
+}) {
   return (
-    <PythonProvider>
+    <PythonProvider
+      packages={{
+        official: ["pyodide-http"],
+      }}
+    >
       <main>
         <StaticCodeBlock code={code} fileName={fileName} />
       </main>
@@ -14,9 +24,14 @@ export function PythonProvidedStaticCodeBlock({ code, fileName }: { code: string
   );
 }
 
-export function PythonProvidedEditableCodeBlock({ code }: { code: string }) {    
+export function PythonProvidedEditableCodeBlock({ code }: { code: string }) {
   return (
-    <PythonProvider lazy={false}>
+    <PythonProvider
+      lazy={false}
+      packages={{
+        official: ["pyodide-http"],
+      }}
+    >
       <main>
         <EditableCodeBlock code={code} />
       </main>
