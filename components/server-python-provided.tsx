@@ -28,7 +28,6 @@ export async function ServerPythonProvidedStaticCodeBlock({
         .parse(toml.parse(configString))
         .project.dependencies.map(stripVersion)
     );
-  console.log(dependencies);
   return (
     <PythonProvidedStaticCodeBlock
       code={code}
