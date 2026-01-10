@@ -1,6 +1,6 @@
+import * as fs from "node:fs/promises";
+import path from "node:path";
 import * as toml from "toml";
-import * as fs from "fs/promises";
-import path from "path";
 import { z } from "zod";
 import { PythonProvidedStaticCodeBlock } from "@/components/python-provided";
 
@@ -16,8 +16,12 @@ function stripVersion(dependency: string): string {
 
 export async function ServerPythonProvidedStaticCodeBlock({
   filePath,
+  maxCodeLinesHeight,
+  maxOutputLinesHeight,
 }: {
   filePath: string;
+  maxCodeLinesHeight?: number;
+  maxOutputLinesHeight?: number;
 }) {
   const code = await fs.readFile(filePath, "utf8");
   const fileName = path.basename(filePath);
@@ -33,6 +37,8 @@ export async function ServerPythonProvidedStaticCodeBlock({
       code={code}
       fileName={fileName}
       dependencies={dependencies}
+      maxCodeLinesHeight={maxCodeLinesHeight}
+      maxOutputLinesHeight={maxOutputLinesHeight}
     />
   );
 }

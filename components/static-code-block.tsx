@@ -10,11 +10,13 @@ function Output({
   isRunning,
   stdout,
   stderr,
+  maxOutputLinesHeight,
 }: {
   isLoading: boolean;
   isRunning: boolean;
   stdout: string;
   stderr: string;
+  maxOutputLinesHeight: number;
 }) {
   if (isLoading) {
     return (
@@ -46,8 +48,24 @@ function Output({
     );
   }
 
+  const stdoutLines = stdout.split("\n").length;
+  const stderrLines = stderr.split("\n").length;
+  const totalLines = (stdout ? stdoutLines : 0) + (stderr ? stderrLines : 0);
+
+  const maxHeight =
+    totalLines > maxOutputLinesHeight
+      ? `${maxOutputLinesHeight * 1.5}rem`
+      : undefined;
+
   return (
-    <div className="output">
+    <div
+      className="output"
+      style={{
+        maxHeight,
+        overflowY: maxHeight ? "auto" : undefined,
+        fontFamily: "monospace",
+      }}
+    >
       {stdout && <pre className="output__stdout">{stdout}</pre>}
       {stderr && <pre className="output__stderr">{stderr}</pre>}
     </div>
@@ -57,9 +75,13 @@ function Output({
 export function StaticCodeBlock({
   code,
   fileName,
+  maxCodeLinesHeight = 20,
+  maxOutputLinesHeight = 10,
 }: {
   code: string;
   fileName?: string;
+  maxCodeLinesHeight?: number;
+  maxOutputLinesHeight?: number;
 }) {
   const { runPython, stdout, stderr, isLoading, isRunning, isReady } =
     usePython({});
@@ -76,6 +98,14 @@ export function StaticCodeBlock({
     }
   };
 
+  const displayCode = fileName ? `# ${fileName}\n${code}` : code;
+  const codeLines = displayCode.split("\n").length;
+
+  const codeMaxHeight =
+    codeLines > maxCodeLinesHeight
+      ? `${maxCodeLinesHeight * 1.7 * 0.875}rem`
+      : undefined;
+
   return (
     <div className="code-block relative">
       <SyntaxHighlighter
@@ -88,11 +118,14 @@ export function StaticCodeBlock({
           borderRadius: "0.5rem 0.5rem 0 0",
           fontSize: "0.875rem",
           lineHeight: 1.7,
+          maxHeight: codeMaxHeight,
+          overflowY: codeMaxHeight ? "auto" : undefined,
         }}
       >
-        {fileName ? `# ${fileName}\n${code}` : code}
+        {displayCode}
       </SyntaxHighlighter>
       <button
+        type="button"
         onClick={handleRerun}
         disabled={isLoading || isRunning || !isReady}
         className="absolute top-3 right-3 p-2 rounded-lg bg-gray-800/90 hover:bg-gray-700 text-gray-400 hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer backdrop-blur-sm shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
@@ -100,10 +133,12 @@ export function StaticCodeBlock({
       >
         {isRunning ? (
           <svg
+            role="img"
             className="animate-spin h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
+            aria-label="Running"
           >
             <circle
               className="opacity-25"
@@ -121,11 +156,13 @@ export function StaticCodeBlock({
           </svg>
         ) : (
           <svg
+            role="img"
             className="h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-label="Re-run"
           >
             <path
               strokeLinecap="round"
@@ -141,6 +178,7 @@ export function StaticCodeBlock({
         isRunning={isRunning}
         stdout={stdout}
         stderr={stderr}
+        maxOutputLinesHeight={maxOutputLinesHeight}
       />
     </div>
   );

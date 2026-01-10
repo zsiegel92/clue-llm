@@ -7,10 +7,14 @@ export function PythonProvidedStaticCodeBlock({
   code,
   fileName,
   dependencies,
+  maxCodeLinesHeight,
+  maxOutputLinesHeight,
 }: {
   code: string;
   fileName?: string;
   dependencies: string[];
+  maxCodeLinesHeight?: number;
+  maxOutputLinesHeight?: number;
 }) {
   return (
     <PythonProvider
@@ -20,7 +24,12 @@ export function PythonProvidedStaticCodeBlock({
       }}
     >
       <main>
-        <StaticCodeBlock code={code} fileName={fileName} />
+        <StaticCodeBlock
+          code={code}
+          fileName={fileName}
+          maxCodeLinesHeight={maxCodeLinesHeight}
+          maxOutputLinesHeight={maxOutputLinesHeight}
+        />
       </main>
     </PythonProvider>
   );

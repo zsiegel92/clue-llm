@@ -1,11 +1,11 @@
 import { z } from "zod";
 import {
-  technologies,
-  places,
   companies,
-  institutions,
   foods,
+  institutions,
   materials,
+  places,
+  technologies,
 } from "./single-token-strings";
 
 export const scenarioSchema = z.object({
