@@ -10,6 +10,10 @@ const pyProjectSchema = z.object({
   }),
 });
 
+function stripVersion(dependency: string): string {
+  return dependency.split(">")[0]?.split("<")[0]?.split("=")[0] ?? dependency;
+}
+
 export async function ServerPythonProvidedStaticCodeBlock({
   filePath,
 }: {
@@ -19,9 +23,10 @@ export async function ServerPythonProvidedStaticCodeBlock({
   const fileName = path.basename(filePath);
   const dependencies = await fs
     .readFile("pyproject.toml", "utf8")
-    .then(
-      (configString) =>
-        pyProjectSchema.parse(toml.parse(configString)).project.dependencies
+    .then((configString) =>
+      pyProjectSchema
+        .parse(toml.parse(configString))
+        .project.dependencies.map(stripVersion)
     );
   console.log(dependencies);
   return (
