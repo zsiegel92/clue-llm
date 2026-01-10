@@ -95,12 +95,12 @@ export function StaticCodeBlock({
       <button
         onClick={handleRerun}
         disabled={isLoading || isRunning || !isReady}
-        className="absolute top-3 right-3 p-2 rounded-md bg-gray-800/80 hover:bg-gray-700/90 text-gray-300 hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer backdrop-blur-sm"
+        className="absolute top-3 right-3 p-2 rounded-lg bg-gray-800/90 hover:bg-gray-700 text-gray-400 hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer backdrop-blur-sm shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
         title="Re-run code"
       >
         {isRunning ? (
           <svg
-            className="animate-spin h-4 w-4"
+            className="animate-spin h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -121,7 +121,7 @@ export function StaticCodeBlock({
           </svg>
         ) : (
           <svg
-            className="h-4 w-4"
+            className="h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

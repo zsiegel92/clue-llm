@@ -1,17 +1,16 @@
-import { PythonProvidedStaticCodeBlock } from '@/components/python-provided'
-import { ServerPythonProvidedStaticCodeBlock } from '@/components/server-python-provided'
-
+import { PythonProvidedStaticCodeBlock } from "@/components/python-provided";
+import { ServerPythonProvidedStaticCodeBlock } from "@/components/server-python-provided";
 
 # Welcome to my MDX page!
- 
+
 This is some **bold** and _italics_ text.
- 
+
 This is a list in markdown:
- 
+
 - One
 - Two
 - Three
- 
+
 Checkout my React component:
 
 A code block:
@@ -23,13 +22,8 @@ print(x)
 
 ## Static Python Block
 
-<PythonProvidedStaticCodeBlock code={
-    `
-    print('Hello, World!')
-    `} />
-
+<PythonProvidedStaticCodeBlock code={`print('Hello, World!')`} />
 
 ## Server Python Block (runs on client but rendering entrypoint is server)
 
-<ServerPythonProvidedStaticCodeBlock filePath={
-    `python-scripts/count.py`} />
+<ServerPythonProvidedStaticCodeBlock filePath={`python-scripts/count.py`} />
