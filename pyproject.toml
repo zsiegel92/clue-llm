@@ -10,3 +10,9 @@ dependencies = [
     "python-sat>=1.8.dev26",
     "sympy>=1.14.0",
 ]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.408",
+    "ruff>=0.14.11",
+]

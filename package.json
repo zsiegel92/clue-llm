@@ -11,7 +11,11 @@
     "format": "biome format --write",
     "script": "tsx --env-file=.env.local",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "type-check:python": "uv run pyright",
+    "lint:python": "uv run ruff check",
+    "python:format": "uv run ruff format --check",
+    "python:format-fix": "uv run ruff format"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
