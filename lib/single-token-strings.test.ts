@@ -7,6 +7,7 @@ import {
   materials,
   places,
   technologies,
+  names,
 } from "./single-token-strings";
 
 describe("single-token-strings", () => {
@@ -17,6 +18,7 @@ describe("single-token-strings", () => {
     ...institutions,
     ...foods,
     ...materials,
+    ...names,
   ];
 
   it("exports non-empty arrays", () => {
@@ -26,6 +28,7 @@ describe("single-token-strings", () => {
     expect(institutions.length).toBeGreaterThan(0);
     expect(foods.length).toBeGreaterThan(0);
     expect(materials.length).toBeGreaterThan(0);
+    expect(names.length).toBeGreaterThan(0);
   });
 
   it("exports unique strings", () => {
