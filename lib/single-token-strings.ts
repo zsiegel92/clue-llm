@@ -164,3 +164,14 @@ export const materials = [
   "tin",
   "lead",
 ] as const;
+
+export const names = [
+  "Joe",
+  "John",
+  "Bob",
+  "Will",
+  "Jane",
+  "Linda",
+  "Susan",
+  "May",
+] as const;
