@@ -5,6 +5,7 @@ from sympy import (
 )
 from sympy.logic.boolalg import to_cnf, to_int_repr
 from sympy.abc import A, B
+from sympy.logic.inference import satisfiable
 
 C: Symbol = symbols("C")
 D: Symbol = symbols("D")
@@ -16,3 +17,7 @@ cnf2 = to_cnf(expr, simplify=True, force=True)
 print(cnf)
 ir = to_int_repr(cnf.args, [A, B, C, D])
 print(ir)
+
+sol = satisfiable(cnf)
+
+print(f"Solution: {sol}")
