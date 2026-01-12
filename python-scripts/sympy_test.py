@@ -1,6 +1,8 @@
 from sympy import (
     symbols,  #
     Implies,
+    And,
+    Or,
     Symbol,
 )
 from sympy.logic.boolalg import to_cnf, to_int_repr
@@ -21,3 +23,12 @@ print(ir)
 sol = satisfiable(cnf)
 
 print(f"Solution: {sol}")
+
+expr2 = Or(And(A, B), And(C, D))
+cnf2 = to_cnf(expr2, simplify=True, force=True)
+print(cnf2)
+ir2 = to_int_repr(cnf2.args, [A, B, C, D])
+print(ir2)
+
+sol2 = satisfiable(cnf2)
+print(f"Solution: {sol2}")
