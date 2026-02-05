@@ -1,5 +1,5 @@
 import { PythonProvidedStaticCodeBlock } from "@/components/python-provided";
-import { ServerPythonProvidedStaticCodeBlock } from "@/components/server-python-provided";
+import { ServerPythonProvidedStaticCodeBlock, ServerPythonProvidedStaticMultiFileCodeBlock } from "@/components/server-python-provided";
 
 # Welcome to my MDX page!
 
@@ -31,3 +31,32 @@ print(x)
 ## Py-SAT Test
 
 <ServerPythonProvidedStaticCodeBlock filePath={`python-scripts/py_sat_test.py`} />
+
+## Simple Multi-File Test
+
+<ServerPythonProvidedStaticMultiFileCodeBlock
+  filePaths={[
+    'python-scripts/test_simple_multifile.py',
+    'python-scripts/simple_utils.py',
+  ]}
+  entrypointPath='python-scripts/test_simple_multifile.py'
+  maxCodeLinesHeight={15}
+  maxOutputLinesHeight={10}
+/>
+
+## Multi-File Test: Clue Game
+
+<ServerPythonProvidedStaticMultiFileCodeBlock
+  filePaths={[
+    'python-scripts/test_clue_game_simple.py',
+    'python-scripts/clue_models.py',
+    'python-scripts/generate_clue_game.py',
+    'python-scripts/solver.py',
+    'python-scripts/ui.py',
+    'python-scripts/single_token_strings.py',
+    'lib/single-token-strings.json',
+  ]}
+  entrypointPath='python-scripts/test_clue_game_simple.py'
+  maxCodeLinesHeight={30}
+  maxOutputLinesHeight={30}
+/>

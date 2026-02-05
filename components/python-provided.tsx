@@ -2,6 +2,10 @@
 import { PythonProvider } from "react-py";
 import { EditableCodeBlock } from "./editable-code-block";
 import { StaticCodeBlock } from "./static-code-block";
+import {
+  type CodeFile,
+  StaticMultiFileCodeBlock,
+} from "./static-multi-file-code-block";
 
 export function PythonProvidedStaticCodeBlock({
   code,
@@ -27,6 +31,35 @@ export function PythonProvidedStaticCodeBlock({
         <StaticCodeBlock
           code={code}
           fileName={fileName}
+          maxCodeLinesHeight={maxCodeLinesHeight}
+          maxOutputLinesHeight={maxOutputLinesHeight}
+        />
+      </main>
+    </PythonProvider>
+  );
+}
+
+export function PythonProvidedStaticMultiFileCodeBlock({
+  files,
+  dependencies,
+  maxCodeLinesHeight,
+  maxOutputLinesHeight,
+}: {
+  files: CodeFile[];
+  dependencies: string[];
+  maxCodeLinesHeight?: number;
+  maxOutputLinesHeight?: number;
+}) {
+  return (
+    <PythonProvider
+      packages={{
+        official: ["pyodide-http"],
+        micropip: dependencies,
+      }}
+    >
+      <main>
+        <StaticMultiFileCodeBlock
+          files={files}
           maxCodeLinesHeight={maxCodeLinesHeight}
           maxOutputLinesHeight={maxOutputLinesHeight}
         />

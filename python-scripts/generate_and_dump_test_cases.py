@@ -5,7 +5,7 @@ from pathlib import Path
 
 from generate_serialized_game import generate_test_case, SerializedGame
 
-NUMBER_OF_CASES_TO_GENERATE = 100
+NUMBER_OF_CASES_TO_GENERATE = 500
 
 
 def generate_test_cases(num_cases: int, seed_start: int = 0) -> list[SerializedGame]:
@@ -17,6 +17,8 @@ def generate_test_cases(num_cases: int, seed_start: int = 0) -> list[SerializedG
         seed = seed_start + i
         serialized_game = generate_test_case(seed)
         test_cases.append(serialized_game)
+        if i % 20 == 0:
+            print(f"Generated {i+1}/{NUMBER_OF_CASES_TO_GENERATE} test cases")
     return test_cases
 
 

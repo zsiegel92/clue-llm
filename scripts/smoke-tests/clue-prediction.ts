@@ -7,8 +7,8 @@
 
 import { clueTestCases } from "../../lib/clue-test-cases";
 import {
-  propositionsToPredictedName,
   type OpenAIModelThatGivesLogProbs,
+  propositionsToPredictedName,
 } from "../../lib/predict";
 import { gameToPrompt } from "../../lib/ui";
 
