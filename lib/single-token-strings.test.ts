@@ -1,10 +1,10 @@
 import { encodingForModel, type TiktokenModel } from "js-tiktoken";
 import { describe, expect, it } from "vitest";
 import {
-  chineseLastNames,
   companies,
   foods,
   institutions,
+  lastNames,
   materials,
   names,
   places,
@@ -13,7 +13,7 @@ import {
 
 describe("single-token-strings", () => {
   const allStrings = [
-    ...chineseLastNames,
+    ...lastNames,
     ...companies,
     ...foods,
     ...institutions,
@@ -24,7 +24,7 @@ describe("single-token-strings", () => {
   ];
 
   it("exports non-empty arrays", () => {
-    expect(chineseLastNames.length).toBeGreaterThan(0);
+    expect(lastNames.length).toBeGreaterThan(0);
     expect(companies.length).toBeGreaterThan(0);
     expect(foods.length).toBeGreaterThan(0);
     expect(institutions.length).toBeGreaterThan(0);

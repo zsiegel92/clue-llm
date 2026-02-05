@@ -161,7 +161,7 @@
     "lead"
   ],
   "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
-  "chineseLastNames": [
+  "lastNames": [
     "Li",
     "Chen",
     "Yang",
