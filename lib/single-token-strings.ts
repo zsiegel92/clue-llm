@@ -9,7 +9,7 @@ const singleTokenStringsSchema = z.object({
   foods: z.array(z.string()),
   materials: z.array(z.string()),
   names: z.array(z.string()),
-  chineseLastNames: z.array(z.string()),
+  lastNames: z.array(z.string()),
 });
 
 const validated = singleTokenStringsSchema.parse(data);
@@ -21,4 +21,4 @@ export const institutions = validated.institutions;
 export const foods = validated.foods;
 export const materials = validated.materials;
 export const names = validated.names;
-export const chineseLastNames = validated.chineseLastNames;
+export const lastNames = validated.lastNames;
