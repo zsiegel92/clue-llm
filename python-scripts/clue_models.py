@@ -70,11 +70,11 @@ class GameConfig(BaseModel):
 
 # Default game configuration using subset of single-token strings
 DEFAULT_CONFIG = GameConfig(
-    names=names[:4],  # Joe, John, Bob, Will
-    technologies=technologies[:3],  # Python, Java, Ruby
-    places=places[:3],  # China, India, France
-    companies=companies[:4],  # Google, Facebook, Amazon, Twitter
-    institutions=institutions[:3],  # government, company, system
-    foods=foods[:3],  # pizza, bread, fish
-    materials=materials[:3],  # wood, metal, steel
+    names=names,  # Joe, John, Bob, Will
+    technologies=technologies,  # Python, Java, Ruby
+    places=places,  # China, India, France
+    companies=companies,  # Google, Facebook, Amazon, Twitter
+    institutions=institutions,  # government, company, system
+    foods=foods,  # pizza, bread, fish
+    materials=materials,  # wood, metal, steel
 )
