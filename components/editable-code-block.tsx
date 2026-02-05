@@ -1,13 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import { usePython } from "react-py";
+import { usePyodide } from "@/hooks/use-pyodide";
 
-export function EditableCodeBlock({ code }: { code: string }) {
+export function EditableCodeBlock({
+  code,
+  packages,
+}: {
+  code: string;
+  packages?: {
+    official?: string[];
+    micropip?: string[];
+  };
+}) {
   const [input, setInput] = useState(code);
 
-  // Use the usePython hook to run code and access both stdout and stderr
-  const { runPython, stdout, stderr, isLoading, isRunning } = usePython();
+  // Use the usePyodide hook to run code and access both stdout and stderr
+  const { runPython, stdout, stderr, isLoading, isRunning } = usePyodide({
+    packages,
+  });
 
   return (
     <>

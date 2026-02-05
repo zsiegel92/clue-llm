@@ -1,9 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { usePython } from "react-py";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { usePyodide } from "@/hooks/use-pyodide";
 
 export interface CodeFile {
   name: string;
@@ -82,14 +82,19 @@ export function StaticMultiFileCodeBlock({
   files,
   maxCodeLinesHeight = 20,
   maxOutputLinesHeight = 10,
+  packages,
 }: {
   files: CodeFile[];
   maxCodeLinesHeight?: number;
   maxOutputLinesHeight?: number;
+  packages?: {
+    official?: string[];
+    micropip?: string[];
+  };
 }) {
   const [selectedFileIndex, setSelectedFileIndex] = useState(0);
   const { runPython, stdout, stderr, isLoading, isRunning, isReady } =
-    usePython();
+    usePyodide({ packages });
   const hasRunRef = useRef(false);
 
   const selectedFile = files[selectedFileIndex];

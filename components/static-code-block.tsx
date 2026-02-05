@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { usePython } from "react-py";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { usePyodide } from "@/hooks/use-pyodide";
 
 function Output({
   isLoading,
@@ -77,14 +77,19 @@ export function StaticCodeBlock({
   fileName,
   maxCodeLinesHeight = 20,
   maxOutputLinesHeight = 10,
+  packages,
 }: {
   code: string;
   fileName?: string;
   maxCodeLinesHeight?: number;
   maxOutputLinesHeight?: number;
+  packages?: {
+    official?: string[];
+    micropip?: string[];
+  };
 }) {
   const { runPython, stdout, stderr, isLoading, isRunning, isReady } =
-    usePython();
+    usePyodide({ packages });
 
   const lastCodeRef = useRef<string | undefined>(undefined);
 

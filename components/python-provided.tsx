@@ -1,6 +1,5 @@
 "use client";
 import { useMemo } from "react";
-import { PythonProvider } from "react-py";
 import { EditableCodeBlock } from "./editable-code-block";
 import { StaticCodeBlock } from "./static-code-block";
 import {
@@ -23,23 +22,22 @@ export function PythonProvidedStaticCodeBlock({
 }) {
   const packages = useMemo(
     () => ({
-      official: ["pyodide-http"],
+      official: ["pyodide-http"] as string[],
       micropip: dependencies,
     }),
     [dependencies],
   );
 
   return (
-    <PythonProvider packages={packages}>
-      <main>
-        <StaticCodeBlock
-          code={code}
-          fileName={fileName}
-          maxCodeLinesHeight={maxCodeLinesHeight}
-          maxOutputLinesHeight={maxOutputLinesHeight}
-        />
-      </main>
-    </PythonProvider>
+    <main>
+      <StaticCodeBlock
+        code={code}
+        fileName={fileName}
+        maxCodeLinesHeight={maxCodeLinesHeight}
+        maxOutputLinesHeight={maxOutputLinesHeight}
+        packages={packages}
+      />
+    </main>
   );
 }
 
@@ -56,22 +54,21 @@ export function PythonProvidedStaticMultiFileCodeBlock({
 }) {
   const packages = useMemo(
     () => ({
-      official: ["pyodide-http"],
+      official: ["pyodide-http"] as string[],
       micropip: dependencies,
     }),
     [dependencies],
   );
 
   return (
-    <PythonProvider packages={packages}>
-      <main>
-        <StaticMultiFileCodeBlock
-          files={files}
-          maxCodeLinesHeight={maxCodeLinesHeight}
-          maxOutputLinesHeight={maxOutputLinesHeight}
-        />
-      </main>
-    </PythonProvider>
+    <main>
+      <StaticMultiFileCodeBlock
+        files={files}
+        maxCodeLinesHeight={maxCodeLinesHeight}
+        maxOutputLinesHeight={maxOutputLinesHeight}
+        packages={packages}
+      />
+    </main>
   );
 }
 
@@ -84,17 +81,15 @@ export function PythonProvidedEditableCodeBlock({
 }) {
   const packages = useMemo(
     () => ({
-      official: ["pyodide-http"],
+      official: ["pyodide-http"] as string[],
       micropip: dependencies,
     }),
     [dependencies],
   );
 
   return (
-    <PythonProvider lazy={false} packages={packages}>
-      <main>
-        <EditableCodeBlock code={code} />
-      </main>
-    </PythonProvider>
+    <main>
+      <EditableCodeBlock code={code} packages={packages} />
+    </main>
   );
 }
