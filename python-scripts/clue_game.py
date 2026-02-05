@@ -417,7 +417,7 @@ class ClueGame:
             print(
                 f"\n⚠️  Hit safety attempt limit ({max_attempts}) without converging!"
             )
-            print(f"   This indicates a bug - should always converge eventually")
+            print("   This indicates a bug - should always converge eventually")
             print(f"   Propositions generated: {propositions_generated}")
             print(f"   Possible killers: {possible}")
             print(f"   Actual killer: {self.killer}")
