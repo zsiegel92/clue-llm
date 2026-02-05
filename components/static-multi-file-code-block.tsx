@@ -89,7 +89,7 @@ export function StaticMultiFileCodeBlock({
 }) {
   const [selectedFileIndex, setSelectedFileIndex] = useState(0);
   const { runPython, stdout, stderr, isLoading, isRunning, isReady } =
-    usePython({});
+    usePython();
   const hasRunRef = useRef(false);
 
   const selectedFile = files[selectedFileIndex];

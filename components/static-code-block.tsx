@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { usePython } from "react-py";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -84,11 +84,14 @@ export function StaticCodeBlock({
   maxOutputLinesHeight?: number;
 }) {
   const { runPython, stdout, stderr, isLoading, isRunning, isReady } =
-    usePython({});
+    usePython();
+
+  const lastCodeRef = useRef<string | undefined>(undefined);
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: runPython is unstable and causes infinite re-renders
   useEffect(() => {
-    if (isReady) {
+    if (isReady && lastCodeRef.current !== code) {
+      lastCodeRef.current = code;
       runPython(code);
     }
   }, [code, isReady]);
