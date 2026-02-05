@@ -6,15 +6,11 @@ from typing import Any
 from sympy import And, Implies, Not, Or
 
 from clue_models import (
-    PROP_COMPLEX_OR,
-    PROP_DIRECT_ELIMINATION,
-    PROP_PERSON_AND_ATTRIBUTE,
-    PROP_PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER,
-    PROP_PERSON_OR_PERSON,
     ClueGame,
     GameConfig,
     PersonActivity,
     PropositionData,
+    PropositionType,
 )
 from solver import (
     check_solution_count,
@@ -87,16 +83,16 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
     # Weight towards more definitive statements to help convergence
     prop_type = random.choices(
         [
-            PROP_PERSON_AND_ATTRIBUTE,
-            PROP_PERSON_OR_PERSON,
-            PROP_PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER,
-            PROP_COMPLEX_OR,
-            PROP_DIRECT_ELIMINATION,
+            PropositionType.PERSON_AND_ATTRIBUTE,
+            PropositionType.PERSON_OR_PERSON,
+            PropositionType.PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER,
+            PropositionType.COMPLEX_OR,
+            PropositionType.DIRECT_ELIMINATION,
         ],
         weights=[40, 20, 20, 15, 5],
     )[0]
 
-    if prop_type == PROP_PERSON_AND_ATTRIBUTE:
+    if prop_type == PropositionType.PERSON_AND_ATTRIBUTE:
         # Simple: "Joe was with cement" or "Joe was at the library"
         person = random.choice(game.names)
         attr_category = random.choice(["material", "institution", "food", "place"])
@@ -109,7 +105,7 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
 
         proposition = game.symbols_map[symbol_key]
         prop_data = PropositionData(
-            prop_type=PROP_PERSON_AND_ATTRIBUTE,
+            prop_type=PropositionType.PERSON_AND_ATTRIBUTE,
             person=person,
             attr_category=attr_category,
             value=actual_value,
@@ -117,7 +113,7 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
 
         return (proposition, prop_data)
 
-    elif prop_type == PROP_PERSON_OR_PERSON:
+    elif prop_type == PropositionType.PERSON_OR_PERSON:
         # "Either Joe was at library OR John was with cement"
         person1 = random.choice(game.names)
         person2 = random.choice([n for n in game.names if n != person1])
@@ -136,7 +132,7 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
 
         proposition = Or(sym1, sym2)
         prop_data = PropositionData(
-            prop_type=PROP_PERSON_OR_PERSON,
+            prop_type=PropositionType.PERSON_OR_PERSON,
             person1=person1,
             person2=person2,
             attr1_cat=attr1_cat,
@@ -147,7 +143,7 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
 
         return (proposition, prop_data)
 
-    elif prop_type == PROP_PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER:
+    elif prop_type == PropositionType.PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER:
         # "If Joe was at church, Joe is not the killer" (alibi)
         # Pick a non-killer to give an alibi to
         innocent_people = [n for n in game.names if n != game.killer]
@@ -167,7 +163,7 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
         # If person was with attribute, they're not the killer
         proposition = Implies(person_attr_sym, Not(killer_sym))
         prop_data = PropositionData(
-            prop_type=PROP_PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER,
+            prop_type=PropositionType.PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER,
             person=person,
             attr_category=attr_cat,
             value=val,
@@ -175,7 +171,7 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
 
         return (proposition, prop_data)
 
-    elif prop_type == PROP_COMPLEX_OR:
+    elif prop_type == PropositionType.COMPLEX_OR:
         # Complex: "(Will and cement) OR (Joe and beer and library)"
         person1 = random.choice(game.names)
         person2 = random.choice([n for n in game.names if n != person1])
@@ -193,7 +189,7 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
 
         proposition = Or(sym1, And(sym2_food, sym2_inst))
         prop_data = PropositionData(
-            prop_type=PROP_COMPLEX_OR,
+            prop_type=PropositionType.COMPLEX_OR,
             person1=person1,
             person2=person2,
             mat1=mat1,
@@ -203,7 +199,7 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
 
         return (proposition, prop_data)
 
-    elif prop_type == PROP_DIRECT_ELIMINATION:
+    elif prop_type == PropositionType.DIRECT_ELIMINATION:
         # Directly eliminate someone who is not the killer
         # This helps the game converge by explicitly clearing innocents
         # OPTIMIZATION: Only target innocents who are still possible suspects
@@ -229,7 +225,7 @@ def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
         # Both: person was there AND if they were there, they're not the killer
         proposition = And(person_attr_sym, Implies(person_attr_sym, Not(killer_sym)))
         prop_data = PropositionData(
-            prop_type=PROP_DIRECT_ELIMINATION,
+            prop_type=PropositionType.DIRECT_ELIMINATION,
             person=person,
             attr_category=attr_cat,
             value=val,

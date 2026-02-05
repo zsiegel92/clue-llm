@@ -1,6 +1,7 @@
 """Pydantic models for the Clue logic game."""
 
-from typing import Any, Literal
+from enum import StrEnum
+from typing import Any
 
 from pydantic import BaseModel, Field
 
@@ -14,20 +15,15 @@ from single_token_strings import (
     technologies,
 )
 
-# Proposition type constants
-PROP_PERSON_AND_ATTRIBUTE = "person_and_attribute"
-PROP_PERSON_OR_PERSON = "person_or_person"
-PROP_PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER = "person_attribute_implies_not_killer"
-PROP_COMPLEX_OR = "complex_or"
-PROP_DIRECT_ELIMINATION = "direct_elimination"
 
-PropositionType = Literal[
-    "person_and_attribute",
-    "person_or_person",
-    "person_attribute_implies_not_killer",
-    "complex_or",
-    "direct_elimination",
-]
+class PropositionType(StrEnum):
+    """Types of propositions in the Clue game."""
+
+    PERSON_AND_ATTRIBUTE = "person_and_attribute"
+    PERSON_OR_PERSON = "person_or_person"
+    PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER = "person_attribute_implies_not_killer"
+    COMPLEX_OR = "complex_or"
+    DIRECT_ELIMINATION = "direct_elimination"
 
 
 class PersonActivity(BaseModel):
