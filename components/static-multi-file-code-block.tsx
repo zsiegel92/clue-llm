@@ -95,6 +95,7 @@ export function StaticMultiFileCodeBlock({
   const selectedFile = files[selectedFileIndex];
   const entrypointFile = files.find((f) => f.isEntrypoint) ?? files[0];
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: runPython is unstable and causes infinite re-renders
   const handleRun = useCallback(async () => {
     if (!isReady || isLoading || isRunning) return;
 
@@ -140,7 +141,7 @@ with open(${JSON.stringify(entrypointFile.name)}, 'r') as f:
     } catch (error) {
       console.error("Error running Python code:", error);
     }
-  }, [files, entrypointFile, isReady, isLoading, isRunning, runPython]);
+  }, [files, entrypointFile, isReady, isLoading, isRunning]);
 
   useEffect(() => {
     if (isReady && !hasRunRef.current) {

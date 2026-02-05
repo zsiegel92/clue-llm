@@ -5,7 +5,7 @@ import {
   getLogProbsFromGenerateTextResponse,
   getMinTokenConfidence,
 } from "./logprob-utils";
-import type { SerializedGame } from "./schemas";
+import type { OpenAIModelThatGivesLogProbs, SerializedGame } from "./schemas";
 import { gameToPrompt } from "./ui";
 
 /**
@@ -23,12 +23,8 @@ export type PredictionResult = {
   confidence: number | undefined;
 };
 
-export type OpenAIModelThatGivesLogProbs =
-  | "gpt-4o-mini"
-  | "gpt-4o"
-  | "gpt-4.1-mini"
-  | "gpt-4.1-nano"
-  | "gpt-4.1";
+// Re-export for convenience
+export type { OpenAIModelThatGivesLogProbs };
 /**
  * Predicts the killer from a clue game using an LLM.
  * Returns the predicted name and the model's confidence in that prediction.

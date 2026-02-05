@@ -66,6 +66,28 @@ export const serializedGameSchema = z.object({
 // Test cases schema
 export const clueTestCasesSchema = z.array(serializedGameSchema);
 
+// OpenAI model type for predictions
+export const openAIModelThatGivesLogProbsSchema = z.enum([
+  "gpt-4o-mini",
+  "gpt-4o",
+  "gpt-4.1-mini",
+  "gpt-4.1-nano",
+  "gpt-4.1",
+]);
+
+// Predicted test case schema (game + prediction results)
+export const predictedTestCaseSchema = serializedGameSchema.extend({
+  prediction: z.string(),
+  correctness: z.boolean(),
+  confidence: z.number().optional(),
+  metadata: z.object({
+    model: openAIModelThatGivesLogProbsSchema,
+  }),
+});
+
+// Array of predicted test cases
+export const predictedTestCasesSchema = z.array(predictedTestCaseSchema);
+
 // Infer types
 export type SingleTokenStrings = z.infer<typeof singleTokenStringsSchema>;
 export type PropositionType = z.infer<typeof propositionTypeSchema>;
@@ -75,3 +97,8 @@ export type SerializedPersonActivity = z.infer<
 >;
 export type SerializedGame = z.infer<typeof serializedGameSchema>;
 export type ClueTestCases = z.infer<typeof clueTestCasesSchema>;
+export type OpenAIModelThatGivesLogProbs = z.infer<
+  typeof openAIModelThatGivesLogProbsSchema
+>;
+export type PredictedTestCase = z.infer<typeof predictedTestCaseSchema>;
+export type PredictedTestCases = z.infer<typeof predictedTestCasesSchema>;

@@ -1,4 +1,5 @@
 "use client";
+import { useMemo } from "react";
 import { PythonProvider } from "react-py";
 import { EditableCodeBlock } from "./editable-code-block";
 import { StaticCodeBlock } from "./static-code-block";
@@ -10,23 +11,26 @@ import {
 export function PythonProvidedStaticCodeBlock({
   code,
   fileName,
-  dependencies,
+  dependencies = [],
   maxCodeLinesHeight,
   maxOutputLinesHeight,
 }: {
   code: string;
   fileName?: string;
-  dependencies: string[];
+  dependencies?: string[];
   maxCodeLinesHeight?: number;
   maxOutputLinesHeight?: number;
 }) {
+  const packages = useMemo(
+    () => ({
+      official: ["pyodide-http"],
+      micropip: dependencies,
+    }),
+    [dependencies],
+  );
+
   return (
-    <PythonProvider
-      packages={{
-        official: ["pyodide-http"],
-        micropip: dependencies,
-      }}
-    >
+    <PythonProvider packages={packages}>
       <main>
         <StaticCodeBlock
           code={code}
@@ -41,22 +45,25 @@ export function PythonProvidedStaticCodeBlock({
 
 export function PythonProvidedStaticMultiFileCodeBlock({
   files,
-  dependencies,
+  dependencies = [],
   maxCodeLinesHeight,
   maxOutputLinesHeight,
 }: {
   files: CodeFile[];
-  dependencies: string[];
+  dependencies?: string[];
   maxCodeLinesHeight?: number;
   maxOutputLinesHeight?: number;
 }) {
+  const packages = useMemo(
+    () => ({
+      official: ["pyodide-http"],
+      micropip: dependencies,
+    }),
+    [dependencies],
+  );
+
   return (
-    <PythonProvider
-      packages={{
-        official: ["pyodide-http"],
-        micropip: dependencies,
-      }}
-    >
+    <PythonProvider packages={packages}>
       <main>
         <StaticMultiFileCodeBlock
           files={files}
@@ -75,14 +82,16 @@ export function PythonProvidedEditableCodeBlock({
   code: string;
   dependencies: string[];
 }) {
+  const packages = useMemo(
+    () => ({
+      official: ["pyodide-http"],
+      micropip: dependencies,
+    }),
+    [dependencies],
+  );
+
   return (
-    <PythonProvider
-      lazy={false}
-      packages={{
-        official: ["pyodide-http"],
-        micropip: dependencies,
-      }}
-    >
+    <PythonProvider lazy={false} packages={packages}>
       <main>
         <EditableCodeBlock code={code} />
       </main>
