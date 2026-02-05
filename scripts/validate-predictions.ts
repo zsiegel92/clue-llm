@@ -34,7 +34,9 @@ async function validatePredictions() {
     console.log(`  Total predictions: ${predictions.length}`);
 
     // Calculate stats
-    const correct = predictions.filter((p) => p.correctness).length;
+    const correct = predictions.filter(
+      (p) => p.predictionData.correctness,
+    ).length;
     const incorrect = predictions.length - correct;
     const accuracy = (correct / predictions.length) * 100;
 
@@ -44,12 +46,14 @@ async function validatePredictions() {
 
     // Check confidence data
     const withConfidence = predictions.filter(
-      (p) => p.confidence !== undefined,
+      (p) => p.predictionData.confidence !== undefined,
     ).length;
     console.log(`  With confidence data: ${withConfidence}`);
 
     // Check metadata
-    const models = new Set(predictions.map((p) => p.metadata.model));
+    const models = new Set(
+      predictions.map((p) => p.predictionData.metadata.model),
+    );
     console.log(`  Models used: ${Array.from(models).join(", ")}`);
 
     console.log("\n=".repeat(60));
@@ -58,13 +62,13 @@ async function validatePredictions() {
     console.log("\n📋 Sample Predictions:\n");
     for (let i = 0; i < Math.min(3, predictions.length); i++) {
       const p = predictions[i];
-      console.log(`  [${i + 1}] Seed ${p.seed}:`);
-      console.log(`      Killer: ${p.killer}`);
-      console.log(`      Prediction: ${p.prediction}`);
+      console.log(`  [${i + 1}] Seed ${p.game.seed}:`);
+      console.log(`      Killer: ${p.game.killer}`);
+      console.log(`      Prediction: ${p.predictionData.prediction}`);
       console.log(
-        `      Correct: ${p.correctness ? "✅" : "❌"} | Confidence: ${p.confidence !== undefined ? `${(p.confidence * 100).toFixed(1)}%` : "N/A"}`,
+        `      Correct: ${p.predictionData.correctness ? "✅" : "❌"} | Confidence: ${p.predictionData.confidence !== undefined ? `${(p.predictionData.confidence * 100).toFixed(1)}%` : "N/A"}`,
       );
-      console.log(`      Model: ${p.metadata.model}`);
+      console.log(`      Model: ${p.predictionData.metadata.model}`);
       console.log("");
     }
 

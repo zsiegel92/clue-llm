@@ -37,12 +37,14 @@ async function processSingleTestCase(
     const correctness = result.name === game.killer;
 
     return {
-      ...game,
-      prediction: result.name,
-      correctness,
-      confidence: result.confidence,
-      metadata: {
-        model,
+      game,
+      predictionData: {
+        prediction: result.name,
+        correctness,
+        confidence: result.confidence,
+        metadata: {
+          model,
+        },
       },
     };
   } catch (error) {
@@ -78,7 +80,7 @@ async function generatePredictions() {
       const prediction = await processSingleTestCase(game, index);
       predictions.push(prediction);
       completed++;
-      if (prediction.correctness) {
+      if (prediction.predictionData.correctness) {
         correct++;
       }
 
@@ -101,7 +103,7 @@ async function generatePredictions() {
   await Promise.all(promises);
 
   // Sort by original order (by seed)
-  predictions.sort((a, b) => a.seed - b.seed);
+  predictions.sort((a, b) => a.game.seed - b.game.seed);
 
   const duration = Date.now() - startTime;
   const accuracy = (correct / completed) * 100;
@@ -115,20 +117,27 @@ async function generatePredictions() {
   console.log(`${"=".repeat(60)}\n`);
 
   // Calculate average confidence for correct vs incorrect
-  const correctPredictions = predictions.filter((p) => p.correctness);
-  const incorrectPredictions = predictions.filter((p) => !p.correctness);
+  const correctPredictions = predictions.filter(
+    (p) => p.predictionData.correctness,
+  );
+  const incorrectPredictions = predictions.filter(
+    (p) => !p.predictionData.correctness,
+  );
 
   const avgConfidenceCorrect =
     correctPredictions
-      .filter((p) => p.confidence !== undefined)
-      .reduce((sum, p) => sum + (p.confidence ?? 0), 0) /
-    correctPredictions.filter((p) => p.confidence !== undefined).length;
+      .filter((p) => p.predictionData.confidence !== undefined)
+      .reduce((sum, p) => sum + (p.predictionData.confidence ?? 0), 0) /
+    correctPredictions.filter((p) => p.predictionData.confidence !== undefined)
+      .length;
 
   const avgConfidenceIncorrect =
     incorrectPredictions
-      .filter((p) => p.confidence !== undefined)
-      .reduce((sum, p) => sum + (p.confidence ?? 0), 0) /
-    incorrectPredictions.filter((p) => p.confidence !== undefined).length;
+      .filter((p) => p.predictionData.confidence !== undefined)
+      .reduce((sum, p) => sum + (p.predictionData.confidence ?? 0), 0) /
+    incorrectPredictions.filter(
+      (p) => p.predictionData.confidence !== undefined,
+    ).length;
 
   console.log("📈 Confidence Analysis:\n");
   console.log(

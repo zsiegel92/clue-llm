@@ -75,14 +75,20 @@ export const openAIModelThatGivesLogProbsSchema = z.enum([
   "gpt-4.1",
 ]);
 
-// Predicted test case schema (game + prediction results)
-export const predictedTestCaseSchema = serializedGameSchema.extend({
+// Prediction data schema (separate from game)
+export const predictionDataSchema = z.object({
   prediction: z.string(),
   correctness: z.boolean(),
   confidence: z.number().optional(),
   metadata: z.object({
     model: openAIModelThatGivesLogProbsSchema,
   }),
+});
+
+// Predicted test case schema (game + prediction results, separate objects)
+export const predictedTestCaseSchema = z.object({
+  game: serializedGameSchema,
+  predictionData: predictionDataSchema,
 });
 
 // Array of predicted test cases
@@ -100,5 +106,6 @@ export type ClueTestCases = z.infer<typeof clueTestCasesSchema>;
 export type OpenAIModelThatGivesLogProbs = z.infer<
   typeof openAIModelThatGivesLogProbsSchema
 >;
+export type PredictionData = z.infer<typeof predictionDataSchema>;
 export type PredictedTestCase = z.infer<typeof predictedTestCaseSchema>;
 export type PredictedTestCases = z.infer<typeof predictedTestCasesSchema>;
