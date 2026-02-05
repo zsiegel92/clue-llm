@@ -5,13 +5,24 @@ from typing import Any
 
 from sympy import And, Implies, Not, Or
 
-from clue_models import ClueGame, GameConfig, PersonActivity
+from clue_models import (
+    PROP_COMPLEX_OR,
+    PROP_DIRECT_ELIMINATION,
+    PROP_PERSON_AND_ATTRIBUTE,
+    PROP_PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER,
+    PROP_PERSON_OR_PERSON,
+    ClueGame,
+    GameConfig,
+    PersonActivity,
+    PropositionData,
+)
 from solver import (
     check_solution_count,
     create_symbols,
     is_feasible_with_proposition,
     setup_initial_constraints,
 )
+from ui import render_proposition
 
 
 def create_game(config: GameConfig, seed: int | None = None) -> ClueGame:
@@ -61,17 +72,7 @@ def setup_scenario(game: ClueGame) -> None:
     setup_initial_constraints(game)
 
 
-def print_scenario(game: ClueGame) -> None:
-    """Print the game scenario."""
-    print(f"🎯 Ground truth: {game.killer} is the killer")
-    print("🔍 Full scenario:")
-    for name, activity in game.ground_truth.items():
-        marker = "🔪" if name == game.killer else "✅"
-        print(f"  {marker} {name}: {activity.model_dump()}")
-    print()
-
-
-def generate_proposition(game: ClueGame) -> tuple[Any, str] | None:
+def generate_proposition(game: ClueGame) -> tuple[Any, PropositionData] | None:
     """
     Generate a random proposition that's consistent with ground truth.
 
@@ -86,16 +87,16 @@ def generate_proposition(game: ClueGame) -> tuple[Any, str] | None:
     # Weight towards more definitive statements to help convergence
     prop_type = random.choices(
         [
-            "person_and_attribute",
-            "person_or_person",
-            "person_attribute_implies_not_killer",
-            "complex_or",
-            "direct_elimination",
+            PROP_PERSON_AND_ATTRIBUTE,
+            PROP_PERSON_OR_PERSON,
+            PROP_PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER,
+            PROP_COMPLEX_OR,
+            PROP_DIRECT_ELIMINATION,
         ],
         weights=[40, 20, 20, 15, 5],
     )[0]
 
-    if prop_type == "person_and_attribute":
+    if prop_type == PROP_PERSON_AND_ATTRIBUTE:
         # Simple: "Joe was with cement" or "Joe was at the library"
         person = random.choice(game.names)
         attr_category = random.choice(["material", "institution", "food", "place"])
@@ -107,11 +108,16 @@ def generate_proposition(game: ClueGame) -> tuple[Any, str] | None:
             return None
 
         proposition = game.symbols_map[symbol_key]
-        description = f"{person} was with {actual_value}"
+        prop_data = PropositionData(
+            prop_type=PROP_PERSON_AND_ATTRIBUTE,
+            person=person,
+            attr_category=attr_category,
+            value=actual_value,
+        )
 
-        return (proposition, description)
+        return (proposition, prop_data)
 
-    elif prop_type == "person_or_person":
+    elif prop_type == PROP_PERSON_OR_PERSON:
         # "Either Joe was at library OR John was with cement"
         person1 = random.choice(game.names)
         person2 = random.choice([n for n in game.names if n != person1])
@@ -129,11 +135,19 @@ def generate_proposition(game: ClueGame) -> tuple[Any, str] | None:
             return None
 
         proposition = Or(sym1, sym2)
-        description = f"({person1} with {val1}) OR ({person2} with {val2})"
+        prop_data = PropositionData(
+            prop_type=PROP_PERSON_OR_PERSON,
+            person1=person1,
+            person2=person2,
+            attr1_cat=attr1_cat,
+            attr2_cat=attr2_cat,
+            val1=val1,
+            val2=val2,
+        )
 
-        return (proposition, description)
+        return (proposition, prop_data)
 
-    elif prop_type == "person_attribute_implies_not_killer":
+    elif prop_type == PROP_PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER:
         # "If Joe was at church, Joe is not the killer" (alibi)
         # Pick a non-killer to give an alibi to
         innocent_people = [n for n in game.names if n != game.killer]
@@ -152,11 +166,16 @@ def generate_proposition(game: ClueGame) -> tuple[Any, str] | None:
 
         # If person was with attribute, they're not the killer
         proposition = Implies(person_attr_sym, Not(killer_sym))
-        description = f"If {person} was with {val}, then {person} is not the killer"
+        prop_data = PropositionData(
+            prop_type=PROP_PERSON_ATTRIBUTE_IMPLIES_NOT_KILLER,
+            person=person,
+            attr_category=attr_cat,
+            value=val,
+        )
 
-        return (proposition, description)
+        return (proposition, prop_data)
 
-    elif prop_type == "complex_or":
+    elif prop_type == PROP_COMPLEX_OR:
         # Complex: "(Will and cement) OR (Joe and beer and library)"
         person1 = random.choice(game.names)
         person2 = random.choice([n for n in game.names if n != person1])
@@ -173,11 +192,18 @@ def generate_proposition(game: ClueGame) -> tuple[Any, str] | None:
             return None
 
         proposition = Or(sym1, And(sym2_food, sym2_inst))
-        description = f"({person1} with {mat1}) OR ({person2} with {food2} and {inst2})"
+        prop_data = PropositionData(
+            prop_type=PROP_COMPLEX_OR,
+            person1=person1,
+            person2=person2,
+            mat1=mat1,
+            food2=food2,
+            inst2=inst2,
+        )
 
-        return (proposition, description)
+        return (proposition, prop_data)
 
-    elif prop_type == "direct_elimination":
+    elif prop_type == PROP_DIRECT_ELIMINATION:
         # Directly eliminate someone who is not the killer
         # This helps the game converge by explicitly clearing innocents
         # OPTIMIZATION: Only target innocents who are still possible suspects
@@ -202,9 +228,14 @@ def generate_proposition(game: ClueGame) -> tuple[Any, str] | None:
 
         # Both: person was there AND if they were there, they're not the killer
         proposition = And(person_attr_sym, Implies(person_attr_sym, Not(killer_sym)))
-        description = f"{person} was with {val} (alibi: not the killer)"
+        prop_data = PropositionData(
+            prop_type=PROP_DIRECT_ELIMINATION,
+            person=person,
+            attr_category=attr_cat,
+            value=val,
+        )
 
-        return (proposition, description)
+        return (proposition, prop_data)
 
     return None
 
@@ -242,12 +273,12 @@ def generate_game_until_unique_solution(
         if prop is None:
             continue
 
-        proposition_expr, desc = prop
+        proposition_expr, prop_data = prop
 
         # Check if this proposition would make the problem infeasible
         if not is_feasible_with_proposition(game, proposition_expr):
             if verbose:
-                print(f"❌ Rejected (infeasible): {desc}")
+                print(f"❌ Rejected (infeasible): {render_proposition(prop_data)}")
             continue
 
         # Add to knowledge base (it's feasible)
@@ -256,7 +287,9 @@ def generate_game_until_unique_solution(
         propositions_generated += 1
 
         if verbose:
-            print(f"📜 Proposition {propositions_generated}: {desc}")
+            print(
+                f"📜 Proposition {propositions_generated}: {render_proposition(prop_data)}"
+            )
 
         # Check if we've narrowed it down to a unique solution
         try:

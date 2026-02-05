@@ -4,10 +4,10 @@ from clue_models import DEFAULT_CONFIG
 from generate_clue_game import (
     create_game,
     generate_game_until_unique_solution,
-    print_scenario,
     setup_scenario,
 )
 from solver import check_solution_count
+from ui import print_propositions, print_scenario
 
 
 def test_generate_and_solve_game():
@@ -22,6 +22,13 @@ def test_generate_and_solve_game():
     # Generate propositions until unique solution
     identified_killer = generate_game_until_unique_solution(game, verbose=True)
 
+    # Print the full game record
+    print("\n" + "=" * 60)
+    print("GAME RECORD")
+    print("=" * 60)
+    print_propositions(game, verbose=True)
+    print()
+
     # Verify the solution
     count, possible_killers = check_solution_count(game)
 
@@ -34,7 +41,7 @@ def test_generate_and_solve_game():
         f"Solver found {possible_killers[0]} but actual killer is {game.killer}"
     )
 
-    print("\n✅ Test passed: Unique solution found and verified!")
+    print("✅ Test passed: Unique solution found and verified!")
     return True
 
 
@@ -58,6 +65,9 @@ def test_batch_games(num_games: int = 10, seed_start: int = 0):
 
         # Generate propositions until unique solution
         identified_killer = generate_game_until_unique_solution(game, verbose=False)
+
+        # Print the propositions for this game
+        print_propositions(game, verbose=False)
 
         # Verify the solution
         count, possible_killers = check_solution_count(game)
