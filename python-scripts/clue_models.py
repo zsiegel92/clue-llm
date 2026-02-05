@@ -4,6 +4,16 @@ from typing import Any
 
 from pydantic import BaseModel, Field
 
+from single_token_strings import (
+    companies,
+    foods,
+    institutions,
+    materials,
+    names,
+    places,
+    technologies,
+)
+
 
 class PersonActivity(BaseModel):
     """Activities for a single person."""
@@ -58,13 +68,13 @@ class GameConfig(BaseModel):
     model_config = {"frozen": True}
 
 
-# Default game configuration
+# Default game configuration using subset of single-token strings
 DEFAULT_CONFIG = GameConfig(
-    names=["Joe", "John", "Bob", "Will"],
-    technologies=["Python", "Java", "Ruby"],
-    places=["China", "India", "France"],
-    companies=["Google", "Facebook", "Amazon", "Netflix"],
-    institutions=["church", "library", "court"],
-    foods=["pizza", "beer", "toast"],
-    materials=["wood", "cement", "glass"],
+    names=names[:4],  # Joe, John, Bob, Will
+    technologies=technologies[:3],  # Python, Java, Ruby
+    places=places[:3],  # China, India, France
+    companies=companies[:4],  # Google, Facebook, Amazon, Twitter
+    institutions=institutions[:3],  # government, company, system
+    foods=foods[:3],  # pizza, bread, fish
+    materials=materials[:3],  # wood, metal, steel
 )
