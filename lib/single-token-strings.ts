@@ -175,3 +175,23 @@ export const names = [
   "Susan",
   "May",
 ] as const;
+
+export const chineseLastNames = [
+  "Li",
+  "Chen",
+  "Yang",
+  "Wu",
+  "Xu",
+  "Sun",
+  "Ma",
+  "Hu",
+  "He",
+  "Lin",
+  "Song",
+  "Tang",
+  "Han",
+  "Peng",
+  "Dong",
+  "Pan",
+  "Yu",
+] as const;

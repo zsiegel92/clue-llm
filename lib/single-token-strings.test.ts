@@ -1,34 +1,37 @@
 import { encodingForModel, type TiktokenModel } from "js-tiktoken";
 import { describe, expect, it } from "vitest";
 import {
+  chineseLastNames,
   companies,
   foods,
   institutions,
   materials,
+  names,
   places,
   technologies,
-  names,
 } from "./single-token-strings";
 
 describe("single-token-strings", () => {
   const allStrings = [
-    ...technologies,
-    ...places,
+    ...chineseLastNames,
     ...companies,
-    ...institutions,
     ...foods,
+    ...institutions,
     ...materials,
     ...names,
+    ...places,
+    ...technologies,
   ];
 
   it("exports non-empty arrays", () => {
-    expect(technologies.length).toBeGreaterThan(0);
-    expect(places.length).toBeGreaterThan(0);
+    expect(chineseLastNames.length).toBeGreaterThan(0);
     expect(companies.length).toBeGreaterThan(0);
-    expect(institutions.length).toBeGreaterThan(0);
     expect(foods.length).toBeGreaterThan(0);
+    expect(institutions.length).toBeGreaterThan(0);
     expect(materials.length).toBeGreaterThan(0);
     expect(names.length).toBeGreaterThan(0);
+    expect(places.length).toBeGreaterThan(0);
+    expect(technologies.length).toBeGreaterThan(0);
   });
 
   it("exports unique strings", () => {
