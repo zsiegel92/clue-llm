@@ -86,11 +86,12 @@ export function StaticCodeBlock({
   const { runPython, stdout, stderr, isLoading, isRunning, isReady } =
     usePython({});
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: runPython is unstable and causes infinite re-renders
   useEffect(() => {
     if (isReady) {
       runPython(code);
     }
-  }, [code, isReady, runPython]);
+  }, [code, isReady]);
 
   const handleRerun = () => {
     if (isReady && !isLoading && !isRunning) {

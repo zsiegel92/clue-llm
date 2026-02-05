@@ -61,7 +61,7 @@ export async function ServerPythonProvidedStaticMultiFileCodeBlock({
   const files: CodeFile[] = await Promise.all(
     filePaths.map(async (filePath) => {
       let content = await fs.readFile(filePath, "utf8");
-      let name = filePath.replace(/^python-scripts\//, "");
+      const name = filePath.replace(/^python-scripts\//, "");
 
       // Special handling for single_token_strings.py to work in pyodide
       if (name === "single_token_strings.py") {
