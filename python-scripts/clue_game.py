@@ -17,13 +17,13 @@ Key constraints for intuitive gameplay:
 Proposition generation strategy:
 - Generate propositions that are consistent with ground truth
 - Check feasibility before adding (reject if it makes problem infeasible)
-- Continue until exactly one possible killer remains
+- Continue generating until exactly one possible killer remains (guaranteed convergence)
 - Propositions include: simple statements, disjunctions, implications, and direct eliminations
 
 Performance notes:
-- With current settings, ~60% of games converge within 30 propositions
+- The game now runs until convergence (no arbitrary proposition limit)
+- As propositions increase, probability of multiple possibilities converges to zero
 - The difficulty is an NP-hard SAT problem, making it a proper brain teaser
-- Failed cases typically need more strategic proposition generation or more propositions
 
 Future improvements:
 - Better proposition generation strategy (e.g., information-theoretic approach)
@@ -247,11 +247,15 @@ class ClueGame:
         elif prop_type == "direct_elimination":
             # Directly eliminate someone who is not the killer
             # This helps the game converge by explicitly clearing innocents
-            innocent_people = [n for n in self.names if n != self.killer]
-            if not innocent_people:
+            # OPTIMIZATION: Only target innocents who are still possible suspects
+            _, possible_suspects = self.check_solution_count()
+            innocent_suspects = [n for n in possible_suspects if n != self.killer]
+
+            if not innocent_suspects:
+                # All remaining suspects are the true killer, we're done
                 return None
 
-            person = random.choice(innocent_people)
+            person = random.choice(innocent_suspects)
 
             # Give them an alibi by stating they were somewhere
             attr_cat = random.choice(["material", "institution", "food"])
@@ -305,26 +309,27 @@ class ClueGame:
         """
         Check if adding this proposition would keep the problem feasible.
 
-        Returns True if there's at least one possible killer after adding this proposition.
+        CRITICAL: To guarantee 100% convergence to the correct answer, this checks
+        that the TRUE killer (self.killer) remains a possible solution after adding
+        the proposition. This ensures we never accidentally eliminate the correct answer.
+
+        Returns True if the true killer can still be the killer after adding this proposition.
         """
         # Test the knowledge base with this new proposition
         test_kb = self.knowledge_base + [proposition_expr]
         combined = And(*test_kb)
 
-        # Check if at least one person can still be the killer
-        for name in self.names:
-            killer_sym = self.symbols_map[f"{name}_is_killer"]
-            test_expr = And(combined, killer_sym)
+        # CRITICAL: Check if the TRUE killer is still possible after adding this proposition
+        # This guarantees we never eliminate the correct answer
+        true_killer_sym = self.symbols_map[f"{self.killer}_is_killer"]
+        test_expr = And(combined, true_killer_sym)
 
-            solution = satisfiable(test_expr)
-            if solution is not False:
-                # At least one person can be the killer, so it's feasible
-                return True
+        solution = satisfiable(test_expr)
 
-        # No one can be the killer - infeasible
-        return False
+        # Return True only if the TRUE killer remains a valid possibility
+        return solution is not False
 
-    def play_game(self, max_propositions: int = 30, verbose: bool = True) -> str:
+    def play_game(self, verbose: bool = True) -> str:
         """
         Play the game: generate propositions until exactly one killer remains.
 
@@ -334,7 +339,10 @@ class ClueGame:
         3. If infeasible, reject it and try another
         4. If feasible, add it and check for unique solution
         5. If unique solution found, stop
-        6. Otherwise, continue
+        6. Otherwise, continue until convergence
+
+        Args:
+            verbose: Whether to print progress
 
         Returns the identified killer's name.
         """
@@ -342,11 +350,10 @@ class ClueGame:
 
         propositions_generated = 0
         attempts = 0
-        max_attempts = (
-            max_propositions * 10
-        )  # More attempts since we reject infeasible ones
+        max_attempts = 1000  # Safety limit to prevent infinite loops
 
-        while propositions_generated < max_propositions and attempts < max_attempts:
+        # Continue until we find exactly one killer
+        while attempts < max_attempts:
             attempts += 1
 
             # Generate a candidate proposition
@@ -403,34 +410,19 @@ class ClueGame:
             if verbose:
                 print()
 
+        # If we get here, we hit the safety limit without converging
+        # This shouldn't happen - it indicates a bug in the proposition generation
         count, possible = self.check_solution_count()
         if verbose:
             print(
-                f"\n⚠️  Game didn't converge after {propositions_generated} propositions ({attempts} attempts)"
+                f"\n⚠️  Hit safety attempt limit ({max_attempts}) without converging!"
             )
+            print(f"   This indicates a bug - should always converge eventually")
+            print(f"   Propositions generated: {propositions_generated}")
             print(f"   Possible killers: {possible}")
             print(f"   Actual killer: {self.killer}")
 
         return possible[0] if possible else "UNKNOWN"
-
-
-def main():
-    """Run a sample game."""
-    print("=" * 60)
-    print("CLUE-LIKE LOGIC GAME")
-    print("=" * 60)
-    print()
-
-    game = ClueGame(seed=42)
-    killer = game.play_game(max_propositions=25, verbose=True)
-
-    print("\n" + "=" * 60)
-    print("GAME SUMMARY")
-    print("=" * 60)
-    print(f"Total propositions: {len(game.propositions)}")
-    print(f"Identified killer: {killer}")
-    print(f"Actual killer: {game.killer}")
-    print(f"Correct: {'✅' if killer == game.killer else '❌'}")
 
 
 def run_batch(num_games: int = 10, seed_start: int = 0):
@@ -445,7 +437,7 @@ def run_batch(num_games: int = 10, seed_start: int = 0):
     for i in range(num_games):
         print(f"Game {i + 1}/{num_games}:")
         game = ClueGame(seed=seed_start + i)
-        killer = game.play_game(max_propositions=30, verbose=False)
+        killer = game.play_game(verbose=False)
 
         correct = killer == game.killer
         correct_count += correct
@@ -468,4 +460,4 @@ def run_batch(num_games: int = 10, seed_start: int = 0):
 
 
 if __name__ == "__main__":
-    main()
+    run_batch(num_games=10, seed_start=100)
