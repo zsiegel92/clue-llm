@@ -1,5 +1,6 @@
-import { openai, type OpenAIChatLanguageModelOptions } from "@ai-sdk/openai";
+import { type OpenAIChatLanguageModelOptions, openai } from "@ai-sdk/openai";
 import { generateText, Output } from "ai";
+import PQueue from "p-queue";
 import { z } from "zod";
 import {
   getLogProbsFromGenerateTextResponse,
@@ -7,7 +8,7 @@ import {
 } from "./logprob-utils";
 import type { OpenAIModelThatGivesLogProbs, SerializedGame } from "./schemas";
 import { gameToPrompt } from "./ui";
-import PQueue from "p-queue";
+
 /**
  * Number of few-shot examples to include in the prompt.
  * Experiments show 3 examples provides optimal performance.
