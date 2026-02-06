@@ -7,11 +7,11 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
-import PQueue from "p-queue";
 import { clueTestCases } from "../lib/clue-test-cases";
 import {
   type OpenAIModelThatGivesLogProbs,
   propositionsToPredictedName,
+  queue,
 } from "../lib/predict";
 import type { PredictedTestCase } from "../lib/schemas";
 
@@ -19,14 +19,6 @@ const model: OpenAIModelThatGivesLogProbs = "gpt-4.1-nano";
 
 // Process all test cases
 const testCasesToProcess = clueTestCases;
-
-// Rate limit: 100 requests per minute for enterprise accounts
-// Using concurrency of 10 with interval of 6000ms = 100 req/min
-const queue = new PQueue({
-  concurrency: 10,
-  interval: 6000,
-  intervalCap: 10,
-});
 
 async function processSingleTestCase(
   game: (typeof clueTestCases)[number],

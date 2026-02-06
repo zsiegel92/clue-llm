@@ -7,12 +7,22 @@ import {
 } from "./logprob-utils";
 import type { OpenAIModelThatGivesLogProbs, SerializedGame } from "./schemas";
 import { gameToPrompt } from "./ui";
-
+import PQueue from "p-queue";
 /**
  * Number of few-shot examples to include in the prompt.
  * Experiments show 3 examples provides optimal performance.
  */
 const NUMBER_OF_FEWSHOT_EXAMPLES_TO_INCLUDE = 0;
+
+const CONCURRENCY_MAX = 10;
+const RATE_LIMIT_WINDOW = 15_000;
+const RATE_LIMIT_NUMBER_ALLOWED = 50;
+
+export const queue = new PQueue({
+  concurrency: CONCURRENCY_MAX,
+  interval: RATE_LIMIT_WINDOW,
+  intervalCap: RATE_LIMIT_NUMBER_ALLOWED,
+});
 
 /**
  * Schema for the LLM output when predicting the killer

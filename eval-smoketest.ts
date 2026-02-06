@@ -1,13 +1,9 @@
-import PQueue from "p-queue";
 import { clueTestCases } from "./lib/clue-test-cases";
 import type { OpenAIModelThatGivesLogProbs } from "./lib/predict";
-import { propositionsToPredictedName } from "./lib/predict";
+import { propositionsToPredictedName, queue } from "./lib/predict";
 
 const NUMBER_EXAMPLES_TO_EVAL = 50;
 const MODEL_TO_EVAL: OpenAIModelThatGivesLogProbs = "gpt-4.1-nano";
-const CONCURRENCY_MAX = 10;
-const RATE_LIMIT_WINDOW = 30000; // 1 minute in milliseconds
-const RATE_LIMIT_NUMBER_ALLOWED = 50;
 
 async function runEval() {
   // Use first NUMBER_EXAMPLES_TO_EVAL test cases
@@ -19,11 +15,6 @@ async function runEval() {
   console.log(`Running eval on ${total} test cases...\n`);
 
   // Create queue with concurrency and rate limiting
-  const queue = new PQueue({
-    concurrency: CONCURRENCY_MAX,
-    interval: RATE_LIMIT_WINDOW,
-    intervalCap: RATE_LIMIT_NUMBER_ALLOWED,
-  });
 
   // Create tasks for all test cases
   const tasks = testCases.map((testCase, i) =>
