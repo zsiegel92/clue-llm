@@ -36,6 +36,8 @@ DISJUNCTIONS (OR statements):
 4. The remaining person with NO alibis is the killer
 
 **Critical:** Every suspect except ONE will have at least one alibi. Find the person who has ZERO alibis.
+
+Think carefully and work through each proposition systematically before deciding.
 `.trim();
 
 /**
