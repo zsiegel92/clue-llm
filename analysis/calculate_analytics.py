@@ -6,7 +6,6 @@ from pathlib import Path
 from typing import Any
 
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 
 
 def load_predictions(json_path: Path) -> list[dict[str, Any]]:
@@ -84,33 +83,9 @@ def calculate_statistics(predictions: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
-    """Create HTML visualization with all statistics."""
-    # Create subplots
-    fig = make_subplots(
-        rows=4,
-        cols=2,
-        subplot_titles=(
-            "Average Confidence: Accurate vs Inaccurate",
-            "Calibration Curve: Predicted vs Actual",
-            "Accuracy Rate by Confidence Bin",
-            "Confidence Distribution by Accuracy",
-            "Accuracy by Number of Propositions",
-            "Confidence vs Number of Propositions",
-            "Confidence vs Propositions (Accurate)",
-            "Confidence vs Propositions (Inaccurate)",
-        ),
-        specs=[
-            [{"type": "bar"}, {"type": "scatter"}],
-            [{"type": "bar"}, {"type": "box"}],
-            [{"type": "bar"}, {"type": "scatter"}],
-            [{"type": "scatter"}, {"type": "scatter"}],
-        ],
-        vertical_spacing=0.1,
-        horizontal_spacing=0.15,
-    )
-
-    # 1. Average Confidence Bar Chart
+def create_avg_confidence_chart(stats: dict[str, Any], output_dir: Path) -> str:
+    """Create average confidence bar chart."""
+    fig = go.Figure()
     fig.add_trace(
         go.Bar(
             x=["Accurate", "Inaccurate"],
@@ -122,16 +97,29 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
             textposition="auto",
             marker_color=["green", "red"],
             name="Avg Confidence",
-        ),
-        row=1,
-        col=1,
+        )
+    )
+    fig.update_layout(
+        title="Average Confidence: Accurate vs Inaccurate",
+        yaxis_title="Confidence",
+        height=400,
+        showlegend=True,
     )
 
-    # 2. Calibration Curve
-    bin_labels = [f"{i * 10}-{(i + 1) * 10}%" for i in range(10)]
+    # Save individual files
+    fig.write_html(output_dir / "avg_confidence.html")
+    fig.write_image(output_dir / "avg_confidence.png")
+
+    return fig.to_html(full_html=False, include_plotlyjs=False)
+
+
+def create_calibration_curve(stats: dict[str, Any], output_dir: Path) -> str:
+    """Create calibration curve showing predicted vs actual accuracy."""
     bin_accuracies = [stats["bin_accuracy"][i] for i in range(10)]
     bin_totals = [stats["confidence_bins"][i]["total"] for i in range(10)]
     bin_midpoints = [(i * 10 + (i + 1) * 10) / 2 / 100 for i in range(10)]
+
+    fig = go.Figure()
 
     # Perfect calibration line
     fig.add_trace(
@@ -141,10 +129,7 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
             mode="lines",
             line=dict(color="gray", dash="dash", width=2),
             name="Perfect Calibration",
-            showlegend=True,
-        ),
-        row=1,
-        col=2,
+        )
     )
 
     # Actual calibration
@@ -158,12 +143,31 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
             name="Actual",
             text=[f"n={total}" for total in bin_totals],
             hovertemplate="Confidence: %{x:.1%}<br>Accuracy: %{y:.1%}<br>%{text}<extra></extra>",
-        ),
-        row=1,
-        col=2,
+        )
     )
 
-    # 3. Accuracy Rate by Confidence Bin
+    fig.update_layout(
+        title="Calibration Curve: Predicted vs Actual",
+        xaxis_title="Predicted Confidence",
+        yaxis_title="Actual Accuracy",
+        height=400,
+        showlegend=True,
+    )
+
+    # Save individual files
+    fig.write_html(output_dir / "calibration_curve.html")
+    fig.write_image(output_dir / "calibration_curve.png")
+
+    return fig.to_html(full_html=False, include_plotlyjs=False)
+
+
+def create_accuracy_by_confidence_bin(stats: dict[str, Any], output_dir: Path) -> str:
+    """Create bar chart of accuracy rate by confidence bin."""
+    bin_labels = [f"{i * 10}-{(i + 1) * 10}%" for i in range(10)]
+    bin_accuracies = [stats["bin_accuracy"][i] for i in range(10)]
+    bin_totals = [stats["confidence_bins"][i]["total"] for i in range(10)]
+
+    fig = go.Figure()
     fig.add_trace(
         go.Bar(
             x=bin_labels,
@@ -175,12 +179,26 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
             textposition="auto",
             marker_color="blue",
             name="Accuracy Rate",
-        ),
-        row=2,
-        col=1,
+        )
     )
 
-    # 4. Confidence Distribution Box Plot
+    fig.update_layout(
+        title="Accuracy Rate by Confidence Bin",
+        xaxis_title="Confidence Bin",
+        yaxis_title="Accuracy Rate",
+        height=400,
+        showlegend=True,
+    )
+
+    # Save individual files
+    fig.write_html(output_dir / "accuracy_by_confidence_bin.html")
+    fig.write_image(output_dir / "accuracy_by_confidence_bin.png")
+
+    return fig.to_html(full_html=False, include_plotlyjs=False)
+
+
+def create_confidence_distribution(stats: dict[str, Any], output_dir: Path) -> str:
+    """Create box plot showing confidence distribution by accuracy."""
     accurate_confidences = [
         d["confidence"] for d in stats["props_vs_confidence"] if d["is_correct"]
     ]
@@ -188,14 +206,13 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
         d["confidence"] for d in stats["props_vs_confidence"] if not d["is_correct"]
     ]
 
+    fig = go.Figure()
     fig.add_trace(
         go.Box(
             y=accurate_confidences,
             name="Accurate",
             marker_color="green",
-        ),
-        row=2,
-        col=2,
+        )
     )
 
     fig.add_trace(
@@ -203,14 +220,27 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
             y=inaccurate_confidences,
             name="Inaccurate",
             marker_color="red",
-        ),
-        row=2,
-        col=2,
+        )
     )
 
-    # 5. Accuracy by Number of Propositions
+    fig.update_layout(
+        title="Confidence Distribution by Accuracy",
+        yaxis_title="Confidence",
+        height=400,
+        showlegend=True,
+    )
+
+    # Save individual files
+    fig.write_html(output_dir / "confidence_distribution.html")
+    fig.write_image(output_dir / "confidence_distribution.png")
+
+    return fig.to_html(full_html=False, include_plotlyjs=False)
+
+
+def create_accuracy_by_propositions(stats: dict[str, Any], output_dir: Path) -> str:
+    """Create bar chart of accuracy rate by number of propositions."""
     # Bin by tens of propositions
-    props_bins = {}
+    props_bins: dict[int, dict[str, int]] = {}
     for d in stats["props_vs_confidence"]:
         n = d["num_props"]
         # Bin into 0-10, 10-20, etc.
@@ -229,6 +259,7 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
     ]
     totals = [props_bins[i]["total"] for i in sorted_bin_indices]
 
+    fig = go.Figure()
     fig.add_trace(
         go.Bar(
             x=bin_labels,
@@ -239,15 +270,32 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
             textposition="auto",
             marker_color="purple",
             name="Accuracy Rate",
-        ),
-        row=3,
-        col=1,
+        )
     )
 
-    # 6. Confidence vs Number of Propositions (all data)
+    fig.update_layout(
+        title="Accuracy by Number of Propositions",
+        xaxis_title="Number of Propositions",
+        yaxis_title="Accuracy Rate",
+        height=400,
+        showlegend=True,
+    )
+
+    # Save individual files
+    fig.write_html(output_dir / "accuracy_by_propositions.html")
+    fig.write_image(output_dir / "accuracy_by_propositions.png")
+
+    return fig.to_html(full_html=False, include_plotlyjs=False)
+
+
+def create_confidence_vs_propositions_all(
+    stats: dict[str, Any], output_dir: Path
+) -> str:
+    """Create scatter plot of confidence vs propositions for all predictions."""
     all_props = [d["num_props"] for d in stats["props_vs_confidence"]]
     all_confs = [d["confidence"] for d in stats["props_vs_confidence"]]
 
+    fig = go.Figure()
     fig.add_trace(
         go.Scatter(
             x=all_props,
@@ -256,12 +304,28 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
             marker=dict(color="blue", size=4, opacity=0.4),
             name="All Predictions",
             hovertemplate="Propositions: %{x}<br>Confidence: %{y:.3f}<extra></extra>",
-        ),
-        row=3,
-        col=2,
+        )
     )
 
-    # 7. Confidence vs Propositions (accurate only)
+    fig.update_layout(
+        title="Confidence vs Number of Propositions",
+        xaxis_title="Number of Propositions",
+        yaxis_title="Confidence",
+        height=400,
+        showlegend=True,
+    )
+
+    # Save individual files
+    fig.write_html(output_dir / "confidence_vs_propositions_all.html")
+    fig.write_image(output_dir / "confidence_vs_propositions_all.png")
+
+    return fig.to_html(full_html=False, include_plotlyjs=False)
+
+
+def create_confidence_vs_propositions_accurate(
+    stats: dict[str, Any], output_dir: Path
+) -> str:
+    """Create scatter plot of confidence vs propositions for accurate predictions."""
     accurate_props = [
         d["num_props"] for d in stats["props_vs_confidence"] if d["is_correct"]
     ]
@@ -269,6 +333,7 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
         d["confidence"] for d in stats["props_vs_confidence"] if d["is_correct"]
     ]
 
+    fig = go.Figure()
     fig.add_trace(
         go.Scatter(
             x=accurate_props,
@@ -277,12 +342,28 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
             marker=dict(color="green", size=5, opacity=0.6),
             name="Accurate",
             hovertemplate="Propositions: %{x}<br>Confidence: %{y:.3f}<extra></extra>",
-        ),
-        row=4,
-        col=1,
+        )
     )
 
-    # 8. Confidence vs Propositions (inaccurate only)
+    fig.update_layout(
+        title="Confidence vs Propositions (Accurate)",
+        xaxis_title="Number of Propositions",
+        yaxis_title="Confidence",
+        height=400,
+        showlegend=True,
+    )
+
+    # Save individual files
+    fig.write_html(output_dir / "confidence_vs_propositions_accurate.html")
+    fig.write_image(output_dir / "confidence_vs_propositions_accurate.png")
+
+    return fig.to_html(full_html=False, include_plotlyjs=False)
+
+
+def create_confidence_vs_propositions_inaccurate(
+    stats: dict[str, Any], output_dir: Path
+) -> str:
+    """Create scatter plot of confidence vs propositions for inaccurate predictions."""
     inaccurate_props = [
         d["num_props"] for d in stats["props_vs_confidence"] if not d["is_correct"]
     ]
@@ -290,6 +371,7 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
         d["confidence"] for d in stats["props_vs_confidence"] if not d["is_correct"]
     ]
 
+    fig = go.Figure()
     fig.add_trace(
         go.Scatter(
             x=inaccurate_props,
@@ -298,54 +380,127 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
             marker=dict(color="red", size=5, opacity=0.6),
             name="Inaccurate",
             hovertemplate="Propositions: %{x}<br>Confidence: %{y:.3f}<extra></extra>",
-        ),
-        row=4,
-        col=2,
+        )
     )
 
-    # Update layout
-    overall_accuracy = stats["total_accurate"] / stats["total_predictions"]
     fig.update_layout(
-        height=1800,
-        title_text=f"Clue Prediction Analytics<br>"
-        f"<sub>Total: {stats['total_predictions']} predictions | "
-        f"Accuracy: {overall_accuracy:.1%} ({stats['total_accurate']} correct, {stats['total_inaccurate']} incorrect) | "
-        f"Avg Confidence Δ: {stats['avg_confidence_accurate'] - stats['avg_confidence_inaccurate']:+.4f}</sub>",
+        title="Confidence vs Propositions (Inaccurate)",
+        xaxis_title="Number of Propositions",
+        yaxis_title="Confidence",
+        height=400,
         showlegend=True,
     )
 
-    # Update axes labels
-    fig.update_yaxes(title_text="Confidence", row=1, col=1)
-    fig.update_yaxes(title_text="Actual Accuracy", row=1, col=2)
-    fig.update_xaxes(title_text="Predicted Confidence", row=1, col=2)
+    # Save individual files
+    fig.write_html(output_dir / "confidence_vs_propositions_inaccurate.html")
+    fig.write_image(output_dir / "confidence_vs_propositions_inaccurate.png")
 
-    fig.update_xaxes(title_text="Confidence Bin", row=2, col=1)
-    fig.update_yaxes(title_text="Accuracy Rate", row=2, col=1)
-    fig.update_yaxes(title_text="Confidence", row=2, col=2)
+    return fig.to_html(full_html=False, include_plotlyjs=False)
 
-    fig.update_xaxes(title_text="Number of Propositions", row=3, col=1)
-    fig.update_yaxes(title_text="Accuracy Rate", row=3, col=1)
-    fig.update_xaxes(title_text="Number of Propositions", row=3, col=2)
-    fig.update_yaxes(title_text="Confidence", row=3, col=2)
 
-    fig.update_xaxes(title_text="Number of Propositions", row=4, col=1)
-    fig.update_yaxes(title_text="Confidence", row=4, col=1)
-    fig.update_xaxes(title_text="Number of Propositions", row=4, col=2)
-    fig.update_yaxes(title_text="Confidence", row=4, col=2)
+def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
+    """Create HTML visualization with all statistics."""
+    # Get output directory for individual chart files
+    output_dir = output_path.parent
 
-    # Save HTML
-    fig.write_html(output_path)
+    # Generate all chart HTML (also saves individual files)
+    chart1 = create_avg_confidence_chart(stats, output_dir)
+    chart2 = create_calibration_curve(stats, output_dir)
+    chart3 = create_accuracy_by_confidence_bin(stats, output_dir)
+    chart4 = create_confidence_distribution(stats, output_dir)
+    chart5 = create_accuracy_by_propositions(stats, output_dir)
+    chart6 = create_confidence_vs_propositions_all(stats, output_dir)
+    chart7 = create_confidence_vs_propositions_accurate(stats, output_dir)
+    chart8 = create_confidence_vs_propositions_inaccurate(stats, output_dir)
+
+    # Calculate summary statistics
+    overall_accuracy = stats["total_accurate"] / stats["total_predictions"]
+
+    # Create complete HTML page
+    html_content = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Clue Prediction Analytics</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }}
+        h1 {{
+            text-align: center;
+            color: #333;
+        }}
+        .subtitle {{
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }}
+        .chart-container {{
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+        .charts-grid {{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }}
+        @media (max-width: 1200px) {{
+            .charts-grid {{
+                grid-template-columns: 1fr;
+            }}
+        }}
+    </style>
+</head>
+<body>
+    <h1>Clue Prediction Analytics</h1>
+    <div class="subtitle">
+        <strong>Total:</strong> {stats["total_predictions"]} predictions |
+        <strong>Accuracy:</strong> {overall_accuracy:.1%} ({stats["total_accurate"]} correct, {stats["total_inaccurate"]} incorrect) |
+        <strong>Avg Confidence Δ:</strong> {stats["avg_confidence_accurate"] - stats["avg_confidence_inaccurate"]:+.4f}
+    </div>
+
+    <div class="charts-grid">
+        <div class="chart-container">{chart1}</div>
+        <div class="chart-container">{chart2}</div>
+        <div class="chart-container">{chart3}</div>
+        <div class="chart-container">{chart4}</div>
+        <div class="chart-container">{chart5}</div>
+        <div class="chart-container">{chart6}</div>
+        <div class="chart-container">{chart7}</div>
+        <div class="chart-container">{chart8}</div>
+    </div>
+</body>
+</html>
+"""
+
+    # Write HTML file
+    with open(output_path, "w") as f:
+        f.write(html_content)
+
     print(f"Visualization saved to {output_path}")
 
     # Calculate additional statistics
+    import statistics
+
+    accurate_confidences = [
+        d["confidence"] for d in stats["props_vs_confidence"] if d["is_correct"]
+    ]
+    inaccurate_confidences = [
+        d["confidence"] for d in stats["props_vs_confidence"] if not d["is_correct"]
+    ]
     accurate_props = [
         d["num_props"] for d in stats["props_vs_confidence"] if d["is_correct"]
     ]
     inaccurate_props = [
         d["num_props"] for d in stats["props_vs_confidence"] if not d["is_correct"]
     ]
-
-    import statistics
 
     median_conf_accurate = statistics.median(accurate_confidences)
     median_conf_inaccurate = statistics.median(inaccurate_confidences)
