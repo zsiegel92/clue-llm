@@ -17,7 +17,7 @@
     "python:format": "uv run ruff format --check",
     "python:format-fix": "uv run ruff format",
     "test:python": "uv run python python-scripts/test_clue_game.py",
-    "calculate-analytics": "uv run python analysis/calculate_analytics.py",
+    "calculate-analytics": "uv run python python-scripts/calculate_analytics.py",
     "generate-fine-tune-datasets": "pnpm run script scripts/generate-fine-tune-datasets.ts"
   },
   "dependencies": {

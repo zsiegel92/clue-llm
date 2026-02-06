@@ -3,36 +3,104 @@
 
 import json
 from pathlib import Path
-from typing import Any
 
 import plotly.graph_objects as go
+from pydantic import BaseModel, TypeAdapter
+
+from generate_serialized_game import SerializedGame
 
 
-def load_predictions(json_path: Path) -> list[dict[str, Any]]:
-    """Load predictions from JSON file."""
+class PredictionMetadata(BaseModel):
+    """Metadata for a prediction."""
+
+    model: str
+
+    model_config = {"frozen": True}
+
+
+class PredictionData(BaseModel):
+    """Prediction result data."""
+
+    prediction: str
+    correctness: bool
+    confidence: float
+    metadata: PredictionMetadata
+
+    model_config = {"frozen": True}
+
+
+class PredictionEntry(BaseModel):
+    """Complete prediction entry with game and prediction data."""
+
+    game: SerializedGame
+    predictionData: PredictionData
+
+    model_config = {"frozen": True}
+
+
+class ConfidenceBin(BaseModel):
+    """Confidence bin statistics."""
+
+    correct: int = 0
+    total: int = 0
+
+
+class PropsVsConfidence(BaseModel):
+    """Data point for propositions vs confidence analysis."""
+
+    num_props: int
+    confidence: float
+    is_correct: bool
+
+    model_config = {"frozen": True}
+
+
+class Statistics(BaseModel):
+    """Calculated statistics from predictions."""
+
+    avg_confidence_accurate: float
+    avg_confidence_inaccurate: float
+    confidence_bins: dict[int, ConfidenceBin]
+    bin_accuracy: dict[int, float]
+    props_vs_confidence: list[PropsVsConfidence]
+    total_predictions: int
+    total_accurate: int
+    total_inaccurate: int
+
+    model_config = {"arbitrary_types_allowed": True}
+
+
+def load_predictions(json_path: Path) -> list[PredictionEntry]:
+    """Load and validate predictions from JSON file."""
     with open(json_path) as f:
-        return json.load(f)
+        raw_data = json.load(f)
+
+    # Validate data with Pydantic
+    adapter = TypeAdapter(list[PredictionEntry])
+    return adapter.validate_python(raw_data)
 
 
-def calculate_statistics(predictions: list[dict[str, Any]]) -> dict[str, Any]:
+def calculate_statistics(predictions: list[PredictionEntry]) -> Statistics:
     """Calculate statistics from prediction data."""
     # Separate accurate and inaccurate predictions
-    accurate_preds = []
-    inaccurate_preds = []
+    accurate_preds: list[float] = []
+    inaccurate_preds: list[float] = []
 
     # Confidence bins (0-10%, 10-20%, etc.)
-    confidence_bins = {i: {"correct": 0, "total": 0} for i in range(10)}
+    confidence_bins: dict[int, ConfidenceBin] = {
+        i: ConfidenceBin(correct=0, total=0) for i in range(10)
+    }
 
     # Track confidence vs number of propositions
-    props_vs_confidence = []
+    props_vs_confidence: list[PropsVsConfidence] = []
 
     for entry in predictions:
-        pred_data = entry["predictionData"]
-        game_data = entry["game"]
+        pred_data = entry.predictionData
+        game_data = entry.game
 
-        confidence = pred_data["confidence"]
-        is_correct = pred_data["correctness"]
-        num_propositions = len(game_data["propositions"])
+        confidence = pred_data.confidence
+        is_correct = pred_data.correctness
+        num_propositions = len(game_data.propositions)
 
         # Separate by accuracy
         if is_correct:
@@ -42,17 +110,17 @@ def calculate_statistics(predictions: list[dict[str, Any]]) -> dict[str, Any]:
 
         # Bin by confidence (0-10%, 10-20%, etc.)
         bin_idx = min(int(confidence * 10), 9)
-        confidence_bins[bin_idx]["total"] += 1
+        confidence_bins[bin_idx].total += 1
         if is_correct:
-            confidence_bins[bin_idx]["correct"] += 1
+            confidence_bins[bin_idx].correct += 1
 
         # Track propositions vs confidence and accuracy
         props_vs_confidence.append(
-            {
-                "num_props": num_propositions,
-                "confidence": confidence,
-                "is_correct": is_correct,
-            }
+            PropsVsConfidence(
+                num_props=num_propositions,
+                confidence=confidence,
+                is_correct=is_correct,
+            )
         )
 
     # Calculate average confidence
@@ -64,35 +132,35 @@ def calculate_statistics(predictions: list[dict[str, Any]]) -> dict[str, Any]:
     )
 
     # Calculate accuracy rates by confidence bin
-    bin_accuracy = {}
+    bin_accuracy: dict[int, float] = {}
     for bin_idx, data in confidence_bins.items():
-        if data["total"] > 0:
-            bin_accuracy[bin_idx] = data["correct"] / data["total"]
+        if data.total > 0:
+            bin_accuracy[bin_idx] = data.correct / data.total
         else:
             bin_accuracy[bin_idx] = 0
 
-    return {
-        "avg_confidence_accurate": avg_confidence_accurate,
-        "avg_confidence_inaccurate": avg_confidence_inaccurate,
-        "confidence_bins": confidence_bins,
-        "bin_accuracy": bin_accuracy,
-        "props_vs_confidence": props_vs_confidence,
-        "total_predictions": len(predictions),
-        "total_accurate": len(accurate_preds),
-        "total_inaccurate": len(inaccurate_preds),
-    }
+    return Statistics(
+        avg_confidence_accurate=avg_confidence_accurate,
+        avg_confidence_inaccurate=avg_confidence_inaccurate,
+        confidence_bins=confidence_bins,
+        bin_accuracy=bin_accuracy,
+        props_vs_confidence=props_vs_confidence,
+        total_predictions=len(predictions),
+        total_accurate=len(accurate_preds),
+        total_inaccurate=len(inaccurate_preds),
+    )
 
 
-def create_avg_confidence_chart(stats: dict[str, Any], output_dir: Path) -> str:
+def create_avg_confidence_chart(stats: Statistics, output_dir: Path) -> str:
     """Create average confidence bar chart."""
     fig = go.Figure()
     fig.add_trace(
         go.Bar(
             x=["Accurate", "Inaccurate"],
-            y=[stats["avg_confidence_accurate"], stats["avg_confidence_inaccurate"]],
+            y=[stats.avg_confidence_accurate, stats.avg_confidence_inaccurate],
             text=[
-                f"{stats['avg_confidence_accurate']:.3f}",
-                f"{stats['avg_confidence_inaccurate']:.3f}",
+                f"{stats.avg_confidence_accurate:.3f}",
+                f"{stats.avg_confidence_inaccurate:.3f}",
             ],
             textposition="auto",
             marker_color=["green", "red"],
@@ -113,10 +181,10 @@ def create_avg_confidence_chart(stats: dict[str, Any], output_dir: Path) -> str:
     return fig.to_html(full_html=False, include_plotlyjs=False)
 
 
-def create_calibration_curve(stats: dict[str, Any], output_dir: Path) -> str:
+def create_calibration_curve(stats: Statistics, output_dir: Path) -> str:
     """Create calibration curve showing predicted vs actual accuracy."""
-    bin_accuracies = [stats["bin_accuracy"][i] for i in range(10)]
-    bin_totals = [stats["confidence_bins"][i]["total"] for i in range(10)]
+    bin_accuracies = [stats.bin_accuracy[i] for i in range(10)]
+    bin_totals = [stats.confidence_bins[i].total for i in range(10)]
     bin_midpoints = [(i * 10 + (i + 1) * 10) / 2 / 100 for i in range(10)]
 
     fig = go.Figure()
@@ -150,11 +218,11 @@ def create_calibration_curve(stats: dict[str, Any], output_dir: Path) -> str:
     return fig.to_html(full_html=False, include_plotlyjs=False)
 
 
-def create_accuracy_by_confidence_bin(stats: dict[str, Any], output_dir: Path) -> str:
+def create_accuracy_by_confidence_bin(stats: Statistics, output_dir: Path) -> str:
     """Create bar chart of accuracy rate by confidence bin."""
     bin_labels = [f"{i * 10}-{(i + 1) * 10}%" for i in range(10)]
-    bin_accuracies = [stats["bin_accuracy"][i] for i in range(10)]
-    bin_totals = [stats["confidence_bins"][i]["total"] for i in range(10)]
+    bin_accuracies = [stats.bin_accuracy[i] for i in range(10)]
+    bin_totals = [stats.confidence_bins[i].total for i in range(10)]
 
     fig = go.Figure()
     fig.add_trace(
@@ -186,13 +254,13 @@ def create_accuracy_by_confidence_bin(stats: dict[str, Any], output_dir: Path) -
     return fig.to_html(full_html=False, include_plotlyjs=False)
 
 
-def create_confidence_distribution(stats: dict[str, Any], output_dir: Path) -> str:
+def create_confidence_distribution(stats: Statistics, output_dir: Path) -> str:
     """Create box plot showing confidence distribution by accuracy."""
     accurate_confidences = [
-        d["confidence"] for d in stats["props_vs_confidence"] if d["is_correct"]
+        d.confidence for d in stats.props_vs_confidence if d.is_correct
     ]
     inaccurate_confidences = [
-        d["confidence"] for d in stats["props_vs_confidence"] if not d["is_correct"]
+        d.confidence for d in stats.props_vs_confidence if not d.is_correct
     ]
 
     fig = go.Figure()
@@ -226,18 +294,18 @@ def create_confidence_distribution(stats: dict[str, Any], output_dir: Path) -> s
     return fig.to_html(full_html=False, include_plotlyjs=False)
 
 
-def create_accuracy_by_propositions(stats: dict[str, Any], output_dir: Path) -> str:
+def create_accuracy_by_propositions(stats: Statistics, output_dir: Path) -> str:
     """Create bar chart of accuracy rate by number of propositions."""
     # Bin by tens of propositions
     props_bins: dict[int, dict[str, int]] = {}
-    for d in stats["props_vs_confidence"]:
-        n = d["num_props"]
+    for d in stats.props_vs_confidence:
+        n = d.num_props
         # Bin into 0-10, 10-20, etc.
         bin_idx = n // 10
         if bin_idx not in props_bins:
             props_bins[bin_idx] = {"correct": 0, "total": 0}
         props_bins[bin_idx]["total"] += 1
-        if d["is_correct"]:
+        if d.is_correct:
             props_bins[bin_idx]["correct"] += 1
 
     # Sort bins and create labels
@@ -277,12 +345,10 @@ def create_accuracy_by_propositions(stats: dict[str, Any], output_dir: Path) -> 
     return fig.to_html(full_html=False, include_plotlyjs=False)
 
 
-def create_confidence_vs_propositions_all(
-    stats: dict[str, Any], output_dir: Path
-) -> str:
+def create_confidence_vs_propositions_all(stats: Statistics, output_dir: Path) -> str:
     """Create scatter plot of confidence vs propositions for all predictions."""
-    all_props = [d["num_props"] for d in stats["props_vs_confidence"]]
-    all_confs = [d["confidence"] for d in stats["props_vs_confidence"]]
+    all_props = [d.num_props for d in stats.props_vs_confidence]
+    all_confs = [d.confidence for d in stats.props_vs_confidence]
 
     fig = go.Figure()
     fig.add_trace(
@@ -312,15 +378,11 @@ def create_confidence_vs_propositions_all(
 
 
 def create_confidence_vs_propositions_accurate(
-    stats: dict[str, Any], output_dir: Path
+    stats: Statistics, output_dir: Path
 ) -> str:
     """Create scatter plot of confidence vs propositions for accurate predictions."""
-    accurate_props = [
-        d["num_props"] for d in stats["props_vs_confidence"] if d["is_correct"]
-    ]
-    accurate_confs = [
-        d["confidence"] for d in stats["props_vs_confidence"] if d["is_correct"]
-    ]
+    accurate_props = [d.num_props for d in stats.props_vs_confidence if d.is_correct]
+    accurate_confs = [d.confidence for d in stats.props_vs_confidence if d.is_correct]
 
     fig = go.Figure()
     fig.add_trace(
@@ -350,14 +412,14 @@ def create_confidence_vs_propositions_accurate(
 
 
 def create_confidence_vs_propositions_inaccurate(
-    stats: dict[str, Any], output_dir: Path
+    stats: Statistics, output_dir: Path
 ) -> str:
     """Create scatter plot of confidence vs propositions for inaccurate predictions."""
     inaccurate_props = [
-        d["num_props"] for d in stats["props_vs_confidence"] if not d["is_correct"]
+        d.num_props for d in stats.props_vs_confidence if not d.is_correct
     ]
     inaccurate_confs = [
-        d["confidence"] for d in stats["props_vs_confidence"] if not d["is_correct"]
+        d.confidence for d in stats.props_vs_confidence if not d.is_correct
     ]
 
     fig = go.Figure()
@@ -387,7 +449,7 @@ def create_confidence_vs_propositions_inaccurate(
     return fig.to_html(full_html=False, include_plotlyjs=False)
 
 
-def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
+def create_visualization(stats: Statistics, output_path: Path) -> None:
     """Create HTML visualization with all statistics."""
     # Get output directory for individual chart files
     output_dir = output_path.parent
@@ -403,7 +465,7 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
     chart8 = create_confidence_vs_propositions_inaccurate(stats, output_dir)
 
     # Calculate summary statistics
-    overall_accuracy = stats["total_accurate"] / stats["total_predictions"]
+    overall_accuracy = stats.total_accurate / stats.total_predictions
 
     # Create complete HTML page
     html_content = f"""
@@ -450,9 +512,9 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
 <body>
     <h1>Clue Prediction Analytics</h1>
     <div class="subtitle">
-        <strong>Total:</strong> {stats["total_predictions"]} predictions |
-        <strong>Accuracy:</strong> {overall_accuracy:.1%} ({stats["total_accurate"]} correct, {stats["total_inaccurate"]} incorrect) |
-        <strong>Avg Confidence Δ:</strong> {stats["avg_confidence_accurate"] - stats["avg_confidence_inaccurate"]:+.4f}
+        <strong>Total:</strong> {stats.total_predictions} predictions |
+        <strong>Accuracy:</strong> {overall_accuracy:.1%} ({stats.total_accurate} correct, {stats.total_inaccurate} incorrect) |
+        <strong>Avg Confidence Δ:</strong> {stats.avg_confidence_accurate - stats.avg_confidence_inaccurate:+.4f}
     </div>
 
     <div class="charts-grid">
@@ -479,16 +541,14 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
     import statistics
 
     accurate_confidences = [
-        d["confidence"] for d in stats["props_vs_confidence"] if d["is_correct"]
+        d.confidence for d in stats.props_vs_confidence if d.is_correct
     ]
     inaccurate_confidences = [
-        d["confidence"] for d in stats["props_vs_confidence"] if not d["is_correct"]
+        d.confidence for d in stats.props_vs_confidence if not d.is_correct
     ]
-    accurate_props = [
-        d["num_props"] for d in stats["props_vs_confidence"] if d["is_correct"]
-    ]
+    accurate_props = [d.num_props for d in stats.props_vs_confidence if d.is_correct]
     inaccurate_props = [
-        d["num_props"] for d in stats["props_vs_confidence"] if not d["is_correct"]
+        d.num_props for d in stats.props_vs_confidence if not d.is_correct
     ]
 
     median_conf_accurate = statistics.median(accurate_confidences)
@@ -501,23 +561,21 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
     print("SUMMARY STATISTICS")
     print("=" * 60)
 
-    print(f"\nTotal predictions: {stats['total_predictions']}")
+    print(f"\nTotal predictions: {stats.total_predictions}")
     print(
-        f"Accurate predictions: {stats['total_accurate']} ({stats['total_accurate'] / stats['total_predictions']:.1%})"
+        f"Accurate predictions: {stats.total_accurate} ({stats.total_accurate / stats.total_predictions:.1%})"
     )
     print(
-        f"Inaccurate predictions: {stats['total_inaccurate']} ({stats['total_inaccurate'] / stats['total_predictions']:.1%})"
+        f"Inaccurate predictions: {stats.total_inaccurate} ({stats.total_inaccurate / stats.total_predictions:.1%})"
     )
 
     print("\n" + "-" * 60)
     print("CONFIDENCE ANALYSIS")
     print("-" * 60)
-    print(f"Average confidence when accurate:   {stats['avg_confidence_accurate']:.4f}")
+    print(f"Average confidence when accurate:   {stats.avg_confidence_accurate:.4f}")
+    print(f"Average confidence when inaccurate: {stats.avg_confidence_inaccurate:.4f}")
     print(
-        f"Average confidence when inaccurate: {stats['avg_confidence_inaccurate']:.4f}"
-    )
-    print(
-        f"Difference (accurate - inaccurate): {stats['avg_confidence_accurate'] - stats['avg_confidence_inaccurate']:+.4f}"
+        f"Difference (accurate - inaccurate): {stats.avg_confidence_accurate - stats.avg_confidence_inaccurate:+.4f}"
     )
     print(f"\nMedian confidence when accurate:    {median_conf_accurate:.4f}")
     print(f"Median confidence when inaccurate:  {median_conf_inaccurate:.4f}")
@@ -540,12 +598,12 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
     # Find bins with worst calibration
     calibration_errors = []
     for i in range(10):
-        if stats["confidence_bins"][i]["total"] > 0:
+        if stats.confidence_bins[i].total > 0:
             midpoint = (i * 10 + (i + 1) * 10) / 2 / 100
-            actual = stats["bin_accuracy"][i]
+            actual = stats.bin_accuracy[i]
             error = abs(midpoint - actual)
             calibration_errors.append(
-                (i, midpoint, actual, error, stats["confidence_bins"][i]["total"])
+                (i, midpoint, actual, error, stats.confidence_bins[i].total)
             )
 
     calibration_errors.sort(key=lambda x: x[3], reverse=True)
