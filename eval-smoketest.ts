@@ -3,10 +3,10 @@ import { clueTestCases } from "./lib/clue-test-cases";
 import type { OpenAIModelThatGivesLogProbs } from "./lib/predict";
 import { propositionsToPredictedName } from "./lib/predict";
 
-const NUMBER_EXAMPLES_TO_EVAL = 20;
+const NUMBER_EXAMPLES_TO_EVAL = 50;
 const MODEL_TO_EVAL: OpenAIModelThatGivesLogProbs = "gpt-4.1-nano";
-const CONCURRENCY_MAX = 5;
-const RATE_LIMIT_WINDOW = 60000; // 1 minute in milliseconds
+const CONCURRENCY_MAX = 10;
+const RATE_LIMIT_WINDOW = 30000; // 1 minute in milliseconds
 const RATE_LIMIT_NUMBER_ALLOWED = 50;
 
 async function runEval() {

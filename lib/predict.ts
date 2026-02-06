@@ -1,4 +1,4 @@
-import { openai } from "@ai-sdk/openai";
+import { openai, type OpenAIChatLanguageModelOptions } from "@ai-sdk/openai";
 import { generateText, Output } from "ai";
 import { z } from "zod";
 import {
@@ -12,7 +12,7 @@ import { gameToPrompt } from "./ui";
  * Number of few-shot examples to include in the prompt.
  * Experiments show 3 examples provides optimal performance.
  */
-const NUMBER_OF_FEWSHOT_EXAMPLES_TO_INCLUDE = 3;
+const NUMBER_OF_FEWSHOT_EXAMPLES_TO_INCLUDE = 0;
 
 /**
  * Schema for the LLM output when predicting the killer
@@ -46,14 +46,15 @@ export async function propositionsToPredictedName(
   const prompt = gameToPrompt(game, NUMBER_OF_FEWSHOT_EXAMPLES_TO_INCLUDE);
 
   const result = await generateText({
-    model: openai.chat(modelName),
+    model: openai.responses(modelName),
     output: Output.object({ schema: killerPredictionSchema }),
     prompt,
     providerOptions: {
       openai: {
         logprobs: true,
-      },
+      } satisfies OpenAIChatLanguageModelOptions,
     },
+    temperature: 0,
   });
 
   const prediction = result.output;

@@ -147,18 +147,10 @@ export function gameToPrompt(
     lines.push(fewShotText);
   }
 
-  lines.push("## Suspects:");
-  for (const name of game.names) {
-    lines.push(`- ${name}`);
-  }
-  lines.push("");
-
-  lines.push("## Propositions:");
-  for (let i = 0; i < game.propositions.length; i++) {
-    const prop = game.propositions[i];
-    const rendered = renderProposition(prop);
-    lines.push(`${i + 1}. ${rendered}`);
-  }
+  // Wrap the actual puzzle in XML to match the few-shot examples format
+  lines.push("<input>");
+  lines.push(generateGamePromptWithoutExamples(game));
+  lines.push("</input>");
   lines.push("");
 
   lines.push("Based on these propositions, who is the killer?");
