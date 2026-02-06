@@ -56,7 +56,7 @@ export async function propositionsToPredictedName(
   const prompt = gameToPrompt(game, NUMBER_OF_FEWSHOT_EXAMPLES_TO_INCLUDE);
 
   const result = await generateText({
-    model: openai.responses(modelName),
+    model: openai.chat(modelName),
     output: Output.object({ schema: killerPredictionSchema }),
     prompt,
     providerOptions: {
