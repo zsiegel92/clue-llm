@@ -1,4 +1,54 @@
+import { fewShotExamples } from "./clue-test-cases";
 import type { SerializedGame, SerializedProposition } from "./schemas";
+
+/**
+ * Generate the exact prompt that would be shown for a game (without the examples section)
+ */
+function generateGamePromptWithoutExamples(game: SerializedGame): string {
+  const lines: string[] = [];
+
+  lines.push("**Suspects:**");
+  for (const name of game.names) {
+    lines.push(`- ${name}`);
+  }
+  lines.push("");
+
+  lines.push("**Propositions:**");
+  for (let i = 0; i < game.propositions.length; i++) {
+    const prop = game.propositions[i];
+    const rendered = renderProposition(prop);
+    lines.push(`${i + 1}. ${rendered}`);
+  }
+
+  return lines.join("\n");
+}
+
+/**
+ * Generate few-shot examples in XML format with exact input/output
+ */
+function generateFewShotExamples(numExamples: number): string {
+  if (numExamples === 0) return "";
+
+  const lines: string[] = [];
+  lines.push("<examples>");
+
+  for (let i = 0; i < numExamples; i++) {
+    const example = fewShotExamples[i];
+    lines.push("<example>");
+    lines.push("<input>");
+    lines.push(generateGamePromptWithoutExamples(example));
+    lines.push("</input>");
+    lines.push("<correct-output>");
+    lines.push(JSON.stringify({ killer: example.killer }));
+    lines.push("</correct-output>");
+    lines.push("</example>");
+  }
+
+  lines.push("</examples>");
+  lines.push("");
+
+  return lines.join("\n");
+}
 
 /**
  * Instructions explaining how the game format works and how to solve it.
@@ -74,8 +124,13 @@ export function renderProposition(prop: SerializedProposition): string {
 /**
  * Converts a game to a prompt string for LLM inference.
  * The output includes all propositions in a lossless, numbered format.
+ * @param game - The game to convert to a prompt
+ * @param numFewShotExamples - Number of few-shot examples to include (default: 0)
  */
-export function gameToPrompt(game: SerializedGame): string {
+export function gameToPrompt(
+  game: SerializedGame,
+  numFewShotExamples = 0,
+): string {
   const lines: string[] = [];
 
   lines.push("# Clue Logic Puzzle");
@@ -85,6 +140,12 @@ export function gameToPrompt(game: SerializedGame): string {
 
   lines.push(gameFormatInstructions);
   lines.push("");
+
+  // Add few-shot examples if configured
+  const fewShotText = generateFewShotExamples(numFewShotExamples);
+  if (numFewShotExamples > 0 && fewShotText) {
+    lines.push(fewShotText);
+  }
 
   lines.push("## Suspects:");
   for (const name of game.names) {

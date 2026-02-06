@@ -9,6 +9,12 @@ import type { OpenAIModelThatGivesLogProbs, SerializedGame } from "./schemas";
 import { gameToPrompt } from "./ui";
 
 /**
+ * Number of few-shot examples to include in the prompt.
+ * Experiments show 3 examples provides optimal performance.
+ */
+const NUMBER_OF_FEWSHOT_EXAMPLES_TO_INCLUDE = 3;
+
+/**
  * Schema for the LLM output when predicting the killer
  */
 const killerPredictionSchema = z.object({
@@ -37,7 +43,7 @@ export async function propositionsToPredictedName(
   game: SerializedGame,
   modelName: OpenAIModelThatGivesLogProbs,
 ): Promise<PredictionResult> {
-  const prompt = gameToPrompt(game);
+  const prompt = gameToPrompt(game, NUMBER_OF_FEWSHOT_EXAMPLES_TO_INCLUDE);
 
   const result = await generateText({
     model: openai.chat(modelName),
