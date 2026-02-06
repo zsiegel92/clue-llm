@@ -103,7 +103,7 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
         specs=[
             [{"type": "bar"}, {"type": "scatter"}],
             [{"type": "bar"}, {"type": "box"}],
-            [{"type": "scatter"}, {"type": "scatter"}],
+            [{"type": "bar"}, {"type": "scatter"}],
             [{"type": "scatter"}, {"type": "scatter"}],
         ],
         vertical_spacing=0.1,
@@ -209,33 +209,36 @@ def create_visualization(stats: dict[str, Any], output_path: Path) -> None:
     )
 
     # 5. Accuracy by Number of Propositions
-    # Group by number of propositions
-    props_accuracy_data = {}
+    # Bin by tens of propositions
+    props_bins = {}
     for d in stats["props_vs_confidence"]:
         n = d["num_props"]
-        if n not in props_accuracy_data:
-            props_accuracy_data[n] = {"correct": 0, "total": 0}
-        props_accuracy_data[n]["total"] += 1
+        # Bin into 0-10, 10-20, etc.
+        bin_idx = n // 10
+        if bin_idx not in props_bins:
+            props_bins[bin_idx] = {"correct": 0, "total": 0}
+        props_bins[bin_idx]["total"] += 1
         if d["is_correct"]:
-            props_accuracy_data[n]["correct"] += 1
+            props_bins[bin_idx]["correct"] += 1
 
-    sorted_props = sorted(props_accuracy_data.keys())
+    # Sort bins and create labels
+    sorted_bin_indices = sorted(props_bins.keys())
+    bin_labels = [f"{i * 10}-{(i + 1) * 10}" for i in sorted_bin_indices]
     accuracy_rates = [
-        props_accuracy_data[n]["correct"] / props_accuracy_data[n]["total"]
-        for n in sorted_props
+        props_bins[i]["correct"] / props_bins[i]["total"] for i in sorted_bin_indices
     ]
-    totals = [props_accuracy_data[n]["total"] for n in sorted_props]
+    totals = [props_bins[i]["total"] for i in sorted_bin_indices]
 
     fig.add_trace(
-        go.Scatter(
-            x=sorted_props,
+        go.Bar(
+            x=bin_labels,
             y=accuracy_rates,
-            mode="lines+markers",
-            marker=dict(size=[min(t / 3, 20) for t in totals], color="purple"),
-            text=[f"n={t}" for t in totals],
+            text=[
+                f"{acc:.2%}<br>n={total}" for acc, total in zip(accuracy_rates, totals)
+            ],
+            textposition="auto",
+            marker_color="purple",
             name="Accuracy Rate",
-            line=dict(color="purple", width=2),
-            hovertemplate="Propositions: %{x}<br>Accuracy: %{y:.1%}<br>%{text}<extra></extra>",
         ),
         row=3,
         col=1,
