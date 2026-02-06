@@ -16,7 +16,8 @@
     "lint:python": "uv run ruff check",
     "python:format": "uv run ruff format --check",
     "python:format-fix": "uv run ruff format",
-    "test:python": "uv run python python-scripts/test_clue_game.py"
+    "test:python": "uv run python python-scripts/test_clue_game.py",
+    "calculate-analytics": "uv run python analysis/calculate_analytics.py"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.25",
