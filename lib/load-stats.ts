@@ -5,6 +5,8 @@ export type AggregateStats = {
   overallAccuracy: number;
   avgConfidenceWhenCorrect: number;
   avgConfidenceWhenIncorrect: number;
+  avgNumSuspects: number;
+  randomChanceAccuracy: number;
   model: string;
 };
 
@@ -27,9 +29,13 @@ export async function calculateAggregateStats(): Promise<AggregateStats> {
   let totalConfidenceIncorrect = 0;
   let correctWithConfidenceCount = 0;
   let incorrectWithConfidenceCount = 0;
+  let totalSuspects = 0;
 
   for (const testCase of predictions) {
     const { correctness, confidence } = testCase.predictionData;
+    const numSuspects = testCase.game.names.length;
+
+    totalSuspects += numSuspects;
 
     if (correctness) {
       correctCount++;
@@ -46,6 +52,8 @@ export async function calculateAggregateStats(): Promise<AggregateStats> {
   }
 
   const model = predictions[0]?.predictionData.metadata.model ?? "unknown";
+  const avgNumSuspects = totalSuspects / predictions.length;
+  const randomChanceAccuracy = 1 / avgNumSuspects;
 
   return {
     totalPredictions: predictions.length,
@@ -58,6 +66,8 @@ export async function calculateAggregateStats(): Promise<AggregateStats> {
       incorrectWithConfidenceCount > 0
         ? totalConfidenceIncorrect / incorrectWithConfidenceCount
         : 0,
+    avgNumSuspects,
+    randomChanceAccuracy,
     model,
   };
 }

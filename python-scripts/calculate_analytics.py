@@ -66,6 +66,8 @@ class Statistics(BaseModel):
     total_predictions: int
     total_accurate: int
     total_inaccurate: int
+    avg_num_suspects: float
+    random_chance_accuracy: float
 
     model_config = {"arbitrary_types_allowed": True}
 
@@ -94,6 +96,9 @@ def calculate_statistics(predictions: list[PredictionEntry]) -> Statistics:
     # Track confidence vs number of propositions
     props_vs_confidence: list[PropsVsConfidence] = []
 
+    # Track number of suspects per game
+    num_suspects_per_game: list[int] = []
+
     for entry in predictions:
         pred_data = entry.predictionData
         game_data = entry.game
@@ -101,6 +106,10 @@ def calculate_statistics(predictions: list[PredictionEntry]) -> Statistics:
         confidence = pred_data.confidence
         is_correct = pred_data.correctness
         num_propositions = len(game_data.propositions)
+        num_suspects = len(game_data.names)
+
+        # Track number of suspects
+        num_suspects_per_game.append(num_suspects)
 
         # Separate by accuracy
         if is_correct:
@@ -139,6 +148,14 @@ def calculate_statistics(predictions: list[PredictionEntry]) -> Statistics:
         else:
             bin_accuracy[bin_idx] = 0
 
+    # Calculate average number of suspects and random chance accuracy
+    avg_num_suspects = (
+        sum(num_suspects_per_game) / len(num_suspects_per_game)
+        if num_suspects_per_game
+        else 0
+    )
+    random_chance_accuracy = 1.0 / avg_num_suspects if avg_num_suspects > 0 else 0
+
     return Statistics(
         avg_confidence_accurate=avg_confidence_accurate,
         avg_confidence_inaccurate=avg_confidence_inaccurate,
@@ -148,6 +165,8 @@ def calculate_statistics(predictions: list[PredictionEntry]) -> Statistics:
         total_predictions=len(predictions),
         total_accurate=len(accurate_preds),
         total_inaccurate=len(inaccurate_preds),
+        avg_num_suspects=avg_num_suspects,
+        random_chance_accuracy=random_chance_accuracy,
     )
 
 
@@ -514,7 +533,9 @@ def create_visualization(stats: Statistics, output_path: Path) -> None:
     <div class="subtitle">
         <strong>Total:</strong> {stats.total_predictions} predictions |
         <strong>Accuracy:</strong> {overall_accuracy:.1%} ({stats.total_accurate} correct, {stats.total_inaccurate} incorrect) |
-        <strong>Avg Confidence Δ:</strong> {stats.avg_confidence_accurate - stats.avg_confidence_inaccurate:+.4f}
+        <strong>Avg Confidence Δ:</strong> {stats.avg_confidence_accurate - stats.avg_confidence_inaccurate:+.4f} |
+        <strong>Avg Suspects:</strong> {stats.avg_num_suspects:.2f} |
+        <strong>Random Chance:</strong> {stats.random_chance_accuracy:.1%}
     </div>
 
     <div class="charts-grid">
@@ -568,6 +589,8 @@ def create_visualization(stats: Statistics, output_path: Path) -> None:
     print(
         f"Inaccurate predictions: {stats.total_inaccurate} ({stats.total_inaccurate / stats.total_predictions:.1%})"
     )
+    print(f"\nAverage number of suspects per game: {stats.avg_num_suspects:.2f}")
+    print(f"Random chance accuracy: {stats.random_chance_accuracy:.1%}")
 
     print("\n" + "-" * 60)
     print("CONFIDENCE ANALYSIS")

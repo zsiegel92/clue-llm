@@ -63,6 +63,24 @@ export function StatsDisplayClient({ stats }: { stats: AggregateStats }) {
             pp
           </div>
         </div>
+
+        <div className="stat-card border border-zinc-300 dark:border-zinc-700 rounded-lg p-4">
+          <div className="text-sm text-zinc-600 dark:text-zinc-400 mb-1">
+            Avg Suspects per Game
+          </div>
+          <div className="text-xl font-semibold">
+            {stats.avgNumSuspects.toFixed(2)}
+          </div>
+        </div>
+
+        <div className="stat-card border border-zinc-300 dark:border-zinc-700 rounded-lg p-4">
+          <div className="text-sm text-zinc-600 dark:text-zinc-400 mb-1">
+            Random Chance Accuracy
+          </div>
+          <div className="text-xl font-semibold text-amber-600 dark:text-amber-400">
+            {(stats.randomChanceAccuracy * 100).toFixed(2)}%
+          </div>
+        </div>
       </div>
     </div>
   );

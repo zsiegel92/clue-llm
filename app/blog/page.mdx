@@ -124,7 +124,7 @@ Try it yourself! Explore a random game from our dataset. Click "Reveal Answer" t
 
 ---
 
-## Aggregate Statistics
+## Model Performance
 
 How well does `gpt-4.1-nano` perform overall? Here are the aggregate statistics calculated from our full prediction dataset:
 
@@ -136,8 +136,14 @@ How well does `gpt-4.1-nano` perform overall? Here are the aggregate statistics 
 - **Avg Confidence (Correct)**: The average confidence when the model was correct
 - **Avg Confidence (Incorrect)**: The average confidence when the model was wrong
 - **Confidence Delta**: The difference between correct and incorrect confidence levels—a larger delta indicates better separation and more interpretable confidence scores
+- **Average Number of Suspects per Game**: The mean number of potential culprits in each mystery
+- **Random Chance Accuracy**: The baseline accuracy achieved by random guessing (1 / average number of suspects)
 
-These metrics show that the model performs reasonably well on this NP-complete reasoning task, though there's still room for improvement.
+### Establishing a Baseline
+
+To properly evaluate the model's reasoning abilities, we need to establish a baseline for comparison. If the model were simply guessing randomly, its accuracy would be equal to the reciprocal of the average number of suspects per game.
+
+Interestingly, the model's actual performance may be close to this random chance baseline, highlighting just how challenging this reasoning task truly is. Even a sophisticated language model can struggle with the complex logical deductions required to solve these mysteries. This makes any improvement above random chance a meaningful indicator of genuine reasoning capability.
 
 ---
 
