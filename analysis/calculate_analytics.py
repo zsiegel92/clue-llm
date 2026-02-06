@@ -121,17 +121,6 @@ def create_calibration_curve(stats: dict[str, Any], output_dir: Path) -> str:
 
     fig = go.Figure()
 
-    # Perfect calibration line
-    fig.add_trace(
-        go.Scatter(
-            x=[0, 1],
-            y=[0, 1],
-            mode="lines",
-            line=dict(color="gray", dash="dash", width=2),
-            name="Perfect Calibration",
-        )
-    )
-
     # Actual calibration
     fig.add_trace(
         go.Scatter(
