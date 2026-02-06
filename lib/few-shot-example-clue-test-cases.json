@@ -2,16 +2,7 @@
   {
     "seed": 1500,
     "killer": "John",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -1580,16 +1571,7 @@
   {
     "seed": 1501,
     "killer": "Susan",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -2648,16 +2630,7 @@
   {
     "seed": 1502,
     "killer": "Bob",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -4241,16 +4214,7 @@
   {
     "seed": 1503,
     "killer": "Bob",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -5789,16 +5753,7 @@
   {
     "seed": 1504,
     "killer": "Susan",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -6947,16 +6902,7 @@
   {
     "seed": 1505,
     "killer": "Susan",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -8105,16 +8051,7 @@
   {
     "seed": 1506,
     "killer": "Bob",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -9173,16 +9110,7 @@
   {
     "seed": 1507,
     "killer": "May",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -10316,16 +10244,7 @@
   {
     "seed": 1508,
     "killer": "Will",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -11804,16 +11723,7 @@
   {
     "seed": 1509,
     "killer": "May",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -13022,16 +12932,7 @@
   {
     "seed": 1510,
     "killer": "Susan",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -14255,16 +14156,7 @@
   {
     "seed": 1511,
     "killer": "Linda",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -15443,16 +15335,7 @@
   {
     "seed": 1512,
     "killer": "May",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -16436,16 +16319,7 @@
   {
     "seed": 1513,
     "killer": "John",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -17999,16 +17873,7 @@
   {
     "seed": 1514,
     "killer": "Linda",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -19682,16 +19547,7 @@
   {
     "seed": 1515,
     "killer": "Bob",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -21335,16 +21191,7 @@
   {
     "seed": 1516,
     "killer": "Bob",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -22748,16 +22595,7 @@
   {
     "seed": 1517,
     "killer": "Will",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -23861,16 +23699,7 @@
   {
     "seed": 1518,
     "killer": "Jane",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
@@ -25709,16 +25538,7 @@
   {
     "seed": 1519,
     "killer": "Will",
-    "names": [
-      "Joe",
-      "John",
-      "Bob",
-      "Will",
-      "Jane",
-      "Linda",
-      "Susan",
-      "May"
-    ],
+    "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
     "technologies": [
       "Python",
       "Java",
