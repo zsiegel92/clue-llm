@@ -29,13 +29,11 @@ import Image from "next/image";
 
 ## What This Is
 
-This is an experiment in **LLM mechanistic interpretability** disguised as a murder mystery game.
+We generate logic puzzles where suspects have various attributes (they were at certain places, with certain objects, etc.). Through a series of propositions—logical clues—you must deduce who the killer is. Everyone except the killer has provable alibis. The catch? This is an **NP-complete SAT (satisfiability) problem**: given logical constraints, find the truth assignment that satisfies them all.
 
-Here's the setup: We generate logic puzzles where suspects have various attributes (they were at certain places, with certain objects, etc.). Through a series of propositions—logical clues—you must deduce who the killer is. Everyone except the killer has provable alibis. The catch? This is an **NP-complete SAT (satisfiability) problem**: given logical constraints, find the truth assignment that satisfies them all.
+**Here's what makes this interesting**: We use a SAT solver to *generate* these puzzles, then ask an LLM to *solve* them through next-token prediction. The LLM faces the exact same NP-complete problem that created the puzzle in the first place.
 
-**Here's what makes this interesting**: We use a SAT solver to *generate* these puzzles, then ask an LLM to *solve* them through next-token prediction. The LLM faces the exact same NP-complete problem that created the puzzle in the first place. We're testing whether next-token prediction can encode genuine logical reasoning—and we can measure exactly how well it works.
-
-This lets us probe:
+This setup lets us answer some interesting questions:
 - Can LLMs solve NP-complete problems through pure next-token prediction?
 - How confident are they when they're right vs. wrong?
 - What kinds of logical errors do they make?
@@ -103,7 +101,7 @@ All game elements are single-token strings:
 
 We verify this in tests and extract log probabilities directly from the API response. The formula is simple: `confidence = e^(logprob)`. This gives us a probability between 0 and 1 representing how confident the model is in its prediction.
 
-This precision is crucial for mechanistic interpretability—we can measure exactly how confident the model is at each prediction, enabling calibration analysis and fine-tuning strategies.
+This precision lets us measure exactly how confident the model is at each prediction, enabling calibration analysis and fine-tuning strategies.
 
 ---
 
@@ -134,7 +132,7 @@ We analyzed predictions from `gpt-4.1-nano` to see how well it calibrates on thi
 - But there's often overconfidence or underconfidence in certain ranges
 - The gap between confidence and accuracy reveals systematic biases
 
-This analysis reveals when the model "knows what it knows"—and when it's confidently wrong. For mechanistic interpretability, these confident mistakes are gold: they show us exactly where the model's reasoning breaks down.
+This analysis reveals when the model "knows what it knows"—and when it's confidently wrong. These confident mistakes are particularly interesting: they show us exactly where the model's reasoning breaks down.
 
 ---
 
@@ -209,21 +207,19 @@ The bet: confident mistakes reveal systematic reasoning failures that generalize
 
 ## Why This Matters
 
-This project is fundamentally about **mechanistic interpretability**: understanding what's actually happening inside an LLM when it "reasons."
-
-By forcing the model to solve NP-complete SAT problems through next-token prediction, we can:
+By having the model solve NP-complete SAT problems through next-token prediction, we can:
 
 1. **Test the limits of reasoning**: These are computationally hard problems. Can next-token prediction encode genuine logical deduction?
 
 2. **Measure confidence precisely**: Single-token predictions give us clean probability measurements, revealing when the model "knows what it knows."
 
-3. **Identify failure modes**: Where does logical reasoning break down? Confident mistakes show us systematic errors in the model's world model.
+3. **Identify failure modes**: Where does logical reasoning break down? Confident mistakes show us systematic errors in how the model reasons.
 
 4. **Improve strategically**: By training on specific failure patterns, we can teach the model to reason better—and measure exactly how much better.
 
 Ilya Sutskever said predicting the killer in a detective novel requires "a fair amount of reasoning." We've built a controlled environment to test exactly that claim. The results suggest that yes, LLMs can perform complex logical reasoning through next-token prediction—but they're far from perfect. Every mistake is a window into how they think.
 
-That's the cool part: we're not just testing if LLMs can solve logic puzzles. We're probing the mechanism by which statistical models learn to reason. And we can measure it with single-token precision.
+That's the interesting part: we're not just testing *if* LLMs can solve logic puzzles. We're testing *how* statistical models learn to reason, and we can measure it with single-token precision.
 
 ---
 
