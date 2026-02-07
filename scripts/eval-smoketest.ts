@@ -1,6 +1,6 @@
-import { clueTestCases } from "./lib/clue-test-cases";
-import type { OpenAIModelThatGivesLogProbs } from "./lib/predict";
-import { propositionsToPredictedName, queue } from "./lib/predict";
+import { clueTestCases } from "../lib/clue-test-cases";
+import type { OpenAIModelThatGivesLogProbs } from "../lib/predict";
+import { propositionsToPredictedName, queue } from "../lib/predict";
 
 const NUMBER_EXAMPLES_TO_EVAL = 50;
 const MODEL_TO_EVAL: OpenAIModelThatGivesLogProbs = "gpt-4.1-nano";

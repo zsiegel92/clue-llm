@@ -19,7 +19,7 @@
     "test:python": "uv run python python-scripts/test_clue_game.py",
     "calculate-analytics": "uv run python python-scripts/calculate_analytics.py",
     "generate-fine-tune-datasets": "pnpm run script scripts/generate-fine-tune-datasets.ts",
-    "eval": "pnpm run script eval-smoketest.ts"
+    "eval": "pnpm run script scripts/eval-smoketest.ts"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.25",

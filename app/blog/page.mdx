@@ -3,9 +3,9 @@ import { GameViewer } from "@/components/game-viewer";
 import { StatsDisplay } from "@/components/stats-display";
 import Image from "next/image";
 
-# LLM Reasoning Through Mystery Solving
+# Can LLMs Reason by Predicting the Next Word?
 
-## On Next-Token Prediction and Understanding
+## The Detective Novel Test
 
 <div className="my-8 relative w-full" style={{ paddingBottom: '56.25%' }}>
   <iframe
@@ -27,19 +27,27 @@ import Image from "next/image";
 
 ---
 
-## Introduction
+## What This Is
 
-We're going to explore how LLMs solve an actual mystery that clearly **does** require next-token-prediction to solve a problem that requires reasoning. We'll use **"NP-Complete"** as a proxy for **"Hard"** in this case—a problem that requires a SAT solver that is NP-complete is our focus.
+This is an experiment in **LLM mechanistic interpretability** disguised as a murder mystery game.
 
-The Clue game we present is a logic puzzle where suspects have alibis (attributes), and through propositions (clues), we must deduce which one person is the killer. The catch? Everyone except the killer has at least one provable alibi. This is a **satisfiability (SAT) problem**: given a set of logical constraints, find the assignment of truth values that satisfies all constraints. SAT problems are NP-complete—computationally hard in the general case.
+Here's the setup: We generate logic puzzles where suspects have various attributes (they were at certain places, with certain objects, etc.). Through a series of propositions—logical clues—you must deduce who the killer is. Everyone except the killer has provable alibis. The catch? This is an **NP-complete SAT (satisfiability) problem**: given logical constraints, find the truth assignment that satisfies them all.
 
-By having LLMs predict the killer's name from a set of propositions, we're testing their ability to perform complex logical reasoning through next-token prediction.
+**Here's what makes this interesting**: We use a SAT solver to *generate* these puzzles, then ask an LLM to *solve* them through next-token prediction. The LLM faces the exact same NP-complete problem that created the puzzle in the first place. We're testing whether next-token prediction can encode genuine logical reasoning—and we can measure exactly how well it works.
+
+This lets us probe:
+- Can LLMs solve NP-complete problems through pure next-token prediction?
+- How confident are they when they're right vs. wrong?
+- What kinds of logical errors do they make?
+- Can we teach them to reason better through targeted fine-tuning?
 
 ---
 
-## Generating Clue Games with SAT Solvers
+## How the Games Are Generated
 
-The games are generated using an iterative process that leverages a SAT solver to ensure exactly one killer remains unsolved. Here's how it works:
+The clever part: we use the same NP-complete problem to *create* the puzzles that the LLM will need to *solve*.
+
+Each game is generated through an iterative process using SymPy's SAT solver:
 
 <ServerPythonProvidedStaticMultiFileCodeBlock
   filePaths={[
@@ -56,50 +64,54 @@ The games are generated using an iterative process that leverages a SAT solver t
   maxOutputLinesHeight={30}
 />
 
-The generation process:
-1. **Initialize**: Create 8 suspects with random attributes across 6 categories
-2. **Select killer**: Randomly choose one suspect as the killer
-3. **Generate propositions**: Iteratively add logical constraints (propositions) that eliminate non-killers
-4. **Validate uniqueness**: Use SymPy's SAT solver to verify only the killer remains unsolved
-5. **Iterate**: Continue adding propositions until exactly one solution exists
+**The generation algorithm:**
 
-This ensures every generated game is solvable and has a unique solution—perfect for evaluating LLM reasoning.
+1. **Create suspects**: Generate 8 people with random attributes across 6 categories (place, food, material, institution, company, technology)
+2. **Pick the killer**: Randomly select one suspect as the true culprit
+3. **Generate propositions**: Iteratively add logical clues like:
+   - "Joe was with cement"
+   - "(Will with cement) OR (Bob with pizza and at the library)"
+   - "If Jane was at the church, Jane is not the killer"
+4. **Validate with SAT**: Before adding each proposition, use the SAT solver to ensure it doesn't accidentally eliminate the true killer
+5. **Check convergence**: After each proposition, check if exactly one suspect remains
+6. **Repeat**: Continue until the SAT solver confirms only one person could be the killer
 
----
-
-## Single-Token Strings: Precision in Language Models
-
-A critical aspect of this experiment is the use of **single-token strings**—strings that tokenize to exactly one token in GPT-4o's tokenizer. Why does this matter?
-
-### What Are Single-Token Strings?
-
-Names like "John", "Bob", and "Linda" are carefully chosen because they each map to a single token. This has several advantages:
-
-1. **Clean confidence scores**: When the LLM predicts the killer's name, we can extract log probabilities (logprobs) for that prediction. Since the name is a single token, we get a single, clean confidence score.
-
-2. **Computational efficiency**: Single-token strings reduce the complexity of logprob calculations. Instead of aggregating probabilities across multiple tokens, we have a direct measure.
-
-3. **Consistent game size**: All suspects, technologies, places, companies, institutions, foods, and materials are single-token strings. This makes the "game size" more uniform and better-defined relative to context size.
-
-### Proof and Implementation
-
-We verify the single-token property in [`lib/single-token-strings.test.ts`](https://github.com/user/clue-llm/blob/main/lib/single-token-strings.test.ts), which tests that each string in our vocabulary tokenizes to exactly one token.
-
-The prediction logic in [`lib/predict.ts`](https://github.com/user/clue-llm/blob/main/lib/predict.ts) and confidence calculations in [`lib/logprob-utils.ts`](https://github.com/user/clue-llm/blob/main/lib/logprob-utils.ts) leverage this property to extract the model's confidence in its prediction:
-
-- **Logprob extraction**: For each predicted killer name, we extract the log probability from the API response
-- **Confidence calculation**: We convert logprob to a linear probability: `confidence = e^(logprob)`
-- **Minimum token confidence**: If a name spans multiple tokens (in edge cases), we take the minimum token confidence—the weakest link determines overall confidence
-
-While other game elements (places, companies, etc.) are also single-token, we don't currently use their single-token property directly. However, it does make the overall game representation more compact and the "game size" more clearly related to context size.
+**The key insight**: Every proposition is verified against the ground truth using SAT solving. This guarantees 100% solvability—the puzzle *always* has exactly one solution. The LLM must now perform the same logical deduction the SAT solver used to generate the game.
 
 ---
 
-## Model Calibration: Confidence vs. Accuracy
+## The Single-Token Trick
 
-A well-calibrated model should be more confident when correct and less confident when incorrect. But how well does `gpt-4.1-nano` calibrate on this task?
+To measure the LLM's reasoning precisely, we need clean confidence scores. That's where **single-token strings** come in.
 
-We analyzed {/* TODO: insert total predictions count */} predictions to generate a calibration curve:
+### Why Single Tokens Matter
+
+Names like "Joe", "Bob", "Will", and "Linda" are carefully chosen because they each tokenize to exactly one token in GPT-4o's tokenizer. This means:
+
+**Clean confidence measurement**: When the LLM predicts "Joe" as the killer, we get a single log probability value representing its confidence. No multi-token aggregation needed—just one clean number.
+
+Compare this to a name like "Elizabeth" (multiple tokens). To get the overall confidence, you'd need to aggregate probabilities across tokens, which introduces complexity and potential measurement artifacts. With single tokens, we get the LLM's raw, unambiguous confidence in its answer.
+
+### Implementation Details
+
+All game elements are single-token strings:
+- **Names**: Joe, John, Bob, Will, Jane, Linda, etc.
+- **Places**: China, India, France, etc.
+- **Materials**: wood, metal, steel, cement, etc.
+- **Foods**: pizza, bread, fish, etc.
+- **Technologies**: Python, Java, Ruby, etc.
+
+We verify this in tests and extract log probabilities directly from the API response. The formula is simple: `confidence = e^(logprob)`. This gives us a probability between 0 and 1 representing how confident the model is in its prediction.
+
+This precision is crucial for mechanistic interpretability—we can measure exactly how confident the model is at each prediction, enabling calibration analysis and fine-tuning strategies.
+
+---
+
+## Does the Model Know When It's Right?
+
+A well-calibrated model should be more confident when correct and less confident when wrong. If it says "I'm 80% sure," it should be right about 80% of the time.
+
+We analyzed predictions from `gpt-4.1-nano` to see how well it calibrates on this logical reasoning task:
 
 <div className="my-8 flex justify-center">
   <Image
@@ -111,98 +123,107 @@ We analyzed {/* TODO: insert total predictions count */} predictions to generate
   />
 </div>
 
-### What the Calibration Curve Shows
+### Reading the Calibration Curve
 
-- **X-axis**: Predicted confidence (0-100%)
-- **Y-axis**: Actual accuracy rate (0-100%)
-- **Ideal calibration**: The line follows the diagonal (x=y)—when the model is 70% confident, it's correct 70% of the time
+- **X-axis**: What confidence the model reported (0-100%)
+- **Y-axis**: How often it was actually correct (0-100%)
+- **Perfect calibration**: Points fall on the diagonal line (x=y)
 
-**Key insights:**
-- Models tend to be **more accurate when confidence is high**
-- Models tend to have **more confidence when they are accurate**
-- **But it's not perfect**: There are regions where the model is overconfident or underconfident
+**What we typically see:**
+- Higher confidence correlates with higher accuracy (good!)
+- But there's often overconfidence or underconfidence in certain ranges
+- The gap between confidence and accuracy reveals systematic biases
 
-This calibration analysis helps us understand when to trust the model's predictions and where it might be systematically biased.
+This analysis reveals when the model "knows what it knows"—and when it's confidently wrong. For mechanistic interpretability, these confident mistakes are gold: they show us exactly where the model's reasoning breaks down.
 
 ---
 
-## Interactive Game Viewer
+## Try It Yourself
 
-Try it yourself! Explore a random game from our dataset. Click "Reveal Answer" to see if the model got it right, and "Load New Game" to try another.
+Here's an actual game from our dataset. Read through the propositions (clues) and see if you can figure out who the killer is. Then reveal the answer to see if the LLM got it right—and how confident it was.
 
 <GameViewer />
 
 ---
 
-## Model Performance
+## How Well Does It Actually Work?
 
-How well does `gpt-4.1-nano` perform overall? Here are the aggregate statistics calculated from our full prediction dataset:
+Here's how `gpt-4.1-nano` performs on these NP-complete logic puzzles:
 
 <StatsDisplay />
 
-### Interpreting the Stats
+### What These Numbers Mean
 
-- **Overall Accuracy**: The percentage of games where the model correctly identified the killer
-- **Avg Confidence (Correct)**: The average confidence when the model was correct
-- **Avg Confidence (Incorrect)**: The average confidence when the model was wrong
-- **Confidence Delta**: The difference between correct and incorrect confidence levels—a larger delta indicates better separation and more interpretable confidence scores
-- **Average Number of Suspects per Game**: The mean number of potential culprits in each mystery
-- **Random Chance Accuracy**: The baseline accuracy achieved by random guessing (1 / average number of suspects)
+- **Overall Accuracy**: How often the model picks the right killer
+- **Avg Confidence (Correct)**: Average confidence when it's right
+- **Avg Confidence (Incorrect)**: Average confidence when it's wrong
+- **Confidence Delta**: The separation between right and wrong confidence—bigger is better
+- **Average Suspects per Game**: Typical number of potential killers
+- **Random Chance Accuracy**: What you'd get by guessing randomly (1 / number of suspects)
 
-### Establishing a Baseline
+### The Random Chance Baseline
 
-To properly evaluate the model's reasoning abilities, we need to establish a baseline for comparison. If the model were simply guessing randomly, its accuracy would be equal to the reciprocal of the average number of suspects per game.
+With 8 suspects, random guessing gives you 12.5% accuracy. Any performance significantly above this suggests genuine logical reasoning rather than pattern matching or lucky guessing.
 
-Interestingly, the model's actual performance may be close to this random chance baseline, highlighting just how challenging this reasoning task truly is. Even a sophisticated language model can struggle with the complex logical deductions required to solve these mysteries. This makes any improvement above random chance a meaningful indicator of genuine reasoning capability.
-
----
-
-## Fine-Tuning Strategy: Efficient Data Selection
-
-Given our predictions dataset, how should we select training data for fine-tuning to maximize improvement?
-
-The fine-tuning dataset generation script ([`scripts/generate-fine-tune-datasets.ts`](https://github.com/user/clue-llm/blob/main/scripts/generate-fine-tune-datasets.ts)) creates multiple datasets exploring different selection strategies:
-
-### The Core Insight
-
-**Fine-tuning on examples the model already handles well is unlikely to create significant improvement.** The model already "knows" how to solve those cases.
-
-### Selection Strategies
-
-1. **Most Confident + Wrong** (`most-confident-wrong.jsonl`)
-   - Examples where the model was **highly confident but incorrect**
-   - These represent systematic errors or blind spots
-   - Training on these should help the model recognize when it's about to make a confident mistake
-   - **Expected impact**: High—addresses overconfidence and systematic errors
-
-2. **Least Confident + Wrong** (`least-confident-wrong.jsonl`)
-   - Examples where the model was **uncertain and incorrect**
-   - These are cases where the model struggled but failed
-   - **Expected impact**: Medium—helps with difficult cases but may not generalize
-
-3. **Correct Predictions** (`correct.jsonl`)
-   - Examples where the model **got it right**
-   - Serves as a control to reinforce correct reasoning patterns
-   - **Expected impact**: Low—reinforcement, but likely minimal improvement
-
-4. **All Cases** (`all-cases.jsonl`)
-   - Full dataset including correct and incorrect predictions
-   - Provides a comprehensive baseline
-   - **Expected impact**: Variable—depends on data distribution
-
-### Creating a Spectrum
-
-By generating datasets along this spectrum—from **confident+inaccurate** to **unconfident+accurate**—we can empirically test which data selection strategy yields the best fine-tuning results. This approach allows us to maximize efficiency by focusing on the most valuable training examples.
-
-The hypothesis: **Training on a small number of examples where the model was both confident and inaccurate should yield the most efficient improvement**, as these cases expose the model's blind spots most clearly.
+These are *hard* problems. The model is performing the same logical deduction that requires an NP-complete SAT solver to generate the puzzles. Every mistake the model makes is an opportunity to study where its reasoning fails—and potentially fix it through targeted fine-tuning.
 
 ---
 
-## Conclusion
+## Teaching It to Reason Better
 
-This project demonstrates that LLMs can perform complex logical reasoning on NP-complete problems through next-token prediction. The use of single-token strings provides clean confidence measures, calibration analysis reveals the model's strengths and weaknesses, and strategic fine-tuning data selection offers a path to improvement.
+Now that we know *where* the model fails, can we teach it to reason better through fine-tuning?
 
-As Ilya Sutskever noted, predicting the killer in a detective novel requires "a fair amount of reasoning." Our experiments confirm this—and show that modern LLMs are increasingly capable of this kind of reasoning, even on computationally hard problems.
+### The Strategic Question
+
+Not all training examples are equally valuable. Fine-tuning on cases the model already solves correctly is unlikely to help—it already knows how to handle those. The interesting question: **which mistakes should we teach it to fix?**
+
+We generate multiple fine-tuning datasets to test different strategies:
+
+### 1. **Most Confident + Wrong** (Target: Overconfidence)
+Examples where the model was highly confident but incorrect. These are systematic blind spots—patterns where the model has learned the wrong thing. Training on these should help it recognize when it's about to make a confident mistake.
+
+**Hypothesis**: High impact. These expose deeply learned errors.
+
+### 2. **Least Confident + Wrong** (Target: Edge Cases)
+Examples where the model struggled and failed. These are genuinely hard cases where the reasoning is complex or ambiguous.
+
+**Hypothesis**: Medium impact. May help with similar edge cases but might not generalize.
+
+### 3. **Correct Predictions** (Control Group)
+Examples where the model got it right. Serves as a baseline to reinforce existing correct reasoning.
+
+**Hypothesis**: Low impact. Reinforcement learning, but limited new information.
+
+### 4. **All Cases** (Kitchen Sink)
+The full dataset, both right and wrong predictions.
+
+**Hypothesis**: Variable impact depending on the distribution.
+
+### The Experiment
+
+By comparing these strategies, we can empirically test: **Is it more efficient to train on a small number of confident mistakes, or a large number of all mistakes?** This is a mechanistic interpretability question disguised as a training efficiency question.
+
+The bet: confident mistakes reveal systematic reasoning failures that generalize across many similar cases. Fix those, and the model should improve dramatically with minimal training data.
+
+---
+
+## Why This Matters
+
+This project is fundamentally about **mechanistic interpretability**: understanding what's actually happening inside an LLM when it "reasons."
+
+By forcing the model to solve NP-complete SAT problems through next-token prediction, we can:
+
+1. **Test the limits of reasoning**: These are computationally hard problems. Can next-token prediction encode genuine logical deduction?
+
+2. **Measure confidence precisely**: Single-token predictions give us clean probability measurements, revealing when the model "knows what it knows."
+
+3. **Identify failure modes**: Where does logical reasoning break down? Confident mistakes show us systematic errors in the model's world model.
+
+4. **Improve strategically**: By training on specific failure patterns, we can teach the model to reason better—and measure exactly how much better.
+
+Ilya Sutskever said predicting the killer in a detective novel requires "a fair amount of reasoning." We've built a controlled environment to test exactly that claim. The results suggest that yes, LLMs can perform complex logical reasoning through next-token prediction—but they're far from perfect. Every mistake is a window into how they think.
+
+That's the cool part: we're not just testing if LLMs can solve logic puzzles. We're probing the mechanism by which statistical models learn to reason. And we can measure it with single-token precision.
 
 ---
 
