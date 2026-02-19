@@ -16,7 +16,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import OpenAI from "openai";
-import { type OpenAIModelThatGivesLogProbs } from "@/lib/schemas";
+import {
+  type OpenAIModelThatGivesLogProbs,
+  type FineTuningJobConfig,
+} from "@/lib/schemas";
 // NOTE: This will cause a type error until you install the openai package
 // Run: pnpm add openai
 
@@ -38,12 +41,6 @@ async function getOpenAIClient() {
 }
 
 type OpenAIClient = Awaited<ReturnType<typeof getOpenAIClient>>;
-
-interface FineTuningJobConfig {
-  filename: string;
-  suffix: string;
-  description: string;
-}
 
 const FINE_TUNING_CONFIGS: FineTuningJobConfig[] = [
   {

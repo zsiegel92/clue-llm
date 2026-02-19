@@ -109,3 +109,17 @@ export type OpenAIModelThatGivesLogProbs = z.infer<
 export type PredictionData = z.infer<typeof predictionDataSchema>;
 export type PredictedTestCase = z.infer<typeof predictedTestCaseSchema>;
 export type PredictedTestCases = z.infer<typeof predictedTestCasesSchema>;
+
+const fineTuningJobSuffixes = [
+  "most-conf-wrong",
+  "least-conf-wrong",
+  "correct",
+  "all-cases",
+] as const;
+type FineTuningJobSuffix = (typeof fineTuningJobSuffixes)[number];
+
+export interface FineTuningJobConfig {
+  filename: string;
+  suffix: FineTuningJobSuffix;
+  description: string;
+}
