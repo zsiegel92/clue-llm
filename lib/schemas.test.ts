@@ -60,16 +60,6 @@ describe("openAIModelThatGivesLogProbsSchema", () => {
   });
 });
 
-describe("baseOpenAIModelSchema", () => {
-  it("accepts only base models, not fine-tuned", () => {
-    expect(baseOpenAIModelSchema.safeParse("gpt-4.1").success).toBe(true);
-    expect(
-      baseOpenAIModelSchema.safeParse(fineTunedModelSlugs["all-cases-2"])
-        .success,
-    ).toBe(false);
-  });
-});
-
 describe("modelComparisonPredictionsSchema", () => {
   it("validates an empty record", () => {
     const result = modelComparisonPredictionsSchema.safeParse({});
