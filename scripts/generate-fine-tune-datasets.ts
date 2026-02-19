@@ -30,7 +30,6 @@ function testCaseToFineTuningExample(
   testCase: PredictedTestCase,
 ): OpenAIFineTuningExample {
   const userPrompt = gameToPrompt(testCase.game);
-  const expectedAnswer = testCase.game.killer;
 
   return {
     messages: [
@@ -40,7 +39,7 @@ function testCaseToFineTuningExample(
       },
       {
         role: "assistant",
-        content: expectedAnswer,
+        content: JSON.stringify({ killer: testCase.game.killer }),
       },
     ],
   };

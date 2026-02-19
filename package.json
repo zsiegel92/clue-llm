@@ -49,6 +49,7 @@
     "@typescript/native-preview": "7.0.0-dev.20260109.1",
     "babel-plugin-react-compiler": "1.0.0",
     "openai": "^6.22.0",
+    "p-retry": "^7.1.1",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5",
