@@ -92,15 +92,13 @@ export interface FineTuningJobConfig {
   description: string;
 }
 
-// Fine-tuned model suffix to full model slug mapping
-// TODO: confirm from https://platform.openai.com/finetune
 export const fineTunedModelSlugs = {
   "most-conf-wrong-2":
-    "ft:gpt-4.1-nano-2025-04-14:personal:most-conf-wrong:DAmLvxyI",
+    "ft:gpt-4.1-nano-2025-04-14:personal:most-conf-wrong-2:DAnlh3at",
   "least-conf-wrong-2":
-    "ft:gpt-4.1-nano-2025-04-14:personal:least-conf-wrong:DAmOQ58F",
-  "correct-2": "ft:gpt-4.1-nano-2025-04-14:personal:correct:DAmTNCNJ",
-  "all-cases-2": "ft:gpt-4.1-nano-2025-04-14:personal:all-cases:DAmhlcZz",
+    "ft:gpt-4.1-nano-2025-04-14:personal:least-conf-wrong-2:DAnptsX0",
+  "correct-2": "ft:gpt-4.1-nano-2025-04-14:personal:correct-2:DAnlniaW",
+  "all-cases-2": "ft:gpt-4.1-nano-2025-04-14:personal:all-cases-2:DAo5YWOA",
 } as const satisfies Record<FineTuningJobSuffix, string>;
 
 // All OpenAI models that give log probabilities (base + fine-tuned)
