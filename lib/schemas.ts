@@ -66,14 +66,18 @@ export const serializedGameSchema = z.object({
 // Test cases schema
 export const clueTestCasesSchema = z.array(serializedGameSchema);
 
-// OpenAI model type for predictions
-export const openAIModelThatGivesLogProbsSchema = z.enum([
+const openAIModelThatGivesLogProbsValues = [
   "gpt-4o-mini",
   "gpt-4o",
   "gpt-4.1-mini",
   "gpt-4.1-nano",
   "gpt-4.1",
-]);
+] as const;
+
+// OpenAI model type for predictions
+export const openAIModelThatGivesLogProbsSchema = z.enum(
+  openAIModelThatGivesLogProbsValues,
+);
 
 // Prediction data schema (separate from game)
 export const predictionDataSchema = z.object({
