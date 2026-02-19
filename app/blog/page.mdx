@@ -205,6 +205,76 @@ The bet: confident mistakes reveal systematic reasoning failures that generalize
 
 ---
 
+## The Results
+
+We evaluated 7 models on 250 validation cases (disjoint from any fine-tuning training data): three off-the-shelf OpenAI models (`gpt-4.1`, `gpt-4.1-mini`, `gpt-4.1-nano`) and four fine-tuned variants of `gpt-4.1-nano`.
+
+<div className="my-8 flex justify-center">
+  <Image
+    src="/model_accuracy_comparison.png"
+    alt="Model Accuracy Comparison - bar chart showing all models with random chance baseline"
+    width={900}
+    height={500}
+    className="rounded-lg border border-zinc-300 dark:border-zinc-700"
+  />
+</div>
+
+The dotted line at 12.5% is random chance (1 in 8 suspects). The base `gpt-4.1-nano` model barely cleared it at 18.4%—essentially guessing. Meanwhile, the largest off-the-shelf model (`gpt-4.1`) managed 50.8%, showing that scale helps but doesn't solve the problem.
+
+The real story is fine-tuning. Every fine-tuned nano model dramatically outperformed its base—and even the much larger `gpt-4.1`.
+
+### Testing Our Hypotheses
+
+We went in with five hypotheses. Here's what happened:
+
+**1. Larger off-the-shelf models outperform smaller ones: TRUE**
+
+`gpt-4.1` (50.8%) > `gpt-4.1-mini` (44.4%) > `gpt-4.1-nano` (18.4%). Scale matters, but even the largest model only gets half of these logic puzzles right.
+
+**2. Fine-tuning on the problem format increases accuracy over the baseline in all cases: TRUE**
+
+Every fine-tuned nano variant crushed the nano baseline (18.4%)—and also beat `gpt-4.1` (50.8%). The smallest fine-tuned model outperforms the largest off-the-shelf model by a wide margin. Teaching a small model *how* to reason about a specific problem type is more effective than using a large model that has never seen the format.
+
+**3. Fine-tuning on incorrect cases beats fine-tuning on correct cases: TRUE**
+
+Training on wrong answers (96.4–96.8%) vastly outperformed training on correct answers (78.4%). This makes sense: the model already knows how to handle the cases it gets right. The information-dense training signal comes from showing it where its reasoning breaks down.
+
+**4. Confidently-wrong cases beat unconfidently-wrong cases: FALSE (negligible effect)**
+
+Most-confident-wrong (96.8%) vs. least-confident-wrong (96.4%)—a 0.4% difference. This was our most interesting hypothesis, and it was wrong. Whether the model is confidently or hesitantly incorrect doesn't seem to matter much for fine-tuning effectiveness.
+
+**5. Fine-tuning on ALL cases beats fine-tuning on a carefully chosen subset: TRUE**
+
+The "all cases" model achieved 100% accuracy (250/250). More data wins, even when the extra data includes cases the model already handles correctly. The kitchen sink approach beat every targeted strategy.
+
+<div className="my-8 flex justify-center">
+  <Image
+    src="/fine_tuning_strategy_comparison.png"
+    alt="Fine-Tuning Strategy Comparison - nano baseline vs fine-tuned variants"
+    width={800}
+    height={500}
+    className="rounded-lg border border-zinc-300 dark:border-zinc-700"
+  />
+</div>
+
+### Confidence Tells a Story Too
+
+<div className="my-8 flex justify-center">
+  <Image
+    src="/model_confidence_comparison.png"
+    alt="Confidence when correct vs incorrect across all models"
+    width={900}
+    height={500}
+    className="rounded-lg border border-zinc-300 dark:border-zinc-700"
+  />
+</div>
+
+Notice something odd about base `gpt-4.1-nano`: it's *more* confident when it's wrong (0.600) than when it's right (0.585). This model doesn't just fail—it fails without knowing it's failing. This is the Dunning-Kruger effect in action. Fine-tuning fixes this: the fine-tuned models show high confidence when correct and lower confidence when wrong (as do larger models like `4.1-mini` and `4.1`), which is the behavior you want from a well-calibrated model. The "all cases" model is 100% correct with 100% confidence—it has fully internalized the reasoning pattern.
+
+There's a subtlety here that the accuracy numbers alone miss. Among the fine-tuned models that still make mistakes, the one trained on **most-confident-wrong** examples has the largest gap between confidence-when-correct (0.998) and confidence-when-incorrect (0.838)—a delta of +0.160. Compare that to the least-confident-wrong model (+0.103) and the correct-cases model (+0.082). So even though the accuracy difference between most-confident-wrong and least-confident-wrong fine-tuning was negligible (96.8% vs 96.4%), training on confident mistakes produced a model with a *better-calibrated sense of when it's right and when it's wrong*. It may have internalized a deeper understanding of what correctness looks like.
+
+---
+
 ## Why This Matters
 
 By having the model solve NP-complete SAT problems through next-token prediction, we can:
