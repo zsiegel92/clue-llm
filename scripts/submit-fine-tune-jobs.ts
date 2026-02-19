@@ -16,12 +16,20 @@
 import fs from "node:fs";
 import path from "node:path";
 import OpenAI from "openai";
-
+import { type OpenAIModelThatGivesLogProbs } from "@/lib/schemas";
 // NOTE: This will cause a type error until you install the openai package
 // Run: pnpm add openai
 
 const outDir = path.join(process.cwd(), "out");
 const outPath = path.join(outDir, "fine-tune-jobs.json");
+
+const fineTuningModelMap: Record<OpenAIModelThatGivesLogProbs, string> = {
+  "gpt-4.1-nano": "gpt-4.1-nano-2025-04-14",
+  "gpt-4.1": "gpt-4.1-2025-04-14",
+  "gpt-4.1-mini": "gpt-4.1-mini-2025-04-14",
+  "gpt-4o": "gpt-4o-2024-11-20",
+  "gpt-4o-mini": "gpt-4o-mini-2024-07-18",
+};
 
 async function getOpenAIClient() {
   return new OpenAI({
@@ -90,7 +98,7 @@ async function createFineTuningJob(
 
   const fineTune = await openai.fineTuning.jobs.create({
     training_file: fileId,
-    model: "gpt-4.1-nano",
+    model: fineTuningModelMap["gpt-4.1-nano"],
     suffix: suffix,
   });
 
@@ -190,7 +198,9 @@ async function main() {
   console.log("\n📌 Once fine-tuning is complete, your models will be named:");
 
   for (const result of results) {
-    console.log(`   gpt-4.1-nano:${result.config.suffix}`);
+    console.log(
+      `   ${fineTuningModelMap["gpt-4.1-nano"]}:${result.config.suffix}`,
+    );
   }
 
   console.log("\n🎉 Done!");
