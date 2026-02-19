@@ -15,26 +15,21 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import OpenAI from "openai";
 
 // NOTE: This will cause a type error until you install the openai package
 // Run: pnpm add openai
 
-/**
- * Dynamically import and initialize OpenAI client
- */
+const outDir = path.join(process.cwd(), "out");
+const outPath = path.join(outDir, "fine-tune-jobs.json");
+
 async function getOpenAIClient() {
-  try {
-    // @ts-expect-error - openai package must be installed before running this script
-    const { default: OpenAI } = await import("openai");
-    return new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
-    });
-  } catch (error) {
-    console.error("❌ Error: OpenAI package not found");
-    console.error("   Please install it first: pnpm add openai");
-    throw error;
-  }
+  return new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
 }
+
+type OpenAIClient = Awaited<ReturnType<typeof getOpenAIClient>>;
 
 interface FineTuningJobConfig {
   filename: string;
@@ -69,7 +64,7 @@ const FINE_TUNING_CONFIGS: FineTuningJobConfig[] = [
  * Upload a file to OpenAI for fine-tuning
  */
 async function uploadFile(
-  openai: Awaited<ReturnType<typeof getOpenAIClient>>,
+  openai: OpenAIClient,
   filePath: string,
 ): Promise<string> {
   console.log(`📤 Uploading ${path.basename(filePath)}...`);
@@ -87,7 +82,7 @@ async function uploadFile(
  * Create a fine-tuning job
  */
 async function createFineTuningJob(
-  openai: Awaited<ReturnType<typeof getOpenAIClient>>,
+  openai: OpenAIClient,
   fileId: string,
   suffix: string,
 ): Promise<string> {
@@ -106,7 +101,7 @@ async function createFineTuningJob(
 /**
  * Submit all fine-tuning jobs
  */
-async function submitAllFineTuningJobs() {
+async function main() {
   console.log("🎯 Starting fine-tuning job submission\n");
   console.log("=".repeat(60));
 
@@ -165,6 +160,18 @@ async function submitAllFineTuningJobs() {
     }
   }
 
+  // Write results to ./out/fine-tune-jobs.json
+  await fs.promises.mkdir(outDir, { recursive: true });
+  const output = results.map((r) => ({
+    suffix: r.config.suffix,
+    description: r.config.description,
+    filename: r.config.filename,
+    fileId: r.fileId,
+    jobId: r.jobId,
+  }));
+  await fs.promises.writeFile(outPath, `${JSON.stringify(output, null, 2)}\n`);
+  console.log(`\n📁 Job details written to ${outPath}`);
+
   // Print summary
   console.log(`\n${"=".repeat(60)}`);
   console.log("✅ All fine-tuning jobs submitted successfully!\n");
@@ -179,7 +186,6 @@ async function submitAllFineTuningJobs() {
   }
 
   console.log("💡 Monitor your jobs at: https://platform.openai.com/finetune");
-  console.log("💡 Or use the OpenAI CLI: openai api fine_tunes.list");
   console.log(`\n${"=".repeat(60)}`);
   console.log("\n📌 Once fine-tuning is complete, your models will be named:");
 
@@ -190,12 +196,7 @@ async function submitAllFineTuningJobs() {
   console.log("\n🎉 Done!");
 }
 
-// Main execution
-if (require.main === module) {
-  submitAllFineTuningJobs().catch((error) => {
-    console.error("\n❌ Fatal error:", error);
-    process.exit(1);
-  });
-}
-
-export { submitAllFineTuningJobs };
+main().catch((error) => {
+  console.error("\n❌ Fatal error:", error);
+  process.exit(1);
+});

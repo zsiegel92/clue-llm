@@ -60,7 +60,7 @@ async function writeFineTuningDataset(
   console.log(`✅ Wrote ${examples.length} examples to ${outputPath}`);
 }
 
-async function generateFineTuneDatasets() {
+async function main() {
   console.log("🎯 Generating fine-tuning datasets\n");
   console.log("=".repeat(60));
 
@@ -200,7 +200,7 @@ async function generateFineTuneDatasets() {
   console.log(`\n📁 All files written to: ${outputDir}`);
 }
 
-generateFineTuneDatasets().catch((error) => {
+main().catch((error) => {
   console.error("❌ Error:", error);
   process.exit(1);
 });
