@@ -66,12 +66,50 @@ export const serializedGameSchema = z.object({
 // Test cases schema
 export const clueTestCasesSchema = z.array(serializedGameSchema);
 
-const openAIModelThatGivesLogProbsValues = [
+// Base OpenAI models that give log probabilities
+const baseOpenAIModelValues = [
   "gpt-4o-mini",
   "gpt-4o",
   "gpt-4.1-mini",
   "gpt-4.1-nano",
   "gpt-4.1",
+] as const;
+
+export const baseOpenAIModelSchema = z.enum(baseOpenAIModelValues);
+
+// Fine-tuning job suffixes
+const fineTuningJobSuffixes = [
+  "most-conf-wrong",
+  "least-conf-wrong",
+  "correct",
+  "all-cases",
+] as const;
+type FineTuningJobSuffix = (typeof fineTuningJobSuffixes)[number];
+
+export interface FineTuningJobConfig {
+  filename: string;
+  suffix: FineTuningJobSuffix;
+  description: string;
+}
+
+// Fine-tuned model suffix to full model slug mapping
+// TODO: confirm from https://platform.openai.com/finetune
+export const fineTunedModelSlugs = {
+  "most-conf-wrong":
+    "ft:gpt-4.1-nano-2025-04-14:personal:most-conf-wrong:DAmLvxyI",
+  "least-conf-wrong":
+    "ft:gpt-4.1-nano-2025-04-14:personal:least-conf-wrong:DAmOQ58F",
+  correct: "ft:gpt-4.1-nano-2025-04-14:personal:correct:DAmTNCNJ",
+  "all-cases": "ft:gpt-4.1-nano-2025-04-14:personal:all-cases:DAmhlcZz",
+} as const satisfies Record<FineTuningJobSuffix, string>;
+
+// All OpenAI models that give log probabilities (base + fine-tuned)
+const openAIModelThatGivesLogProbsValues = [
+  ...baseOpenAIModelValues,
+  fineTunedModelSlugs["most-conf-wrong"],
+  fineTunedModelSlugs["least-conf-wrong"],
+  fineTunedModelSlugs.correct,
+  fineTunedModelSlugs["all-cases"],
 ] as const;
 
 // OpenAI model type for predictions
@@ -98,6 +136,12 @@ export const predictedTestCaseSchema = z.object({
 // Array of predicted test cases
 export const predictedTestCasesSchema = z.array(predictedTestCaseSchema);
 
+// Model comparison predictions: keyed by model name
+export const modelComparisonPredictionsSchema = z.record(
+  z.string(),
+  predictedTestCasesSchema,
+);
+
 // Infer types
 export type SingleTokenStrings = z.infer<typeof singleTokenStringsSchema>;
 export type PropositionType = z.infer<typeof propositionTypeSchema>;
@@ -107,23 +151,13 @@ export type SerializedPersonActivity = z.infer<
 >;
 export type SerializedGame = z.infer<typeof serializedGameSchema>;
 export type ClueTestCases = z.infer<typeof clueTestCasesSchema>;
+export type BaseOpenAIModel = z.infer<typeof baseOpenAIModelSchema>;
 export type OpenAIModelThatGivesLogProbs = z.infer<
   typeof openAIModelThatGivesLogProbsSchema
 >;
 export type PredictionData = z.infer<typeof predictionDataSchema>;
 export type PredictedTestCase = z.infer<typeof predictedTestCaseSchema>;
 export type PredictedTestCases = z.infer<typeof predictedTestCasesSchema>;
-
-const fineTuningJobSuffixes = [
-  "most-conf-wrong",
-  "least-conf-wrong",
-  "correct",
-  "all-cases",
-] as const;
-type FineTuningJobSuffix = (typeof fineTuningJobSuffixes)[number];
-
-export interface FineTuningJobConfig {
-  filename: string;
-  suffix: FineTuningJobSuffix;
-  description: string;
-}
+export type ModelComparisonPredictions = z.infer<
+  typeof modelComparisonPredictionsSchema
+>;

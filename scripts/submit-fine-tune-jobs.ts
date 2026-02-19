@@ -16,17 +16,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import OpenAI from "openai";
-import {
-  type OpenAIModelThatGivesLogProbs,
-  type FineTuningJobConfig,
-} from "@/lib/schemas";
+import type { BaseOpenAIModel, FineTuningJobConfig } from "@/lib/schemas";
+
 // NOTE: This will cause a type error until you install the openai package
 // Run: pnpm add openai
 
 const outDir = path.join(process.cwd(), "out");
 const outPath = path.join(outDir, "fine-tune-jobs.json");
 
-const fineTuningModelMap: Record<OpenAIModelThatGivesLogProbs, string> = {
+const fineTuningModelMap: Record<BaseOpenAIModel, string> = {
   "gpt-4.1-nano": "gpt-4.1-nano-2025-04-14",
   "gpt-4.1": "gpt-4.1-2025-04-14",
   "gpt-4.1-mini": "gpt-4.1-mini-2025-04-14",

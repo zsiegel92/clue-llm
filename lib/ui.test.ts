@@ -119,8 +119,8 @@ describe("gameToPrompt", () => {
     const prompt = gameToPrompt(game);
 
     expect(prompt).toContain("# Clue Logic Puzzle");
-    expect(prompt).toContain("## Suspects:");
-    expect(prompt).toContain("## Propositions:");
+    expect(prompt).toContain("**Suspects:**");
+    expect(prompt).toContain("**Propositions:**");
     expect(prompt).toContain("Based on these propositions, who is the killer?");
   });
 
@@ -145,8 +145,13 @@ describe("gameToPrompt", () => {
     const game = clueTestCases[0];
     const prompt = gameToPrompt(game);
 
-    const lines = prompt.split("\n");
-    const propositionLines = lines.filter((line) => /^\d+\. /.test(line));
+    // Count proposition lines between **Propositions:** and </input>
+    const propsStart = prompt.indexOf("**Propositions:**");
+    const propsEnd = prompt.indexOf("</input>");
+    const propsSection = prompt.slice(propsStart, propsEnd);
+    const propositionLines = propsSection
+      .split("\n")
+      .filter((line) => /^\d+\. /.test(line));
 
     expect(propositionLines.length).toBe(game.propositions.length);
   });

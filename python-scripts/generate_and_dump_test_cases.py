@@ -7,6 +7,7 @@ from generate_serialized_game import generate_test_case, SerializedGame
 
 NUMBER_OF_CASES_TO_GENERATE = 500
 NUMBER_OF_FEW_SHOT_EXAMPLES_TO_GENERATE = 20
+NUMBER_OF_VALIDATION_CASES_TO_GENERATE = 250
 
 
 def generate_test_cases(num_cases: int, seed_start: int = 0) -> list[SerializedGame]:
@@ -19,7 +20,7 @@ def generate_test_cases(num_cases: int, seed_start: int = 0) -> list[SerializedG
         serialized_game = generate_test_case(seed)
         test_cases.append(serialized_game)
         if i % 20 == 0:
-            print(f"Generated {i + 1}/{NUMBER_OF_CASES_TO_GENERATE} test cases")
+            print(f"Generated {i + 1}/{num_cases} test cases")
     return test_cases
 
 
@@ -32,6 +33,10 @@ def main() -> None:
         (
             NUMBER_OF_FEW_SHOT_EXAMPLES_TO_GENERATE,
             "few-shot-example-clue-test-cases.json",
+        ),
+        (
+            NUMBER_OF_VALIDATION_CASES_TO_GENERATE,
+            "clue-validation-cases.json",
         ),
     ]:
         output_path = Path(__file__).parent.parent / "lib" / destination_filename

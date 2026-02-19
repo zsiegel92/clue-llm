@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { clueTestCases } from "./clue-test-cases";
 
 describe("clue-test-cases", () => {
-  it("loads 100 test cases", () => {
-    expect(clueTestCases.length).toBe(100);
+  it("loads 500 test cases", () => {
+    expect(clueTestCases.length).toBe(500);
   });
 
   it("all test cases have required fields", () => {
