@@ -37,10 +37,10 @@ describe("modelsToCompare consistency", () => {
 
   it("fineTunedModelSlugs keys match expected suffixes", () => {
     const keys = Object.keys(fineTunedModelSlugs);
-    expect(keys).toContain("most-conf-wrong");
-    expect(keys).toContain("least-conf-wrong");
-    expect(keys).toContain("correct");
-    expect(keys).toContain("all-cases");
+    expect(keys).toContain("most-conf-wrong-2");
+    expect(keys).toContain("least-conf-wrong-2");
+    expect(keys).toContain("correct-2");
+    expect(keys).toContain("all-cases-2");
     expect(keys.length).toBe(4);
   });
 });

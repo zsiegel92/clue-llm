@@ -11,10 +11,10 @@ import {
 describe("fineTunedModelSlugs", () => {
   it("has all four fine-tuning job suffixes", () => {
     expect(Object.keys(fineTunedModelSlugs)).toEqual([
-      "most-conf-wrong",
-      "least-conf-wrong",
-      "correct",
-      "all-cases",
+      "most-conf-wrong-2",
+      "least-conf-wrong-2",
+      "correct-2",
+      "all-cases-2",
     ]);
   });
 
@@ -64,7 +64,8 @@ describe("baseOpenAIModelSchema", () => {
   it("accepts only base models, not fine-tuned", () => {
     expect(baseOpenAIModelSchema.safeParse("gpt-4.1").success).toBe(true);
     expect(
-      baseOpenAIModelSchema.safeParse(fineTunedModelSlugs["all-cases"]).success,
+      baseOpenAIModelSchema.safeParse(fineTunedModelSlugs["all-cases-2"])
+        .success,
     ).toBe(false);
   });
 });

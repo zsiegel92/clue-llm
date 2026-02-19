@@ -79,10 +79,10 @@ export const baseOpenAIModelSchema = z.enum(baseOpenAIModelValues);
 
 // Fine-tuning job suffixes
 const fineTuningJobSuffixes = [
-  "most-conf-wrong",
-  "least-conf-wrong",
-  "correct",
-  "all-cases",
+  "most-conf-wrong-2",
+  "least-conf-wrong-2",
+  "correct-2",
+  "all-cases-2",
 ] as const;
 type FineTuningJobSuffix = (typeof fineTuningJobSuffixes)[number];
 
@@ -95,21 +95,21 @@ export interface FineTuningJobConfig {
 // Fine-tuned model suffix to full model slug mapping
 // TODO: confirm from https://platform.openai.com/finetune
 export const fineTunedModelSlugs = {
-  "most-conf-wrong":
+  "most-conf-wrong-2":
     "ft:gpt-4.1-nano-2025-04-14:personal:most-conf-wrong:DAmLvxyI",
-  "least-conf-wrong":
+  "least-conf-wrong-2":
     "ft:gpt-4.1-nano-2025-04-14:personal:least-conf-wrong:DAmOQ58F",
-  correct: "ft:gpt-4.1-nano-2025-04-14:personal:correct:DAmTNCNJ",
-  "all-cases": "ft:gpt-4.1-nano-2025-04-14:personal:all-cases:DAmhlcZz",
+  "correct-2": "ft:gpt-4.1-nano-2025-04-14:personal:correct:DAmTNCNJ",
+  "all-cases-2": "ft:gpt-4.1-nano-2025-04-14:personal:all-cases:DAmhlcZz",
 } as const satisfies Record<FineTuningJobSuffix, string>;
 
 // All OpenAI models that give log probabilities (base + fine-tuned)
 const openAIModelThatGivesLogProbsValues = [
   ...baseOpenAIModelValues,
-  fineTunedModelSlugs["most-conf-wrong"],
-  fineTunedModelSlugs["least-conf-wrong"],
-  fineTunedModelSlugs.correct,
-  fineTunedModelSlugs["all-cases"],
+  fineTunedModelSlugs["most-conf-wrong-2"],
+  fineTunedModelSlugs["least-conf-wrong-2"],
+  fineTunedModelSlugs["correct-2"],
+  fineTunedModelSlugs["all-cases-2"],
 ] as const;
 
 // OpenAI model type for predictions

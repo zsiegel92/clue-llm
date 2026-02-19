@@ -43,22 +43,22 @@ type OpenAIClient = Awaited<ReturnType<typeof getOpenAIClient>>;
 const FINE_TUNING_CONFIGS: FineTuningJobConfig[] = [
   {
     filename: "most-confident-wrong.jsonl",
-    suffix: "most-conf-wrong",
+    suffix: "most-conf-wrong-2",
     description: "72 most confident but wrong predictions",
   },
   {
     filename: "least-confident-wrong.jsonl",
-    suffix: "least-conf-wrong",
+    suffix: "least-conf-wrong-2",
     description: "72 least confident and wrong predictions",
   },
   {
     filename: "correct.jsonl",
-    suffix: "correct",
+    suffix: "correct-2",
     description: "72 correct predictions",
   },
   {
     filename: "all-cases.jsonl",
-    suffix: "all-cases",
+    suffix: "all-cases-2",
     description: "All 500 test cases",
   },
 ];
