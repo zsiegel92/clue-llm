@@ -8,11 +8,36 @@ interface TocItem {
   level: number;
 }
 
+interface TocSection {
+  heading: TocItem;
+  children: ReadonlyArray<TocItem>;
+}
+
 function slugify(text: string): string {
   return text
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
+}
+
+function groupIntoSections(
+  headings: ReadonlyArray<TocItem>,
+): ReadonlyArray<TocSection> {
+  const sections: Array<TocSection> = [];
+
+  for (const heading of headings) {
+    if (heading.level === 2) {
+      sections.push({ heading, children: [] });
+    } else if (sections.length > 0) {
+      const current = sections[sections.length - 1];
+      sections[sections.length - 1] = {
+        ...current,
+        children: [...current.children, heading],
+      };
+    }
+  }
+
+  return sections;
 }
 
 export function TableOfContents() {
@@ -31,7 +56,11 @@ export function TableOfContents() {
       if (!text.trim()) continue;
       const id = el.id || slugify(text);
       if (!el.id) el.id = id;
-      items.push({ id, text: text.trim(), level: el.tagName === "H2" ? 2 : 3 });
+      items.push({
+        id,
+        text: text.trim(),
+        level: el.tagName === "H2" ? 2 : 3,
+      });
     }
 
     setHeadings(items);
@@ -61,27 +90,46 @@ export function TableOfContents() {
 
   if (headings.length === 0) return null;
 
+  const sections = groupIntoSections(headings);
+
   return (
     <nav className="toc">
       <p className="toc__title">On this page</p>
       <ul className="toc__list">
-        {headings.map(({ id, text, level }) => (
-          <li
-            key={id}
-            className={level === 3 ? "toc__item--nested" : undefined}
-          >
+        {sections.map((section) => (
+          <li key={section.heading.id} className="toc__section">
             <a
-              href={`#${id}`}
-              className={`toc__link ${activeId === id ? "toc__link--active" : ""}`}
+              href={`#${section.heading.id}`}
+              className={`toc__link ${activeId === section.heading.id ? "toc__link--active" : ""}`}
               onClick={(e) => {
                 e.preventDefault();
                 document
-                  .getElementById(id)
+                  .getElementById(section.heading.id)
                   ?.scrollIntoView({ behavior: "auto" });
               }}
             >
-              {text}
+              {section.heading.text}
             </a>
+            {section.children.length > 0 && (
+              <ul className="toc__children">
+                {section.children.map((child) => (
+                  <li key={child.id}>
+                    <a
+                      href={`#${child.id}`}
+                      className={`toc__link ${activeId === child.id ? "toc__link--active" : ""}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .getElementById(child.id)
+                          ?.scrollIntoView({ behavior: "auto" });
+                      }}
+                    >
+                      {child.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>

@@ -15,14 +15,19 @@ def test_generate_and_solve_game():
     print("Running single game test...")
 
     # Create and setup game
-    game = create_game(DEFAULT_CONFIG, seed=42)
+    game = create_game(
+        DEFAULT_CONFIG,
+    )
     setup_scenario(game)
 
     # Print scenario for visibility
     print_scenario(game)
 
     # Generate propositions until unique solution
-    identified_killer = generate_game_until_unique_solution(game, verbose=True)
+    identified_killer = generate_game_until_unique_solution(
+        game,
+        verbose=True,
+    )
 
     # Print the full game record
     print("\n" + "=" * 60)
@@ -36,12 +41,12 @@ def test_generate_and_solve_game():
 
     # Assertions
     assert count == 1, f"Expected 1 possible killer, got {count}: {possible_killers}"
-    assert identified_killer == game.killer, (
-        f"Identified {identified_killer} but actual killer is {game.killer}"
-    )
-    assert possible_killers[0] == game.killer, (
-        f"Solver found {possible_killers[0]} but actual killer is {game.killer}"
-    )
+    assert (
+        identified_killer == game.killer
+    ), f"Identified {identified_killer} but actual killer is {game.killer}"
+    assert (
+        possible_killers[0] == game.killer
+    ), f"Solver found {possible_killers[0]} but actual killer is {game.killer}"
 
     print("✅ Test passed: Unique solution found and verified!")
     return True

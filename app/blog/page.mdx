@@ -25,9 +25,14 @@ Here's an actual game from our dataset. Read through the propositions (clues) an
 
 ## How the Games Are Generated
 
-The clever part: we use the same NP-complete problem to *create* the puzzles that the LLM will need to *solve*.
+Each game is generated through an iterative process using SymPy's SAT solver - randomly generate propositions until the game has exactly one killer (but does not become infeasible).
 
-Each game is generated through an iterative process using SymPy's SAT solver:
+> Note: there ARE computationally cheaper ways to generate tight sets of propositions (exactly one solution) but this was fun and required only building one good piece of machinery: the game's SAT solver.
+
+
+### Generate games in your browser!
+
+This runs our REAL SymPy-based game generator *IN YOUR BROWSER* with Pyodide!
 
 <ServerPythonProvidedStaticMultiFileCodeBlock
   filePaths={[
@@ -44,52 +49,17 @@ Each game is generated through an iterative process using SymPy's SAT solver:
   maxOutputLinesHeight={30}
 />
 
-**The generation algorithm:**
-
-1. **Create suspects**: Generate 8 people with random attributes across 6 categories (place, food, material, institution, company, technology)
-2. **Pick the killer**: Randomly select one suspect as the true culprit
-3. **Generate propositions**: Iteratively add logical clues like:
-   - "Joe was with cement"
-   - "(Will with cement) OR (Bob with pizza and at the library)"
-   - "If Jane was at the church, Jane is not the killer"
-4. **Validate with SAT**: Before adding each proposition, use the SAT solver to ensure it doesn't accidentally eliminate the true killer
-5. **Check convergence**: After each proposition, check if exactly one suspect remains
-6. **Repeat**: Continue until the SAT solver confirms only one person could be the killer
 
 **The key insight**: Every proposition is verified against the ground truth using SAT solving. This guarantees 100% solvability—the puzzle *always* has exactly one solution. The LLM must now perform the same logical deduction the SAT solver used to generate the game.
 
 ---
 
-## The Single-Token Trick
-
-To measure the LLM's reasoning precisely, we need clean confidence scores. That's where **single-token strings** come in.
-
-### Why Single Tokens Matter
-
-Names like "Joe", "Bob", "Will", and "Linda" are carefully chosen because they each tokenize to exactly one token in GPT-4o's tokenizer. This means:
-
-**Clean confidence measurement**: When the LLM predicts "Joe" as the killer, we get a single log probability value representing its confidence. No multi-token aggregation needed—just one clean number.
-
-Compare this to a name like "Elizabeth" (multiple tokens). To get the overall confidence, you'd need to aggregate probabilities across tokens, which introduces complexity and potential measurement artifacts. With single tokens, we get the LLM's raw, unambiguous confidence in its answer.
-
-### Implementation Details
-
-All game elements are single-token strings:
-- **Names**: Joe, John, Bob, Will, Jane, Linda, etc.
-- **Places**: China, India, France, etc.
-- **Materials**: wood, metal, steel, cement, etc.
-- **Foods**: pizza, bread, fish, etc.
-- **Technologies**: Python, Java, Ruby, etc.
-
-We verify this in tests and extract log probabilities directly from the API response. The formula is simple: `confidence = e^(logprob)`. This gives us a probability between 0 and 1 representing how confident the model is in its prediction.
-
-This precision lets us measure exactly how confident the model is at each prediction, enabling calibration analysis and fine-tuning strategies.
-
----
 
 ## Does the Model Know When It's Right?
 
-A well-calibrated model should be more confident when correct and less confident when wrong. If it says "I'm 80% sure," it should be right about 80% of the time.
+A well-calibrated model, in-distribution, should be more confident when correct and less confident when wrong. If it says "I'm 80% sure," it should be right about 80% of the time.
+
+We extract log probabilities directly from responses from the OpenAI chat API. The formula is simple: `confidence = e^(logprob)`. This gives us a probability between 0 and 1 representing how confident the model is in its prediction.
 
 We analyzed predictions from `gpt-4.1-nano` to see how well it calibrates on this logical reasoning task:
 
@@ -103,51 +73,39 @@ We analyzed predictions from `gpt-4.1-nano` to see how well it calibrates on thi
   />
 </div>
 
-### Reading the Calibration Curve
-
-- **X-axis**: What confidence the model reported (0-100%)
-- **Y-axis**: How often it was actually correct (0-100%)
-- **Perfect calibration**: Points fall on the diagonal line (x=y)
-
-**What we typically see:**
-- Higher confidence correlates with higher accuracy (good!)
-- But there's often overconfidence or underconfidence in certain ranges
-- The gap between confidence and accuracy reveals systematic biases
-
-This analysis reveals when the model "knows what it knows"—and when it's confidently wrong. These confident mistakes are particularly interesting: they show us exactly where the model's reasoning breaks down.
-
+> `gpt-4.1-nano` scores roughly as well as random chance, so these problems are squarely OUT-OF-DISTRIBUTION, yet confidence still has a positive relationship with accuracy.
 ---
 
----
+## Model Performance
 
-## How Well Does It Actually Work?
-
-Here's how `gpt-4.1-nano` performs on these NP-complete logic puzzles:
+Here's how the baseline model `gpt-4.1-nano` performs on these NP-complete logic puzzles:
 
 <StatsDisplay />
 
-### What These Numbers Mean
+> With 8 suspects, random guessing gives you 12.5% accuracy. `gpt-4.1-nano` hardly does better!
 
-- **Overall Accuracy**: How often the model picks the right killer
-- **Avg Confidence (Correct)**: Average confidence when it's right
-- **Avg Confidence (Incorrect)**: Average confidence when it's wrong
-- **Confidence Delta**: The separation between right and wrong confidence—bigger is better
-- **Average Suspects per Game**: Typical number of potential killers
-- **Random Chance Accuracy**: What you'd get by guessing randomly (1 / number of suspects)
 
-### The Random Chance Baseline
+We evaluated 7 models on 250 validation cases (disjoint from any fine-tuning training data): three off-the-shelf OpenAI models (`gpt-4.1`, `gpt-4.1-mini`, `gpt-4.1-nano`) and four fine-tuned variants of `gpt-4.1-nano`.
 
-With 8 suspects, random guessing gives you 12.5% accuracy. Any performance significantly above this suggests genuine logical reasoning rather than pattern matching or lucky guessing.
+<div className="my-8 flex justify-center">
+  <Image
+    src="/model_accuracy_comparison.png"
+    alt="Model Accuracy Comparison - bar chart showing all models with random chance baseline"
+    width={900}
+    height={500}
+    className="rounded-lg border border-zinc-300 dark:border-zinc-700"
+  />
+</div>
 
-These are *hard* problems. The model is performing the same logical deduction that requires an NP-complete SAT solver to generate the puzzles. Every mistake the model makes is an opportunity to study where its reasoning fails—and potentially fix it through targeted fine-tuning.
+The dotted line at 12.5% is random chance (1 in 8 suspects). The base `gpt-4.1-nano` model barely cleared it at 18.4%—essentially guessing. Meanwhile, the largest off-the-shelf model (`gpt-4.1`) managed 50.8%, showing that scale helps but doesn't solve the problem.
+
+The real story is fine-tuning. Every fine-tuned nano model dramatically outperformed its base—and even the much larger `gpt-4.1`.
+
+
 
 ---
 
-## Teaching It to Reason Better
-
-Now that we know *where* the model fails, can we teach it to reason better through fine-tuning?
-
-### The Strategic Question
+## Fine-Tuning: are "Confidently Wrong" examples the most sample-efficient?? (Yes!)
 
 Not all training examples are equally valuable. Fine-tuning on cases the model already solves correctly is unlikely to help—it already knows how to handle those. The interesting question: **which mistakes should we teach it to fix?**
 
@@ -173,35 +131,13 @@ The full dataset, both right and wrong predictions.
 
 **Hypothesis**: Variable impact depending on the distribution.
 
-### The Experiment
 
-By comparing these strategies, we can empirically test: **Is it more efficient to train on a small number of confident mistakes, or a large number of all mistakes?** This is a mechanistic interpretability question disguised as a training efficiency question.
-
-The bet: confident mistakes reveal systematic reasoning failures that generalize across many similar cases. Fix those, and the model should improve dramatically with minimal training data.
 
 ---
 
-## The Results
 
-We evaluated 7 models on 250 validation cases (disjoint from any fine-tuning training data): three off-the-shelf OpenAI models (`gpt-4.1`, `gpt-4.1-mini`, `gpt-4.1-nano`) and four fine-tuned variants of `gpt-4.1-nano`.
+## Hypotheses, Results, Learnings
 
-<div className="my-8 flex justify-center">
-  <Image
-    src="/model_accuracy_comparison.png"
-    alt="Model Accuracy Comparison - bar chart showing all models with random chance baseline"
-    width={900}
-    height={500}
-    className="rounded-lg border border-zinc-300 dark:border-zinc-700"
-  />
-</div>
-
-The dotted line at 12.5% is random chance (1 in 8 suspects). The base `gpt-4.1-nano` model barely cleared it at 18.4%—essentially guessing. Meanwhile, the largest off-the-shelf model (`gpt-4.1`) managed 50.8%, showing that scale helps but doesn't solve the problem.
-
-The real story is fine-tuning. Every fine-tuned nano model dramatically outperformed its base—and even the much larger `gpt-4.1`.
-
-### Testing Our Hypotheses
-
-We went in with five hypotheses. Here's what happened:
 
 **1. Larger off-the-shelf models outperform smaller ones: TRUE**
 
@@ -215,9 +151,11 @@ Every fine-tuned nano variant crushed the nano baseline (18.4%)—and also beat 
 
 Training on wrong answers (96.4–96.8%) vastly outperformed training on correct answers (78.4%). This makes sense: the model already knows how to handle the cases it gets right. The information-dense training signal comes from showing it where its reasoning breaks down.
 
-**4. Confidently-wrong cases beat unconfidently-wrong cases: FALSE (negligible effect)**
+**4. Confidently-wrong cases beat unconfidently-wrong cases: MAYBE (negligible effect)**
 
-Most-confident-wrong (96.8%) vs. least-confident-wrong (96.4%)—a 0.4% difference. This was our most interesting hypothesis, and it was wrong. Whether the model is confidently or hesitantly incorrect doesn't seem to matter much for fine-tuning effectiveness.
+Most-confident-wrong (96.8%) vs. least-confident-wrong (96.4%)—a 0.4% difference. This was our most interesting hypothesis, and it was too close to call. Whether the model is confidently or hesitantly incorrect doesn't seem to matter much for fine-tuning effectiveness.
+
+A caveat: see below note on confidence. The model fine-tuned on "confidently wrong" examples was the best-calibrated in terms of logprob of top token correlating with accuracy. So, it wasn't so much more accurate, but its confidence was a much better indicator of its accuracy than the other experimental conditions. Takeaway: a model trained on its worst mistakes can better flag production hallucinations.
 
 **5. Fine-tuning on ALL cases beats fine-tuning on a carefully chosen subset: TRUE**
 
@@ -233,7 +171,7 @@ The "all cases" model achieved 100% accuracy (250/250). More data wins, even whe
   />
 </div>
 
-### Confidence Tells a Story Too
+### Confidence & the Dunning-Kruger Effect
 
 <div className="my-8 flex justify-center">
   <Image
@@ -245,7 +183,9 @@ The "all cases" model achieved 100% accuracy (250/250). More data wins, even whe
   />
 </div>
 
-Notice something odd about base `gpt-4.1-nano`: it's *more* confident when it's wrong (0.600) than when it's right (0.585). This model doesn't just fail—it fails without knowing it's failing. This is the Dunning-Kruger effect in action. Fine-tuning fixes this: the fine-tuned models show high confidence when correct and lower confidence when wrong (as do larger models like `4.1-mini` and `4.1`), which is the behavior you want from a well-calibrated model. The "all cases" model is 100% correct with 100% confidence—it has fully internalized the reasoning pattern.
+Notice something odd about base `gpt-4.1-nano`: it's *more* confident when it's wrong (0.600) than when it's right (0.585). This model doesn't just fail—it fails without knowing it's failing. This is the Dunning-Kruger effect in action.
+
+Fine-tuning fixes this: the fine-tuned models show high confidence when correct and lower confidence when wrong (as do larger models like `4.1-mini` and `4.1`), which is the behavior you want from a well-calibrated model. The "all cases" model is 100% correct with 100% confidence—it has fully internalized the reasoning pattern.
 
 There's a subtlety here that the accuracy numbers alone miss. Among the fine-tuned models that still make mistakes, the one trained on **most-confident-wrong** examples has the largest gap between confidence-when-correct (0.998) and confidence-when-incorrect (0.838)—a delta of +0.160. Compare that to the least-confident-wrong model (+0.103) and the correct-cases model (+0.082). So even though the accuracy difference between most-confident-wrong and least-confident-wrong fine-tuning was negligible (96.8% vs 96.4%), training on confident mistakes produced a model with a *better-calibrated sense of when it's right and when it's wrong*. It may have internalized a deeper understanding of what correctness looks like.
 
@@ -257,11 +197,9 @@ By having the model solve NP-complete SAT problems through next-token prediction
 
 1. **Test the limits of reasoning**: These are computationally hard problems. Can next-token prediction encode genuine logical deduction?
 
-2. **Measure confidence precisely**: Single-token predictions give us clean probability measurements, revealing when the model "knows what it knows."
+2. **Measure confidence precisely**: Single-token predictions give us clean probability measurements, revealing when the model "knows what it knows." Low confidence can help flag hallucinations in production is probably the simplest possible mechanistic interpretability entrypoint for AI engineers.
 
-3. **Identify failure modes**: Where does logical reasoning break down? Confident mistakes show us systematic errors in how the model reasons.
-
-4. **Improve strategically**: By training on specific failure patterns, we can teach the model to reason better—and measure exactly how much better.
+3. **Fine-tune efficiently**: By training on specific failure patterns, we can teach the model to reason better—and measure exactly how much better.
 
 Ilya Sutskever said predicting the killer in a detective novel requires "a fair amount of reasoning." We've built a controlled environment to test exactly that claim. The results suggest that yes, LLMs can perform complex logical reasoning through next-token prediction—but they're far from perfect. Every mistake is a window into how they think.
 
