@@ -29,12 +29,86 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
+/* Prose + TOC Layout */
+.prose-layout {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* MDX Typography Styles */
 .prose {
   max-width: 65ch;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  min-width: 0;
+  padding: 2rem 0;
   line-height: 1.75;
+}
+
+/* TOC Sidebar */
+.toc-sidebar {
+  display: none;
+  width: 14rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1200px) {
+  .toc-sidebar {
+    display: block;
+    padding-top: 2rem;
+  }
+}
+
+.toc {
+  position: sticky;
+  top: 2rem;
+}
+
+.toc__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.toc__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid var(--code-border);
+}
+
+.toc__list li {
+  margin: 0;
+}
+
+.toc__item--nested {
+  padding-left: 0.75rem;
+}
+
+.toc__link {
+  display: block;
+  padding: 0.25rem 0 0.25rem 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.15s;
+  margin-left: -2px;
+  border-left: 2px solid transparent;
+}
+
+.toc__link:hover {
+  color: var(--foreground);
+}
+
+.toc__link--active {
+  color: var(--foreground);
+  border-left-color: #3b82f6;
 }
 
 .prose h1 {
