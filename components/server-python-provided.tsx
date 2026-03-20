@@ -27,10 +27,10 @@ export async function ServerPythonProvidedStaticCodeBlock({
   maxCodeLinesHeight?: number;
   maxOutputLinesHeight?: number;
 }) {
-  const code = await fs.readFile(filePath, "utf8");
+  const code = await fs.readFile(path.resolve(process.cwd(), filePath), "utf8");
   const fileName = path.basename(filePath);
   const dependencies = await fs
-    .readFile("pyproject.toml", "utf8")
+    .readFile(path.resolve(process.cwd(), "pyproject.toml"), "utf8")
     .then((configString) =>
       pyProjectSchema
         .parse(toml.parse(configString))
@@ -60,7 +60,10 @@ export async function ServerPythonProvidedStaticMultiFileCodeBlock({
 }) {
   const files: CodeFile[] = await Promise.all(
     filePaths.map(async (filePath) => {
-      let content = await fs.readFile(filePath, "utf8");
+      let content = await fs.readFile(
+        path.resolve(process.cwd(), filePath),
+        "utf8",
+      );
       const name = filePath.replace(/^python-scripts\//, "");
 
       // Special handling for single_token_strings.py to work in pyodide
@@ -81,7 +84,7 @@ export async function ServerPythonProvidedStaticMultiFileCodeBlock({
   );
 
   const dependencies = await fs
-    .readFile("pyproject.toml", "utf8")
+    .readFile(path.resolve(process.cwd(), "pyproject.toml"), "utf8")
     .then((configString) =>
       pyProjectSchema
         .parse(toml.parse(configString))

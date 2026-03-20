@@ -15,7 +15,7 @@
       "!build",
       "!lib/clue-test-cases.json"
     ],
-    "maxSize": 10485760
+    "maxSize": 100485760
   },
   "formatter": {
     "enabled": true,

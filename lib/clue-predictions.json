@@ -3,16 +3,7 @@
     "game": {
       "seed": 1000,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -1186,16 +1177,7 @@
     "game": {
       "seed": 1001,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -2579,16 +2561,7 @@
     "game": {
       "seed": 1002,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -3402,16 +3375,7 @@
     "game": {
       "seed": 1003,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -4465,16 +4429,7 @@
     "game": {
       "seed": 1004,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -5498,16 +5453,7 @@
     "game": {
       "seed": 1005,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -7146,16 +7092,7 @@
     "game": {
       "seed": 1006,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -8164,16 +8101,7 @@
     "game": {
       "seed": 1007,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -9377,16 +9305,7 @@
     "game": {
       "seed": 1008,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -10650,16 +10569,7 @@
     "game": {
       "seed": 1009,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -12583,16 +12493,7 @@
     "game": {
       "seed": 1010,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -13631,16 +13532,7 @@
     "game": {
       "seed": 1011,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -14784,16 +14676,7 @@
     "game": {
       "seed": 1012,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -16417,16 +16300,7 @@
     "game": {
       "seed": 1013,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -17975,16 +17849,7 @@
     "game": {
       "seed": 1014,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -18963,16 +18828,7 @@
     "game": {
       "seed": 1015,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -20596,16 +20452,7 @@
     "game": {
       "seed": 1016,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -22019,16 +21866,7 @@
     "game": {
       "seed": 1017,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -23127,16 +22965,7 @@
     "game": {
       "seed": 1018,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -24580,16 +24409,7 @@
     "game": {
       "seed": 1019,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -26048,16 +25868,7 @@
     "game": {
       "seed": 1020,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -27336,16 +27147,7 @@
     "game": {
       "seed": 1021,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -28264,16 +28066,7 @@
     "game": {
       "seed": 1022,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -29147,16 +28940,7 @@
     "game": {
       "seed": 1023,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -30090,16 +29874,7 @@
     "game": {
       "seed": 1024,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -32023,16 +31798,7 @@
     "game": {
       "seed": 1025,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -33056,16 +32822,7 @@
     "game": {
       "seed": 1026,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -34164,16 +33921,7 @@
     "game": {
       "seed": 1027,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -35587,16 +35335,7 @@
     "game": {
       "seed": 1028,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -36725,16 +36464,7 @@
     "game": {
       "seed": 1029,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -37848,16 +37578,7 @@
     "game": {
       "seed": 1030,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -39136,16 +38857,7 @@
     "game": {
       "seed": 1031,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -40649,16 +40361,7 @@
     "game": {
       "seed": 1032,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -41757,16 +41460,7 @@
     "game": {
       "seed": 1033,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -43150,16 +42844,7 @@
     "game": {
       "seed": 1034,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -44333,16 +44018,7 @@
     "game": {
       "seed": 1035,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -45741,16 +45417,7 @@
     "game": {
       "seed": 1036,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -47374,16 +47041,7 @@
     "game": {
       "seed": 1037,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -48977,16 +48635,7 @@
     "game": {
       "seed": 1038,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -50145,16 +49794,7 @@
     "game": {
       "seed": 1039,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -51568,16 +51208,7 @@
     "game": {
       "seed": 1040,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -52751,16 +52382,7 @@
     "game": {
       "seed": 1041,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -54039,16 +53661,7 @@
     "game": {
       "seed": 1042,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -55117,16 +54730,7 @@
     "game": {
       "seed": 1043,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -56075,16 +55679,7 @@
     "game": {
       "seed": 1044,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -57363,16 +56958,7 @@
     "game": {
       "seed": 1045,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -59416,16 +59002,7 @@
     "game": {
       "seed": 1046,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -61184,16 +60761,7 @@
     "game": {
       "seed": 1047,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -62952,16 +62520,7 @@
     "game": {
       "seed": 1048,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -64300,16 +63859,7 @@
     "game": {
       "seed": 1049,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -65393,16 +64943,7 @@
     "game": {
       "seed": 1050,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -67326,16 +66867,7 @@
     "game": {
       "seed": 1051,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -68869,16 +68401,7 @@
     "game": {
       "seed": 1052,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -69947,16 +69470,7 @@
     "game": {
       "seed": 1053,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -71985,16 +71499,7 @@
     "game": {
       "seed": 1054,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -73018,16 +72523,7 @@
     "game": {
       "seed": 1055,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -74081,16 +73577,7 @@
     "game": {
       "seed": 1056,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -74964,16 +74451,7 @@
     "game": {
       "seed": 1057,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -77332,16 +76810,7 @@
     "game": {
       "seed": 1058,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -78350,16 +77819,7 @@
     "game": {
       "seed": 1059,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -79593,16 +79053,7 @@
     "game": {
       "seed": 1060,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -80821,16 +80272,7 @@
     "game": {
       "seed": 1061,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -81914,16 +81356,7 @@
     "game": {
       "seed": 1062,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -83337,16 +82770,7 @@
     "game": {
       "seed": 1063,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -84355,16 +83779,7 @@
     "game": {
       "seed": 1064,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -85808,16 +85223,7 @@
     "game": {
       "seed": 1065,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -87141,16 +86547,7 @@
     "game": {
       "seed": 1066,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -88219,16 +87616,7 @@
     "game": {
       "seed": 1067,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -89522,16 +88910,7 @@
     "game": {
       "seed": 1068,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -90825,16 +90204,7 @@
     "game": {
       "seed": 1069,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -91858,16 +91228,7 @@
     "game": {
       "seed": 1070,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -92981,16 +92342,7 @@
     "game": {
       "seed": 1071,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -94719,16 +94071,7 @@
     "game": {
       "seed": 1072,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -95932,16 +95275,7 @@
     "game": {
       "seed": 1073,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -97325,16 +96659,7 @@
     "game": {
       "seed": 1074,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -98718,16 +98043,7 @@
     "game": {
       "seed": 1075,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -99601,16 +98917,7 @@
     "game": {
       "seed": 1076,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -100799,16 +100106,7 @@
     "game": {
       "seed": 1077,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -101757,16 +101055,7 @@
     "game": {
       "seed": 1078,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -103315,16 +102604,7 @@
     "game": {
       "seed": 1079,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -104243,16 +103523,7 @@
     "game": {
       "seed": 1080,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -105921,16 +105192,7 @@
     "game": {
       "seed": 1081,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -107389,16 +106651,7 @@
     "game": {
       "seed": 1082,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -109037,16 +108290,7 @@
     "game": {
       "seed": 1083,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -111000,16 +110244,7 @@
     "game": {
       "seed": 1084,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -112573,16 +111808,7 @@
     "game": {
       "seed": 1085,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -114011,16 +113237,7 @@
     "game": {
       "seed": 1086,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -115404,16 +114621,7 @@
     "game": {
       "seed": 1087,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -116602,16 +115810,7 @@
     "game": {
       "seed": 1088,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -117605,16 +116804,7 @@
     "game": {
       "seed": 1089,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -118848,16 +118038,7 @@
     "game": {
       "seed": 1090,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -120391,16 +119572,7 @@
     "game": {
       "seed": 1091,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -122054,16 +121226,7 @@
     "game": {
       "seed": 1092,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -123057,16 +122220,7 @@
     "game": {
       "seed": 1093,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -124915,16 +124069,7 @@
     "game": {
       "seed": 1094,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -126623,16 +125768,7 @@
     "game": {
       "seed": 1095,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -128016,16 +127152,7 @@
     "game": {
       "seed": 1096,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -129409,16 +128536,7 @@
     "game": {
       "seed": 1097,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -130817,16 +129935,7 @@
     "game": {
       "seed": 1098,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -132105,16 +131214,7 @@
     "game": {
       "seed": 1099,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -132778,16 +131878,7 @@
     "game": {
       "seed": 1100,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -133616,16 +132707,7 @@
     "game": {
       "seed": 1101,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -134994,16 +134076,7 @@
     "game": {
       "seed": 1102,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -136417,16 +135490,7 @@
     "game": {
       "seed": 1103,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -137915,16 +136979,7 @@
     "game": {
       "seed": 1104,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -138978,16 +138033,7 @@
     "game": {
       "seed": 1105,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -140011,16 +139057,7 @@
     "game": {
       "seed": 1106,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -142289,16 +141326,7 @@
     "game": {
       "seed": 1107,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -143217,16 +142245,7 @@
     "game": {
       "seed": 1108,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -144790,16 +143809,7 @@
     "game": {
       "seed": 1109,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -146693,16 +145703,7 @@
     "game": {
       "seed": 1110,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -147966,16 +146967,7 @@
     "game": {
       "seed": 1111,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -149329,16 +148321,7 @@
     "game": {
       "seed": 1112,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -150347,16 +149330,7 @@
     "game": {
       "seed": 1113,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -151875,16 +150849,7 @@
     "game": {
       "seed": 1114,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -153583,16 +152548,7 @@
     "game": {
       "seed": 1115,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -154616,16 +153572,7 @@
     "game": {
       "seed": 1116,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -155784,16 +154731,7 @@
     "game": {
       "seed": 1117,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -156937,16 +155875,7 @@
     "game": {
       "seed": 1118,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -158015,16 +156944,7 @@
     "game": {
       "seed": 1119,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -159033,16 +157953,7 @@
     "game": {
       "seed": 1120,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -160066,16 +158977,7 @@
     "game": {
       "seed": 1121,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -161309,16 +160211,7 @@
     "game": {
       "seed": 1122,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -162747,16 +161640,7 @@
     "game": {
       "seed": 1123,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -164110,16 +162994,7 @@
     "game": {
       "seed": 1124,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -165533,16 +164408,7 @@
     "game": {
       "seed": 1125,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -167211,16 +166077,7 @@
     "game": {
       "seed": 1126,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -168634,16 +167491,7 @@
     "game": {
       "seed": 1127,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -170807,16 +169655,7 @@
     "game": {
       "seed": 1128,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -172410,16 +171249,7 @@
     "game": {
       "seed": 1129,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -174568,16 +173398,7 @@
     "game": {
       "seed": 1130,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -175511,16 +174332,7 @@
     "game": {
       "seed": 1131,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -176799,16 +175611,7 @@
     "game": {
       "seed": 1132,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -177817,16 +176620,7 @@
     "game": {
       "seed": 1133,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -179510,16 +178304,7 @@
     "game": {
       "seed": 1134,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -180753,16 +179538,7 @@
     "game": {
       "seed": 1135,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -182056,16 +180832,7 @@
     "game": {
       "seed": 1136,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -183419,16 +182186,7 @@
     "game": {
       "seed": 1137,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -184272,16 +183030,7 @@
     "game": {
       "seed": 1138,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -185530,16 +184279,7 @@
     "game": {
       "seed": 1139,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -186818,16 +185558,7 @@
     "game": {
       "seed": 1140,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -188106,16 +186837,7 @@
     "game": {
       "seed": 1141,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -189709,16 +188431,7 @@
     "game": {
       "seed": 1142,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -191012,16 +189725,7 @@
     "game": {
       "seed": 1143,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -191970,16 +190674,7 @@
     "game": {
       "seed": 1144,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -193543,16 +192238,7 @@
     "game": {
       "seed": 1145,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -195221,16 +193907,7 @@
     "game": {
       "seed": 1146,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -196539,16 +195216,7 @@
     "game": {
       "seed": 1147,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -198172,16 +196840,7 @@
     "game": {
       "seed": 1148,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -199280,16 +197939,7 @@
     "game": {
       "seed": 1149,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -201078,16 +199728,7 @@
     "game": {
       "seed": 1150,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -202246,16 +200887,7 @@
     "game": {
       "seed": 1151,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -203534,16 +202166,7 @@
     "game": {
       "seed": 1152,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -204387,16 +203010,7 @@
     "game": {
       "seed": 1153,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -205750,16 +204364,7 @@
     "game": {
       "seed": 1154,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -208193,16 +206798,7 @@
     "game": {
       "seed": 1155,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -208956,16 +207552,7 @@
     "game": {
       "seed": 1156,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -210124,16 +208711,7 @@
     "game": {
       "seed": 1157,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -211097,16 +209675,7 @@
     "game": {
       "seed": 1158,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -212715,16 +211284,7 @@
     "game": {
       "seed": 1159,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -213958,16 +212518,7 @@
     "game": {
       "seed": 1160,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -214991,16 +213542,7 @@
     "game": {
       "seed": 1161,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -216114,16 +214656,7 @@
     "game": {
       "seed": 1162,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -216967,16 +215500,7 @@
     "game": {
       "seed": 1163,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -217955,16 +216479,7 @@
     "game": {
       "seed": 1164,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -219168,16 +217683,7 @@
     "game": {
       "seed": 1165,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -220291,16 +218797,7 @@
     "game": {
       "seed": 1166,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -221564,16 +220061,7 @@
     "game": {
       "seed": 1167,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -223287,16 +221775,7 @@
     "game": {
       "seed": 1168,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -224485,16 +222964,7 @@
     "game": {
       "seed": 1169,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -225188,16 +223658,7 @@
     "game": {
       "seed": 1170,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -227076,16 +225537,7 @@
     "game": {
       "seed": 1171,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -228064,16 +226516,7 @@
     "game": {
       "seed": 1172,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -229232,16 +227675,7 @@
     "game": {
       "seed": 1173,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -230385,16 +228819,7 @@
     "game": {
       "seed": 1174,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -231628,16 +230053,7 @@
     "game": {
       "seed": 1175,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -233111,16 +231527,7 @@
     "game": {
       "seed": 1176,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -234324,16 +232731,7 @@
     "game": {
       "seed": 1177,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -235372,16 +233770,7 @@
     "game": {
       "seed": 1178,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -236975,16 +235364,7 @@
     "game": {
       "seed": 1179,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -238158,16 +236538,7 @@
     "game": {
       "seed": 1180,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -239356,16 +237727,7 @@
     "game": {
       "seed": 1181,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -241424,16 +239786,7 @@
     "game": {
       "seed": 1182,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -243237,16 +241590,7 @@
     "game": {
       "seed": 1183,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -244810,16 +243154,7 @@
     "game": {
       "seed": 1184,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -246518,16 +244853,7 @@
     "game": {
       "seed": 1185,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -248331,16 +246657,7 @@
     "game": {
       "seed": 1186,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -249529,16 +247846,7 @@
     "game": {
       "seed": 1187,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -250832,16 +249140,7 @@
     "game": {
       "seed": 1188,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -252615,16 +250914,7 @@
     "game": {
       "seed": 1189,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -253723,16 +252013,7 @@
     "game": {
       "seed": 1190,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -254966,16 +253247,7 @@
     "game": {
       "seed": 1191,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -256524,16 +254796,7 @@
     "game": {
       "seed": 1192,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -257857,16 +256120,7 @@
     "game": {
       "seed": 1193,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -259145,16 +257399,7 @@
     "game": {
       "seed": 1194,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -260388,16 +258633,7 @@
     "game": {
       "seed": 1195,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -261451,16 +259687,7 @@
     "game": {
       "seed": 1196,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -263039,16 +261266,7 @@
     "game": {
       "seed": 1197,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -264492,16 +262710,7 @@
     "game": {
       "seed": 1198,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -265825,16 +264034,7 @@
     "game": {
       "seed": 1199,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -267188,16 +265388,7 @@
     "game": {
       "seed": 1200,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -268836,16 +267027,7 @@
     "game": {
       "seed": 1201,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -270559,16 +268741,7 @@
     "game": {
       "seed": 1202,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -271802,16 +269975,7 @@
     "game": {
       "seed": 1203,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -272910,16 +271074,7 @@
     "game": {
       "seed": 1204,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -274273,16 +272428,7 @@
     "game": {
       "seed": 1205,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -275576,16 +273722,7 @@
     "game": {
       "seed": 1206,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -276984,16 +275121,7 @@
     "game": {
       "seed": 1207,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -278167,16 +276295,7 @@
     "game": {
       "seed": 1208,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -279590,16 +277709,7 @@
     "game": {
       "seed": 1209,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -280818,16 +278928,7 @@
     "game": {
       "seed": 1210,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -282691,16 +280792,7 @@
     "game": {
       "seed": 1211,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -284384,16 +282476,7 @@
     "game": {
       "seed": 1212,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -285417,16 +283500,7 @@
     "game": {
       "seed": 1213,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -286405,16 +284479,7 @@
     "game": {
       "seed": 1214,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -287378,16 +285443,7 @@
     "game": {
       "seed": 1215,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -288681,16 +286737,7 @@
     "game": {
       "seed": 1216,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -289984,16 +288031,7 @@
     "game": {
       "seed": 1217,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -291152,16 +289190,7 @@
     "game": {
       "seed": 1218,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -292845,16 +290874,7 @@
     "game": {
       "seed": 1219,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -294088,16 +292108,7 @@
     "game": {
       "seed": 1220,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -295481,16 +293492,7 @@
     "game": {
       "seed": 1221,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -296574,16 +294576,7 @@
     "game": {
       "seed": 1222,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -297157,16 +295150,7 @@
     "game": {
       "seed": 1223,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -298580,16 +296564,7 @@
     "game": {
       "seed": 1224,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -299418,16 +297393,7 @@
     "game": {
       "seed": 1225,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -300661,16 +298627,7 @@
     "game": {
       "seed": 1226,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -302594,16 +300551,7 @@
     "game": {
       "seed": 1227,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -303762,16 +301710,7 @@
     "game": {
       "seed": 1228,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -304915,16 +302854,7 @@
     "game": {
       "seed": 1229,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -306698,16 +304628,7 @@
     "game": {
       "seed": 1230,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -307731,16 +305652,7 @@
     "game": {
       "seed": 1231,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -308854,16 +306766,7 @@
     "game": {
       "seed": 1232,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -309827,16 +307730,7 @@
     "game": {
       "seed": 1233,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -311400,16 +309294,7 @@
     "game": {
       "seed": 1234,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -312328,16 +310213,7 @@
     "game": {
       "seed": 1235,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -313376,16 +311252,7 @@
     "game": {
       "seed": 1236,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -314949,16 +312816,7 @@
     "game": {
       "seed": 1237,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -316102,16 +313960,7 @@
     "game": {
       "seed": 1238,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -317075,16 +314924,7 @@
     "game": {
       "seed": 1239,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -318003,16 +315843,7 @@
     "game": {
       "seed": 1240,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -319636,16 +317467,7 @@
     "game": {
       "seed": 1241,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -320594,16 +318416,7 @@
     "game": {
       "seed": 1242,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -321417,16 +319230,7 @@
     "game": {
       "seed": 1243,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -323365,16 +321169,7 @@
     "game": {
       "seed": 1244,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -324908,16 +322703,7 @@
     "game": {
       "seed": 1245,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -326991,16 +324777,7 @@
     "game": {
       "seed": 1246,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -328669,16 +326446,7 @@
     "game": {
       "seed": 1247,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -329672,16 +327440,7 @@
     "game": {
       "seed": 1248,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -331110,16 +328869,7 @@
     "game": {
       "seed": 1249,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -332413,16 +330163,7 @@
     "game": {
       "seed": 1250,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -333746,16 +331487,7 @@
     "game": {
       "seed": 1251,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -334914,16 +332646,7 @@
     "game": {
       "seed": 1252,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -336277,16 +334000,7 @@
     "game": {
       "seed": 1253,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -337520,16 +335234,7 @@
     "game": {
       "seed": 1254,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -338883,16 +336588,7 @@
     "game": {
       "seed": 1255,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -340516,16 +338212,7 @@
     "game": {
       "seed": 1256,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -342719,16 +340406,7 @@
     "game": {
       "seed": 1257,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -344082,16 +341760,7 @@
     "game": {
       "seed": 1258,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -345685,16 +343354,7 @@
     "game": {
       "seed": 1259,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -347273,16 +344933,7 @@
     "game": {
       "seed": 1260,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -348291,16 +345942,7 @@
     "game": {
       "seed": 1261,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -349819,16 +347461,7 @@
     "game": {
       "seed": 1262,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -351257,16 +348890,7 @@
     "game": {
       "seed": 1263,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -352650,16 +350274,7 @@
     "game": {
       "seed": 1264,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -354118,16 +351733,7 @@
     "game": {
       "seed": 1265,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -355691,16 +353297,7 @@
     "game": {
       "seed": 1266,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -357729,16 +355326,7 @@
     "game": {
       "seed": 1267,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -359377,16 +356965,7 @@
     "game": {
       "seed": 1268,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -360905,16 +358484,7 @@
     "game": {
       "seed": 1269,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -362238,16 +359808,7 @@
     "game": {
       "seed": 1270,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -363496,16 +361057,7 @@
     "game": {
       "seed": 1271,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -364649,16 +362201,7 @@
     "game": {
       "seed": 1272,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -366447,16 +363990,7 @@
     "game": {
       "seed": 1273,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -367915,16 +365449,7 @@
     "game": {
       "seed": 1274,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -368933,16 +366458,7 @@
     "game": {
       "seed": 1275,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -370131,16 +367647,7 @@
     "game": {
       "seed": 1276,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -371329,16 +368836,7 @@
     "game": {
       "seed": 1277,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -373352,16 +370850,7 @@
     "game": {
       "seed": 1278,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -374700,16 +372189,7 @@
     "game": {
       "seed": 1279,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -376453,16 +373933,7 @@
     "game": {
       "seed": 1280,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -378041,16 +375512,7 @@
     "game": {
       "seed": 1281,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -379089,16 +376551,7 @@
     "game": {
       "seed": 1282,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -380542,16 +377995,7 @@
     "game": {
       "seed": 1283,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -381275,16 +378719,7 @@
     "game": {
       "seed": 1284,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -382293,16 +379728,7 @@
     "game": {
       "seed": 1285,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -384046,16 +381472,7 @@
     "game": {
       "seed": 1286,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -385124,16 +382541,7 @@
     "game": {
       "seed": 1287,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -386442,16 +383850,7 @@
     "game": {
       "seed": 1288,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -387520,16 +384919,7 @@
     "game": {
       "seed": 1289,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -389108,16 +386498,7 @@
     "game": {
       "seed": 1290,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -390726,16 +388107,7 @@
     "game": {
       "seed": 1291,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -391909,16 +389281,7 @@
     "game": {
       "seed": 1292,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -393347,16 +390710,7 @@
     "game": {
       "seed": 1293,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -395250,16 +392604,7 @@
     "game": {
       "seed": 1294,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -396343,16 +393688,7 @@
     "game": {
       "seed": 1295,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -397841,16 +395177,7 @@
     "game": {
       "seed": 1296,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -398889,16 +396216,7 @@
     "game": {
       "seed": 1297,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -400222,16 +397540,7 @@
     "game": {
       "seed": 1298,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -401315,16 +398624,7 @@
     "game": {
       "seed": 1299,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -402633,16 +399933,7 @@
     "game": {
       "seed": 1300,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -403681,16 +400972,7 @@
     "game": {
       "seed": 1301,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -405194,16 +402476,7 @@
     "game": {
       "seed": 1302,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -406782,16 +404055,7 @@
     "game": {
       "seed": 1303,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -407935,16 +405199,7 @@
     "game": {
       "seed": 1304,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -409373,16 +406628,7 @@
     "game": {
       "seed": 1305,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -411141,16 +408387,7 @@
     "game": {
       "seed": 1306,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -412624,16 +409861,7 @@
     "game": {
       "seed": 1307,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -414677,16 +411905,7 @@
     "game": {
       "seed": 1308,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -415770,16 +412989,7 @@
     "game": {
       "seed": 1309,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -417328,16 +414538,7 @@
     "game": {
       "seed": 1310,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -418541,16 +415742,7 @@
     "game": {
       "seed": 1311,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -419439,16 +416631,7 @@
     "game": {
       "seed": 1312,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -420682,16 +417865,7 @@
     "game": {
       "seed": 1313,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -421925,16 +419099,7 @@
     "game": {
       "seed": 1314,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -423393,16 +420558,7 @@
     "game": {
       "seed": 1315,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -424711,16 +421867,7 @@
     "game": {
       "seed": 1316,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -425804,16 +422951,7 @@
     "game": {
       "seed": 1317,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -426702,16 +423840,7 @@
     "game": {
       "seed": 1318,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -427765,16 +424894,7 @@
     "game": {
       "seed": 1319,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -429053,16 +426173,7 @@
     "game": {
       "seed": 1320,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -430161,16 +427272,7 @@
     "game": {
       "seed": 1321,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -431464,16 +428566,7 @@
     "game": {
       "seed": 1322,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -432677,16 +429770,7 @@
     "game": {
       "seed": 1323,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -433920,16 +431004,7 @@
     "game": {
       "seed": 1324,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -435823,16 +432898,7 @@
     "game": {
       "seed": 1325,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -437396,16 +434462,7 @@
     "game": {
       "seed": 1326,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -438924,16 +435981,7 @@
     "game": {
       "seed": 1327,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -440557,16 +437605,7 @@
     "game": {
       "seed": 1328,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -441650,16 +438689,7 @@
     "game": {
       "seed": 1329,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -443448,16 +440478,7 @@
     "game": {
       "seed": 1330,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -444856,16 +441877,7 @@
     "game": {
       "seed": 1331,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -446609,16 +443621,7 @@
     "game": {
       "seed": 1332,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -448842,16 +445845,7 @@
     "game": {
       "seed": 1333,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -450175,16 +447169,7 @@
     "game": {
       "seed": 1334,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -450953,16 +447938,7 @@
     "game": {
       "seed": 1335,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -452316,16 +449292,7 @@
     "game": {
       "seed": 1336,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -453934,16 +450901,7 @@
     "game": {
       "seed": 1337,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -455417,16 +452375,7 @@
     "game": {
       "seed": 1338,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -456450,16 +453399,7 @@
     "game": {
       "seed": 1339,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -457963,16 +454903,7 @@
     "game": {
       "seed": 1340,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -459521,16 +456452,7 @@
     "game": {
       "seed": 1341,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -460749,16 +457671,7 @@
     "game": {
       "seed": 1342,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -462097,16 +459010,7 @@
     "game": {
       "seed": 1343,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -464360,16 +461264,7 @@
     "game": {
       "seed": 1344,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -465498,16 +462393,7 @@
     "game": {
       "seed": 1345,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -467161,16 +464047,7 @@
     "game": {
       "seed": 1346,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -468374,16 +465251,7 @@
     "game": {
       "seed": 1347,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -469407,16 +466275,7 @@
     "game": {
       "seed": 1348,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -470635,16 +467494,7 @@
     "game": {
       "seed": 1349,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -471863,16 +468713,7 @@
     "game": {
       "seed": 1350,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -472806,16 +469647,7 @@
     "game": {
       "seed": 1351,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -473794,16 +470626,7 @@
     "game": {
       "seed": 1352,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -475442,16 +472265,7 @@
     "game": {
       "seed": 1353,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -476685,16 +473499,7 @@
     "game": {
       "seed": 1354,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -477988,16 +474793,7 @@
     "game": {
       "seed": 1355,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -479291,16 +476087,7 @@
     "game": {
       "seed": 1356,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -480399,16 +477186,7 @@
     "game": {
       "seed": 1357,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -481942,16 +478720,7 @@
     "game": {
       "seed": 1358,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -482915,16 +479684,7 @@
     "game": {
       "seed": 1359,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -484398,16 +481158,7 @@
     "game": {
       "seed": 1360,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -486136,16 +482887,7 @@
     "game": {
       "seed": 1361,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -487604,16 +484346,7 @@
     "game": {
       "seed": 1362,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -488577,16 +485310,7 @@
     "game": {
       "seed": 1363,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -489505,16 +486229,7 @@
     "game": {
       "seed": 1364,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -491003,16 +487718,7 @@
     "game": {
       "seed": 1365,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -492201,16 +488907,7 @@
     "game": {
       "seed": 1366,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -493219,16 +489916,7 @@
     "game": {
       "seed": 1367,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -494522,16 +491210,7 @@
     "game": {
       "seed": 1368,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -495855,16 +492534,7 @@
     "game": {
       "seed": 1369,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -497473,16 +494143,7 @@
     "game": {
       "seed": 1370,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -498746,16 +495407,7 @@
     "game": {
       "seed": 1371,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -500124,16 +496776,7 @@
     "game": {
       "seed": 1372,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -501772,16 +498415,7 @@
     "game": {
       "seed": 1373,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -503315,16 +499949,7 @@
     "game": {
       "seed": 1374,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -504873,16 +501498,7 @@
     "game": {
       "seed": 1375,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -506161,16 +502777,7 @@
     "game": {
       "seed": 1376,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -507434,16 +504041,7 @@
     "game": {
       "seed": 1377,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -508662,16 +505260,7 @@
     "game": {
       "seed": 1378,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -510205,16 +506794,7 @@
     "game": {
       "seed": 1379,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -511778,16 +508358,7 @@
     "game": {
       "seed": 1380,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -512766,16 +509337,7 @@
     "game": {
       "seed": 1381,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -514714,16 +511276,7 @@
     "game": {
       "seed": 1382,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -516317,16 +512870,7 @@
     "game": {
       "seed": 1383,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -517620,16 +514164,7 @@
     "game": {
       "seed": 1384,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -519448,16 +515983,7 @@
     "game": {
       "seed": 1385,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -520856,16 +517382,7 @@
     "game": {
       "seed": 1386,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -522264,16 +518781,7 @@
     "game": {
       "seed": 1387,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -523912,16 +520420,7 @@
     "game": {
       "seed": 1388,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -524870,16 +521369,7 @@
     "game": {
       "seed": 1389,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -526533,16 +523023,7 @@
     "game": {
       "seed": 1390,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -527911,16 +524392,7 @@
     "game": {
       "seed": 1391,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -529424,16 +525896,7 @@
     "game": {
       "seed": 1392,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -530577,16 +527040,7 @@
     "game": {
       "seed": 1393,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -532690,16 +529144,7 @@
     "game": {
       "seed": 1394,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -533783,16 +530228,7 @@
     "game": {
       "seed": 1395,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -535371,16 +531807,7 @@
     "game": {
       "seed": 1396,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -536809,16 +533236,7 @@
     "game": {
       "seed": 1397,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -537707,16 +534125,7 @@
     "game": {
       "seed": 1398,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -538440,16 +534849,7 @@
     "game": {
       "seed": 1399,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -539578,16 +535978,7 @@
     "game": {
       "seed": 1400,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -540656,16 +537047,7 @@
     "game": {
       "seed": 1401,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -541659,16 +538041,7 @@
     "game": {
       "seed": 1402,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -543037,16 +539410,7 @@
     "game": {
       "seed": 1403,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -544550,16 +540914,7 @@
     "game": {
       "seed": 1404,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -545388,16 +541743,7 @@
     "game": {
       "seed": 1405,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -546526,16 +542872,7 @@
     "game": {
       "seed": 1406,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -548009,16 +544346,7 @@
     "game": {
       "seed": 1407,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -548997,16 +545325,7 @@
     "game": {
       "seed": 1408,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -550990,16 +547309,7 @@
     "game": {
       "seed": 1409,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -552188,16 +548498,7 @@
     "game": {
       "seed": 1410,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -554256,16 +550557,7 @@
     "game": {
       "seed": 1411,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -555829,16 +552121,7 @@
     "game": {
       "seed": 1412,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -557267,16 +553550,7 @@
     "game": {
       "seed": 1413,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -558810,16 +555084,7 @@
     "game": {
       "seed": 1414,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -560308,16 +556573,7 @@
     "game": {
       "seed": 1415,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -561761,16 +558017,7 @@
     "game": {
       "seed": 1416,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -562869,16 +559116,7 @@
     "game": {
       "seed": 1417,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -563902,16 +560140,7 @@
     "game": {
       "seed": 1418,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -565310,16 +561539,7 @@
     "game": {
       "seed": 1419,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -566643,16 +562863,7 @@
     "game": {
       "seed": 1420,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -568051,16 +564262,7 @@
     "game": {
       "seed": 1421,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -569894,16 +566096,7 @@
     "game": {
       "seed": 1422,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -571137,16 +567330,7 @@
     "game": {
       "seed": 1423,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -573745,16 +569929,7 @@
     "game": {
       "seed": 1424,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -575273,16 +571448,7 @@
     "game": {
       "seed": 1425,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -576576,16 +572742,7 @@
     "game": {
       "seed": 1426,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -578599,16 +574756,7 @@
     "game": {
       "seed": 1427,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -580172,16 +576320,7 @@
     "game": {
       "seed": 1428,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -581340,16 +577479,7 @@
     "game": {
       "seed": 1429,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -582658,16 +578788,7 @@
     "game": {
       "seed": 1430,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -584216,16 +580337,7 @@
     "game": {
       "seed": 1431,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -585594,16 +581706,7 @@
     "game": {
       "seed": 1432,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -586957,16 +583060,7 @@
     "game": {
       "seed": 1433,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -588470,16 +584564,7 @@
     "game": {
       "seed": 1434,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -589863,16 +585948,7 @@
     "game": {
       "seed": 1435,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -590881,16 +586957,7 @@
     "game": {
       "seed": 1436,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -592484,16 +588551,7 @@
     "game": {
       "seed": 1437,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -594117,16 +590175,7 @@
     "game": {
       "seed": 1438,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -595315,16 +591364,7 @@
     "game": {
       "seed": 1439,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -596468,16 +592508,7 @@
     "game": {
       "seed": 1440,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -598071,16 +594102,7 @@
     "game": {
       "seed": 1441,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -599314,16 +595336,7 @@
     "game": {
       "seed": 1442,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -600527,16 +596540,7 @@
     "game": {
       "seed": 1443,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -601635,16 +597639,7 @@
     "game": {
       "seed": 1444,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -602878,16 +598873,7 @@
     "game": {
       "seed": 1445,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -603971,16 +599957,7 @@
     "game": {
       "seed": 1446,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -605169,16 +601146,7 @@
     "game": {
       "seed": 1447,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -607282,16 +603250,7 @@
     "game": {
       "seed": 1448,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -608375,16 +604334,7 @@
     "game": {
       "seed": 1449,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -609948,16 +605898,7 @@
     "game": {
       "seed": 1450,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -610861,16 +606802,7 @@
     "game": {
       "seed": 1451,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -612149,16 +608081,7 @@
     "game": {
       "seed": 1452,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -613527,16 +609450,7 @@
     "game": {
       "seed": 1453,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -614575,16 +610489,7 @@
     "game": {
       "seed": 1454,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -615833,16 +611738,7 @@
     "game": {
       "seed": 1455,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -616776,16 +612672,7 @@
     "game": {
       "seed": 1456,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -618004,16 +613891,7 @@
     "game": {
       "seed": 1457,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -619307,16 +615185,7 @@
     "game": {
       "seed": 1458,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -620085,16 +615954,7 @@
     "game": {
       "seed": 1459,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -621388,16 +617248,7 @@
     "game": {
       "seed": 1460,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -622481,16 +618332,7 @@
     "game": {
       "seed": 1461,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -623289,16 +619131,7 @@
     "game": {
       "seed": 1462,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -625177,16 +621010,7 @@
     "game": {
       "seed": 1463,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -626675,16 +622499,7 @@
     "game": {
       "seed": 1464,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -628218,16 +624033,7 @@
     "game": {
       "seed": 1465,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -630436,16 +626242,7 @@
     "game": {
       "seed": 1466,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -631874,16 +627671,7 @@
     "game": {
       "seed": 1467,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -633102,16 +628890,7 @@
     "game": {
       "seed": 1468,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -634690,16 +630469,7 @@
     "game": {
       "seed": 1469,
       "killer": "John",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -636308,16 +632078,7 @@
     "game": {
       "seed": 1470,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -637491,16 +633252,7 @@
     "game": {
       "seed": 1471,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -638899,16 +634651,7 @@
     "game": {
       "seed": 1472,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -640517,16 +636260,7 @@
     "game": {
       "seed": 1473,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -641835,16 +637569,7 @@
     "game": {
       "seed": 1474,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -643213,16 +638938,7 @@
     "game": {
       "seed": 1475,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -644681,16 +640397,7 @@
     "game": {
       "seed": 1476,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -645999,16 +641706,7 @@
     "game": {
       "seed": 1477,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -647332,16 +643030,7 @@
     "game": {
       "seed": 1478,
       "killer": "Will",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -648725,16 +644414,7 @@
     "game": {
       "seed": 1479,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -649953,16 +645633,7 @@
     "game": {
       "seed": 1480,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -651136,16 +646807,7 @@
     "game": {
       "seed": 1481,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -652439,16 +648101,7 @@
     "game": {
       "seed": 1482,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -653772,16 +649425,7 @@
     "game": {
       "seed": 1483,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -655075,16 +650719,7 @@
     "game": {
       "seed": 1484,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -656318,16 +651953,7 @@
     "game": {
       "seed": 1485,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -657921,16 +653547,7 @@
     "game": {
       "seed": 1486,
       "killer": "Linda",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -658954,16 +654571,7 @@
     "game": {
       "seed": 1487,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -660182,16 +655790,7 @@
     "game": {
       "seed": 1488,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -661515,16 +657114,7 @@
     "game": {
       "seed": 1489,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -663178,16 +658768,7 @@
     "game": {
       "seed": 1490,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -664751,16 +660332,7 @@
     "game": {
       "seed": 1491,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -666084,16 +661656,7 @@
     "game": {
       "seed": 1492,
       "killer": "Jane",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -667402,16 +662965,7 @@
     "game": {
       "seed": 1493,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -668525,16 +664079,7 @@
     "game": {
       "seed": 1494,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -669783,16 +665328,7 @@
     "game": {
       "seed": 1495,
       "killer": "Joe",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -671551,16 +667087,7 @@
     "game": {
       "seed": 1496,
       "killer": "Susan",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -672659,16 +668186,7 @@
     "game": {
       "seed": 1497,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -674472,16 +669990,7 @@
     "game": {
       "seed": 1498,
       "killer": "Bob",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
@@ -675895,16 +671404,7 @@
     "game": {
       "seed": 1499,
       "killer": "May",
-      "names": [
-        "Joe",
-        "John",
-        "Bob",
-        "Will",
-        "Jane",
-        "Linda",
-        "Susan",
-        "May"
-      ],
+      "names": ["Joe", "John", "Bob", "Will", "Jane", "Linda", "Susan", "May"],
       "technologies": [
         "Python",
         "Java",
