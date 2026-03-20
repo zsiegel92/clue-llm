@@ -2,26 +2,24 @@ import { ServerPythonProvidedStaticMultiFileCodeBlock } from "@/components/serve
 import { GameViewer } from "@/components/game-viewer";
 import { StatsDisplay } from "@/components/stats-display";
 import SutskeverInterview from "@/components/mdx/sutskever-interview.mdx"
+import WhatThisIs from "@/components/mdx/what-this-is.mdx"
 import Image from "next/image";
 
-# Can LLMs Reason by Predicting the Next Word?
-
+# Next Token Prediction == Reasoning?
 
 <SutskeverInterview/>
 
 ---
 
-## What This Is
+<WhatThisIs/>
 
-We generate logic puzzles where suspects have various attributes (they were at certain places, with certain objects, etc.). Through a series of propositions—logical clues—you must deduce who the killer is. Everyone except the killer has provable alibis. The catch? This is an **NP-complete SAT (satisfiability) problem**: given logical constraints, find the truth assignment that satisfies them all.
+---
 
-**Here's what makes this interesting**: We use a SAT solver to *generate* these puzzles, then ask an LLM to *solve* them through next-token prediction. The LLM faces the exact same NP-complete problem that created the puzzle in the first place.
+## Try It Yourself
 
-This setup lets us answer some interesting questions:
-- Can LLMs solve NP-complete problems through pure next-token prediction?
-- How confident are they when they're right vs. wrong?
-- What kinds of logical errors do they make?
-- Can we teach them to reason better through targeted fine-tuning?
+Here's an actual game from our dataset. Read through the propositions (clues) and see if you can figure out who the killer is. Then reveal the answer to see if the LLM got it right—and how confident it was.
+
+<GameViewer />
 
 ---
 
@@ -119,12 +117,6 @@ We analyzed predictions from `gpt-4.1-nano` to see how well it calibrates on thi
 This analysis reveals when the model "knows what it knows"—and when it's confidently wrong. These confident mistakes are particularly interesting: they show us exactly where the model's reasoning breaks down.
 
 ---
-
-## Try It Yourself
-
-Here's an actual game from our dataset. Read through the propositions (clues) and see if you can figure out who the killer is. Then reveal the answer to see if the LLM got it right—and how confident it was.
-
-<GameViewer />
 
 ---
 

@@ -1,0 +1,67 @@
+## What This Is
+
+We generate logic puzzles similar to "Clue" consisting of logical propositions, like
+
+- "If the murder happened in the bedroom, then it was with the knife."
+- "If the murder was with the bat, the killer was not Tom."
+
+We generate propositions until there is exactly one possible killer, then stop. This is a "game".
+
+## Does solving a problem like this require "reasoning"?
+
+These amount to boolean satisfiability (SAT) problems.
+
+This problem class is NP-complete.
+
+"NP-complete" problems are necessarily hard when they're large.
+
+## What does a proposition look like
+
+Each Clue game's "killer" has roughly 100 possible characteristics, in 7 dimensions:
+- Name
+- Place
+- Material
+- Food
+- Institution
+- Company
+- Technology
+
+so a real proposition is something like:
+
+<div className="rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 px-5 py-4 text-center italic text-lg">"If Linda was in China writing XML, then the killer used metal at the museum with salt."</div>
+
+### Single-token characteristics
+
+Names like "Joe", "Bob", "Will", and "Linda" are carefully chosen because they each tokenize to exactly one token in GPT-4o's tokenizer.
+
+Other fun single-token words in the GPT-4o tokenizer:
+- school
+- company
+- Apple
+- Miami
+- Japan
+- Redis
+- SQL
+- brick
+- sand
+- beer
+- water
+
+
+Single-token outputs means we get...**Clean confidence measurement**: When the LLM predicts "Joe" as the killer, we get a single log probability value representing its confidence. No multi-token aggregation needed—just one clean number.
+
+<u>We carefully selected characteristics that consist of a single token. All the names, places, materials, foods, etc. consist of ONE token.</u>
+
+## How big is a game? How many propositions in a game?
+
+We randomly generate propositions until there is exactly one possible killer. With the number of characteristics involved, this means 40-150 propositions per game.
+
+**We carefully selected this problem size so that our experimental baseline - OpenAI's `gpt-4.1-nano` - would do no better than random chance!**
+
+
+## What do we expect to learn
+
+- How good/bad are LLMs at solving NP-complete problems through pure next-token prediction?
+- How confident are they when they're right vs. wrong? Can we predict their accuracy using their confidence?
+  - In real life we don't know the true answer but we DO know the LLM's confidence.
+- Does fine-tuning help? Is fine-tuning on "confidently wrong" examples more effective than other strategies?
