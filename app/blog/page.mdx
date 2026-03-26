@@ -105,9 +105,11 @@ The real story is fine-tuning. Every fine-tuned nano model dramatically outperfo
 
 ---
 
-## Fine-Tuning: are "Confidently Wrong" examples the most sample-efficient?? (Yes!)
+## Fine-Tuning via Active Sampling
 
-Not all training examples are equally valuable. Fine-tuning on cases the model already solves correctly is unlikely to help—it already knows how to handle those. The interesting question: **which mistakes should we teach it to fix?**
+Not all training examples are equally valuable. Fine-tuning on cases the model already solves correctly is unlikely to help—it already knows how to handle those. The interesting question is an active sampling question: **which examples buy the most learning per label?**
+
+On tasks like this one, where we know the ground truth exactly, "confidently wrong" examples are a particularly clean active-sampling target. They mark places where the model has learned the wrong pattern strongly enough to say it with conviction. If you want the highest-signal corrections, that is a very good place to start.
 
 We generate multiple fine-tuning datasets to test different strategies:
 
@@ -155,7 +157,7 @@ Training on wrong answers (96.4–96.8%) vastly outperformed training on correct
 
 Most-confident-wrong (96.8%) vs. least-confident-wrong (96.4%)—a 0.4% difference. This was our most interesting hypothesis, and it was too close to call. Whether the model is confidently or hesitantly incorrect doesn't seem to matter much for fine-tuning effectiveness.
 
-A caveat: see below note on confidence. The model fine-tuned on "confidently wrong" examples was the best-calibrated in terms of logprob of top token correlating with accuracy. So, it wasn't so much more accurate, but its confidence was a much better indicator of its accuracy than the other experimental conditions. Takeaway: a model trained on its worst mistakes can better flag production hallucinations.
+A caveat: see below note on confidence. The model fine-tuned on "confidently wrong" examples was the best-calibrated in terms of logprob of top token correlating with accuracy. So, it wasn't so much more accurate, but its confidence was a much better indicator of its accuracy than the other experimental conditions. This is also where the active-sampling story gets practical: once you move to production, you often do not know the ground truth upfront, but confidence still helps you decide which outputs are worth labeling, auditing, or routing to human feedback first.
 
 **5. Fine-tuning on ALL cases beats fine-tuning on a carefully chosen subset: TRUE**
 
@@ -197,9 +199,9 @@ By having the model solve NP-complete SAT problems through next-token prediction
 
 1. **Test the limits of reasoning**: These are computationally hard problems. Can next-token prediction encode genuine logical deduction?
 
-2. **Measure confidence precisely**: Single-token predictions give us clean probability measurements, revealing when the model "knows what it knows." Low confidence can help flag hallucinations in production is probably the simplest possible mechanistic interpretability entrypoint for AI engineers.
+2. **Measure confidence precisely**: Single-token predictions give us clean probability measurements, revealing when the model "knows what it knows." Using confidence to flag likely hallucinations in production is about the simplest mechanistic-interpretability foothold an AI engineer can ask for.
 
-3. **Fine-tune efficiently**: By training on specific failure patterns, we can teach the model to reason better—and measure exactly how much better.
+3. **Fine-tune efficiently**: Active sampling gives you a way to spend labeling budget where it matters. In evals with known answers, that can mean confidently wrong cases; in production, it can mean sampling outputs for human review based on confidence or other risk signals.
 
 Ilya Sutskever said predicting the killer in a detective novel requires "a fair amount of reasoning." We've built a controlled environment to test exactly that claim. The results suggest that yes, LLMs can perform complex logical reasoning through next-token prediction—but they're far from perfect. Every mistake is a window into how they think.
 
